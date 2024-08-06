@@ -1,0 +1,104 @@
+Sure, let's explore some examples where methods are dynamically decided in Groovy, leveraging its dynamic typing and duck typing features.
+
+Example 1: Using MetaClass for Dynamic Method Resolution
+Groovy's MetaClass allows you to define methods at runtime.
+
+groovy
+Copy code
+class DynamicExample {}
+
+DynamicExample.metaClass.dynamicMethod = { String name ->
+    return "Hello, $name"
+}
+
+def example = new DynamicExample()
+println example.dynamicMethod("John") // Outputs: Hello, John
+In this example, dynamicMethod is added to DynamicExample at runtime using MetaClass.
+
+Example 2: Using Groovy's Expando Class
+Groovy's Expando class is a dynamic bean that allows properties and methods to be added at runtime.
+
+groovy
+Copy code
+def expando = new Expando()
+expando.sayHello = { name -> "Hello, $name" }
+
+println expando.sayHello("Jane") // Outputs: Hello, Jane
+Here, the sayHello method is added to an instance of Expando at runtime.
+
+Example 3: Using Method Missing
+The methodMissing mechanism allows a class to handle calls to undefined methods dynamically.
+
+groovy
+Copy code
+class DynamicHandler {
+    def methodMissing(String name, args) {
+        return "Called $name with arguments: ${args.join(', ')}"
+    }
+}
+
+def handler = new DynamicHandler()
+println handler.someMethod("arg1", "arg2") // Outputs: Called someMethod with arguments: arg1, arg2
+In this example, any call to an undefined method on DynamicHandler is intercepted by methodMissing.
+
+Example 4: Dynamic Dispatch Based on Argument Type
+You can dynamically choose a method implementation based on the runtime type of the arguments.
+
+groovy
+Copy code
+class Dispatcher {
+    def process(arg) {
+        if (arg instanceof String) {
+            return processString(arg)
+        } else if (arg instanceof Integer) {
+            return processInteger(arg)
+        } else {
+            return processDefault(arg)
+        }
+    }
+
+    private String processString(String arg) {
+        return "Processed String: $arg"
+    }
+
+    private String processInteger(Integer arg) {
+        return "Processed Integer: $arg"
+    }
+
+    private String processDefault(arg) {
+        return "Processed Default: $arg"
+    }
+}
+
+def dispatcher = new Dispatcher()
+println dispatcher.process("hello")    // Outputs: Processed String: hello
+println dispatcher.process(42)         // Outputs: Processed Integer: 42
+println dispatcher.process([1, 2, 3])  // Outputs: Processed Default: [1, 2, 3]
+In this example, the process method dynamically decides which private method to call based on the type of arg.
+
+Example 5: Dynamic Method Addition Using Categories
+Groovy categories allow you to add methods to classes dynamically within a specific scope.
+
+groovy
+Copy code
+class Person {
+    String name
+}
+
+class GreeterCategory {
+    static String greet(Person person) {
+        return "Hello, ${person.name}"
+    }
+}
+
+def person = new Person(name: 'Alice')
+use(GreeterCategory) {
+    println person.greet() // Outputs: Hello, Alice
+}
+In this example, the greet method is added to the Person class dynamically within the scope of the use block using a category.
+
+Conclusion
+Groovy's dynamic typing and metaprogramming capabilities provide powerful tools for dynamically deciding and resolving methods at runtime.
+ This flexibility can be incredibly useful in scenarios requiring runtime adaptability
+and can help simplify complex logic that would be more cumbersome in statically typed languages.
+ However, it also necessitates careful coding practices to ensure maintainability and to avoid runtime errors.
