@@ -10,7 +10,7 @@ SELECT
 FROM
     pg_catalog.pg_attribute a
 WHERE
-    a.attrelid = 'users'::regclass
+    a.attrelid = 'component'::regclass
     AND a.attnum > 0
     AND NOT a.attisdropped
 ORDER BY
