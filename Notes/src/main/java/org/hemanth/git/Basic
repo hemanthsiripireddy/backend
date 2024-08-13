@@ -1,0 +1,4 @@
+
+-- to merge particular file to another branch
+git checkout latest_viakoo_code_01
+C:/Users/Hemanth.Siripireddy/mss/mss_api/MonolithAPI/src/main/groovy/com/viakoo/vnns/tickets/TicketController.groovy
