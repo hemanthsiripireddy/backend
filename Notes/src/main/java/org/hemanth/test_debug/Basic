@@ -1,0 +1,12 @@
+// when you want to test locally, you can just test each class or method,
+this doesn't require to spin up required services. so when we unit test method or class
+it might use other services or databases or queues or something, we can use mockito/stub
+to mock to everything. so we can test a module or class in isolation
+--even we can use this test strategy to debug and find issues in certain methods or classes
+
+--for integration testing, we can use inmemory database or in memory queues or test containers
+--we can use wire mock to mock external services
+
+--for comprehensive testing or end to end testing, we can use docket compose
+this is heavier but useful
+--we can decrease use of mocks to increase integration testing
