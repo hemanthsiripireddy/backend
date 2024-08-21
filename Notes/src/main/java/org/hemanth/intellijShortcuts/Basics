@@ -27,3 +27,15 @@ shift + cntrl + space: to suggest return/ parameters, class implementations
 select shift + cntrl + space two times to give suggestions for static, collections,list
 control shif + A: to search everthing
 cntrl+j for post fix expresiion
+alt+insert to get generate option for getter and setter, constructor ect
+alt+insert in test folder for testmethod and setup creation
+vcs--------
+ctrl+k to open vcs in intellij
+shift+tab to switch between files
+ctrl+d to see diff between local and last commit
+ctrl+alt+z to roll back local changes for a selected file
+alt+back quote to bing up VCS operations pop up
+select annotations to see which line is created in which commit
+alt+1 to move focus to project window tool
+ctrl+alt+o to optimize import statements
+alt+enter to optn language editor
