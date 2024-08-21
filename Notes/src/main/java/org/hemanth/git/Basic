@@ -2,3 +2,7 @@
 -- to merge particular file to another branch
 git checkout latest_viakoo_code_01
 C:/Users/Hemanth.Siripireddy/mss/mss_api/MonolithAPI/src/main/groovy/com/viakoo/vnns/tickets/TicketController.groovy
+--if we want to merge a particular commit changes to another branch
+    you can move to branch you want changes to be,
+    use git cherry-pick <commit-hash>
+    commit-hash is from your source branch which has changes 
