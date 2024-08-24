@@ -1,0 +1,41 @@
+ctrl + ->:  to move one word at a time
+home : to move starting of line
+end: to move end of a line
+ctrl+ home: to	 move starting line
+ctrl+ end: to move to ending line
+pgup: to move up a page at a time
+pgdn: to move down at a time
+camelHumps: type capital letters of Class name, it will display class name ex ArrayList AL is shortcut
+shift + alt + down arrow: to move a line down
+shift + ctrl+ down/up arrow: to move statement up or down like methods or for loop
+cntrl + y to delete a line
+cntrl +d to duplicate a line
+cntrl +P to display method parameters
+cntrl + shift + / to commnet block of code(multiline comment)
+cntrl + '+': to expand or collapse
+shift+ cntrl+ alt + N to navigate to symbol
+shift + shift: to search everywhere
+cntrl + E to display all tabs in IntelliJ
+cntrl + shift + E to display recently edited tabs
+shift + end: to select from current to end
+shift + home : to select from current to start
+shift + cntrl + -> : to select one word at a time
+shift + ->: to select one character at a time
+crtl + w : to expand selection
+cntrl+ shift + w : to shirnk selection
+shift + cntrl + space: to suggest return/ parameters, class implementations
+select shift + cntrl + space two times to give suggestions for static, collections,list
+control shif + A: to search everthing
+cntrl+j for post fix expresiion
+alt+insert to get generate option for getter and setter, constructor ect
+alt+insert in test folder for testmethod and setup creation
+vcs--------
+ctrl+k to open vcs in intellij
+shift+tab to switch between files
+ctrl+d to see diff between local and last commit
+ctrl+alt+z to roll back local changes for a selected file
+alt+back quote to bing up VCS operations pop up
+select annotations to see which line is created in which commit
+alt+1 to move focus to project window tool
+ctrl+alt+o to optimize import statements
+alt+enter to optn language editor
