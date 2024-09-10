@@ -1,0 +1,44 @@
+to update the ec2 system
+sudo apt-get update
+sudo apt-get upgrade
+
+to install jdk
+sudo apt-get install openjdk-11-jdk
+
+to install apache
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.93/bin/apache-tomcat-9.0.93.tar.gz
+
+to extract tomcat file
+tar xzf apache-tomcat-9.0.93.tar.gz
+
+Move the extracted directory to /opt (or another location if preferred):
+sudo mv apache-tomcat-9.0.93 /opt/tomcat
+
+
+c. Set Up Environment Variables
+Create a new file for environment variables:
+
+sudo nano /etc/profile.d/tomcat.sh
+
+Add the following lines:
+export CATALINA_HOME="/opt/tomcat"
+export PATH="$PATH:$CATALINA_HOME/bin"
+
+Apply the changes:
+
+source /etc/profile.d/tomcat.sh
+
+d. Start Tomcat
+Navigate to the Tomcat bin directory and start Tomcat:
+
+cd /opt/tomcat/bin
+./startup.sh
+
+to copy file from local to ec2
+scp -i C:\Users\sirip\Documents\mysiripikey.pem C:\Users\sirip\Documents\ecom.jar ubuntu@18.220.2.231:/home/ubuntu/
+
+
+if you are managing Tomcat manually
+cd /opt/tomcat
+sudo bin/shutdown.sh
+sudo bin/startup.sh

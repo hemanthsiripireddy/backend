@@ -1,0 +1,56 @@
+--how to choose region
+    compliance: government restrict that data should be in the country
+    latency: better to choose nearby region for less latency
+    services: some regions might not have all services
+    pricing: pricing might vary for different regions
+
+-- region contain availability zones
+    one region has min 3 and max 6 availability zones
+    this zones are for redundant purpose, mean, if one zone is destroyed by disaster, customers still
+    have access to their data.
+
+--IAM Policy has
+    version, id, statement
+    statement has
+        sid, effect, principal, action, resource
+
+-- MFA
+    three types of devices are there for MFAS
+-- different ways to access AWS services
+     AWS console using password and MFA
+     command line interface- CLI using access key id and secret access key
+     Software Development kit -SDK using access key id and secret access key
+
+--aws cloud shell
+--aws roles aws services like ec2
+    what permissions ec2 has to access other aws resources
+
+-- IAM Security tools
+    IAM Credential Report (account-level)
+        lists all IAM users and status of their credentials
+    IAM Access Advisor (User Level)
+        this shows services that the user can access and when those services were last accessed
+--EC2
+    types of EC2
+        general purpose
+        computer optimized
+        memory optimized ( RAM)
+        storage optimized(disk or ssd)
+
+
+--- to connect to EC2 from local compute using ssh
+     ssh -i '.\My Key Pair.pem' ec2-user@54.83.183.21
+--EC2 instance purchasing options
+    on demand   - very expensive
+    spot instance  - very less expensive, given left over instances
+    Reserved instances - 1 year - 30% discount
+    Reserved instances - 3 years- 60% discount
+    EC2 savings plan-  per hour base             28 discount
+    Reserved convertible instances- 25% discount
+    dedicated host- on demand - separate hardware
+    dedicated host reservation
+    capacity reservation
+-- spot instances and spot fleets
+
+
+
