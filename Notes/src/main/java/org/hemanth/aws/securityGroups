@@ -1,0 +1,11 @@
+security groups acts as a firewall on EC2 instances
+they regulate
+    access to ports
+    control inbound traffic
+    control outbound traffic
+they typically have type like http, ssh, etc, protocol like tcp, port range, source ip address
+-- classic ports to know
+    22 for SSH
+    21 for FTP
+    80 for HTTP
+    443 for HTTPS

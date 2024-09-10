@@ -30,3 +30,27 @@
         lists all IAM users and status of their credentials
     IAM Access Advisor (User Level)
         this shows services that the user can access and when those services were last accessed
+--EC2
+    types of EC2
+        general purpose
+        computer optimized
+        memory optimized ( RAM)
+        storage optimized(disk or ssd)
+
+
+--- to connect to EC2 from local compute using ssh
+     ssh -i '.\My Key Pair.pem' ec2-user@54.83.183.21
+--EC2 instance purchasing options
+    on demand   - very expensive
+    spot instance  - very less expensive, given left over instances
+    Reserved instances - 1 year - 30% discount
+    Reserved instances - 3 years- 60% discount
+    EC2 savings plan-  per hour base             28 discount
+    Reserved convertible instances- 25% discount
+    dedicated host- on demand - separate hardware
+    dedicated host reservation
+    capacity reservation
+-- spot instances and spot fleets
+
+
+
