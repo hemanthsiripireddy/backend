@@ -1,0 +1,14 @@
+Rule Design Principles
+    Rule dependency: A rule should not depend on any other rule
+    Rule Atomicity: A rule should be designed as simple as possbile
+    data defines the rule to fire next
+
+Ordering of rules
+    salience
+    agenda groups
+    salience +agenda groups
+activation groups
+    only one rule is triggered and only one time from the activation group
+--you can set expiration date for any rule
+--you can insert new facts into session by drools rule
+    you can get all the facts from the session into java code
