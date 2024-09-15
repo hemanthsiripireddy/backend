@@ -5,14 +5,15 @@ sudo apt-get upgrade
 to install jdk
 sudo apt-get install openjdk-11-jdk
 
-to install apache
-wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.93/bin/apache-tomcat-9.0.93.tar.gz
+to install apache tomcat
+wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.29/bin/apache-tomcat-10.1.29.tar.gz
+
 
 to extract tomcat file
-tar xzf apache-tomcat-9.0.93.tar.gz
+tar xzf apache-tomcat-10.1.29.tar.gz
 
 Move the extracted directory to /opt (or another location if preferred):
-sudo mv apache-tomcat-9.0.93 /opt/tomcat
+sudo mv apache-tomcat-10.1.29 /opt/tomcat
 
 
 c. Set Up Environment Variables
@@ -37,8 +38,57 @@ cd /opt/tomcat/bin
 to copy file from local to ec2
 scp -i C:\Users\sirip\Documents\mysiripikey.pem C:\Users\sirip\Documents\ecom.jar ubuntu@18.220.2.231:/home/ubuntu/
 
+scp -i "C:\Users\sirip\Downloads\mykeypair.pem" -r
+"E:\VerintProjectLearning\springboot\04-spring-boot-rest-crud\01-spring-boot-rest-crud\target\demo-0.0.1-SNAPSHOT.war"
+ec2-user@52.71.169.69:/opt/tomcat/webapps
 
 if you are managing Tomcat manually
 cd /opt/tomcat
 sudo bin/shutdown.sh
 sudo bin/startup.sh
+
+--how to install tomcat
+    change directory ownership to allow EC2 user access
+        sudo chown -R ec2-user:ec2-user /opt/tomcat
+    make tomcat scripts executable
+        sudo chmod +x /opt/tomcat/bin/*.sh
+    to start the tomcat
+        /opt/tomcat/bin/startup.sh
+    to shutdown the tomcat
+        /opt/tomcat/bin/shutdown.sh
+    to start/stop the tomcat as service
+        create a systemd service file
+            sudo nano /etc/systemd/system/tomcat.service
+
+if war file is deployed to tomcat
+     the endpoint url should like http://52.71.169.69:8080/demo-0.0.1-SNAPSHOT/test/hello
+     ip address followed by port number followed by app name then url
+
+
+to install jdk21 in ec2 using openjdk distribution by aws
+sudo yum install java-21-amazon-corretto -y
+
+to downlaod any software use
+wget followed by link to software pakckage
+
+--this will move the given folder from current working directory to the new working directory
+the new working directory will be created on the flow
+--->sudo mv apache-maven-3.9.9 /opt/maven
+
+--to extract a package
+tar -xvf apache-maven-3.9.9-bin.tar.gz
+
+
+--to set up environment variables
+       open to nano ~/.bashrc --this opens  the file
+       add the following lines to file
+            export MAVEN_HOME=/opt/maven
+            export PATH=$MAVEN_HOME/bin:$PATH
+       to save lines, ctrl+O and ctrl+x to exit
+       to apply changes
+            enter source ~/.bashrc
+
+
+
+
+
