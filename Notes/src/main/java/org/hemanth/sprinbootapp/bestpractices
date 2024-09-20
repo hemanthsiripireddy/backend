@@ -1,0 +1,44 @@
+-- do not make classes public if not needed or club the classes under one package which
+    interact within package classes. so classes do not need to be public
+--use different logging levels for different environments
+    prod might need only error or warn
+    dev might need info and debug for debugging
+-- use spring profiles to store configuration information for each environment in separate files
+--use appropriate exception handling so client get to know what went wrong instead of throwing
+    generic error
+    or use global exception handling
+--instead of field injection , user contructor or setter injection so it is easy for mocking
+1 proper packaging style
+2 use springboot starters
+3 use proper versions of dependencies
+4 use Lombok
+5 use controller only for routing
+6 use services for business logic
+7 use construction injection for Lombok
+8 use slf4g logging
+9 use meaningful words for classes, methods, variables, and other attributes
+10: bean validation
+11: custom exception handling
+12: use custom response object
+13: use design pattern
+14: use yml instead of properties
+15: encrypt or externalize sensitive information
+16: write E2E unit test case with coverage
+17: avoid null point exception by using Optional
+18: use best practices for all the collection frameworks
+19: use caching @Caching in sprinboot
+20: use pagination
+21:remove unnecessary codes or methods or import statements
+22: use comments
+23: use common code formatting style
+24: use sonar lint
+
+bean validation
+constructor injection instead of autowired, or create allargs construction using annotation
+@ResponseStatu
+while handling exception, we can throw custom exception from catch part, so it's easy for global exception handling
+use design pattersn
+for redundancy, use application.yml file instead of application.properties
+we can create single custom response object for responses
+we externalise or encrypt sensitive information
+

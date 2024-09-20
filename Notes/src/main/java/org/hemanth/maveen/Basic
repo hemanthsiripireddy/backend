@@ -2,3 +2,13 @@
 
 --to run springboot in dubug mode from cmd
 >mvn spring-boot:run -Dspring-boot.run.jvmArguments="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005"
+
+to skip all tests in maveen
+    pom property
+         <skipTests>true</skipTests>
+    you can also toggle skip mode buttion
+    you can append to maveen run command like below
+        mvn clean install site -DskipTests
+to skip unit tests in maveen
+     <skipUTs>true</skipUTs>
+    mvn clean install site -DskipUTs
