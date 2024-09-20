@@ -52,5 +52,18 @@
     capacity reservation
 -- spot instances and spot fleets
 
+--elastic Ip addresses
+    if we associate elastic IP address to Ec2 instance, even after stopping and starting instance,
+    public IP address will be same
+--placement groups
+    cluster
+    spread
+    partition
+
+--Elastic Network Interface
+
+--EC2 hibernate
+    in memory RAM state is preserved
+
 
 

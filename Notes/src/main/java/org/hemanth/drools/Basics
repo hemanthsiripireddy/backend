@@ -12,3 +12,13 @@ activation groups
 --you can set expiration date for any rule
 --you can insert new facts into session by drools rule
     you can get all the facts from the session into java code
+--insertlogical
+    insert a fact into the session
+    existence of the inserted object is tied with the truth of the when-side of the rule
+    if expression on when-side is false, the face is removed
+--fact objects
+--use drools event listeners for debugging
+
+--exits: only one time when is triggered
+--for all- if you want to test a specific expression is valid for all: use for all
+--if you find min or max in the collection, use for all
