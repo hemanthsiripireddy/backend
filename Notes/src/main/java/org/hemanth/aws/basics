@@ -65,5 +65,55 @@
 --EC2 hibernate
     in memory RAM state is preserved
 
+ --EBS elastic block storage
+    when EC2 is created,  one EBS is attached to it automatically, when EC2 is deleted, EBS is also deleted automatically
+    if we manually attach EBS to EC2, if EC2 is deleted, EBS is not deleted automatically
+    EBS snapchat archive
+    recycle bin for EBS snapshot
+    fast snapshot restore
+  --AMI Amazon Machine Image
+  --EC2 instance store: very fast, temporary storage, directly attached EC2 instance hardware
+  --EBS volume types
+    gp2/gp3 -general performance SSD
+    io1/io2- highest performance SSD
+    st1 -HHD
+  --EBS multi attach io1/io2- high performance
+        upto 16 instances at a time
+  --EFS Amazon Elastic File System
+  --ELB elastic Load Balancer
+       AWS has 4 types of managed load balancers
+       classic load balancer v1- 2009, HTTP, HTTPS, TCP, SSL(secure TCP),
+       Application Load Balancer v2-2016, HTTP, HTTPS, WebSocket,
+       Network Load Balancer v2-2017, TCP, TLS, UDP,
+       Gateway Load Balancer 2020 operates at layer  3, IP Protocol
+   --application load balancer
+        routing tables to different target groups
+            routing based on path on URL ex: example.com/user, example.com/post
+            routing based on hostname in URL ex: one.example.com, other.example.com
+            routing based on query string in URL ex: example.com/users?id=10
+         ALB is great fit for microservices and container based applications
+   target group
+   --gateway load balancer
+        if we want filter traffic by passing to firewall, or something, we use gateway load balancer
+        if operates at layer 3 IP protocol
+   --cross zone load balancing vs non-cross zone load balancing
+       CZLB is enabled for ALB by default, no charges for that
+       CZLB is disabled for NLB and GWLB by default, if we enable, charges will apply
+   -- SSL and TLS certificates
+       SNI- server name indication
+       SNI solves loading multiple SSL certificates to one web server(to serve multiple websites)
+   --connection draining
+        time to complete inflight requests while the instance is de registering,
+        stop sending new requests to the instance which is de registering
+   --Auto scaling group
+        dynamic scaling
+        schedule scaling
+        predictive scaling
+        good metrics to scale on
+            CPU utilization
+            request count per target
+            average network in/out
+
+
 
 
