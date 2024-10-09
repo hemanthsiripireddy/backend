@@ -1,0 +1,75 @@
+--to get list of docker containers running
+    docker ps
+--to install docker ima
+    docker run:postgres:9.6
+    docker run -e POSTGRES_PASSWORD=password -d postgres:16.4
+--to get list of docker images
+    docker images
+--to pull  docker image from docker repository
+    docker pull redis
+--to run docker image
+    docker run redis
+    to stop docker, enter ctrl+c
+--to run docker in detached mode
+    docker run -d redis
+docker start containerId
+docker stop containerId
+--to get list of docker containers running or stopped
+    docker ps -a
+--to run docker on host port
+    docker run -p6000:6379 -d redis
+-to remove stopped container
+    docker remove/rm containerID
+--to run docker with name
+    docker run -d -p6001:6379 --name redis-latest redis
+--to open into console of a container
+    >docker exec -it redis-older /bin/bash
+-- to
+docker run -d ^
+-p 27017:27017 ^
+-e MONGO_INITDB_ROOT_USERNAME=admin ^
+-e MONGO_INITDB_ROOT_PASSWORD=password ^
+--name mongodb ^
+--net mongo-network ^
+mongo
+-- to run docker commands from file
+       docker-compose -f docker-compose.yaml up
+-- to stop docker containers or shut down
+     docker-compose -f docker-compose.yaml down
+--to build image from dockerfile
+    docker build -t my-app:1.0 .
+--to login to aws from cmd
+     aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 802819241878.dkr.ecr.us-east-1.amazonaws.com
+--create tag for image to push to aws
+    docker tag my-app:1.0 802819241878.dkr.ecr.us-east-1.amazonaws.com/my-app:1.0
+ --to push image to aws
+    docker push 802819241878.dkr.ecr.us-east-1.amazonaws.com/my-app:1.0
+
+ docker compose file
+    version: '3'
+    services:
+      my-app:
+       image: 802819241878.dkr.ecr.us-east-1.amazonaws.com/my-app:1.1
+       ports:
+       - 3000:3000
+      mongodb:
+        image: mongo
+        ports:
+          - 27017:27017
+        environment:
+          - MONGO_INITDB_ROOT_USERNAME=admin
+          - MONGO_INITDB_ROOT_PASSWORD=password
+        volumes:
+          - mongo-data:/data/db
+      mongo-express:
+        image: mongo-express
+        restart: always # fixes MongoNetworkError when mongodb is not ready when mongo-express starts
+        ports:
+          - 8081:8081
+        environment:
+          - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
+          - ME_CONFIG_MONGODB_ADMINPASSWORD=password
+          - ME_CONFIG_MONGODB_SERVER=mongodb
+    volumes:
+      mongo-data:
+        driver: local

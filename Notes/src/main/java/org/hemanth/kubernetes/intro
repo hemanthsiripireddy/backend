@@ -1,0 +1,10 @@
+ --kubectl get nodes
+    to see  list of pods
+--kubectl create deployment nginx-depl --image=nginx
+    to create deployment
+-- kubectl logs podid
+    to see logs
+--kubectl exec -it mongo-depl-67d7db846c-w5h4w -- bin/bash
+    to enter into terminal of pod
+--kubectl apply -f nginx-deployment.yml
+    to apply commands from file
