@@ -8,3 +8,14 @@
     to enter into terminal of pod
 --kubectl apply -f nginx-deployment.yml
     to apply commands from file
+
+
+ --namespaces
+ --kubectl
+ -minikube
+ -minikube addons enable ingress
+ --ingress
+ --helm
+ -- volumes, persistent storage
+ --statefulness
+
