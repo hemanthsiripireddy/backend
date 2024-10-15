@@ -1,0 +1,28 @@
+Right size and identity boundaries of microservices
+   - domain driven sizing
+   -event storming sizing
+three options to right size and identity boundaries of microservices
+    one
+        savings account and trading account microservice
+        cards and loans microservice
+    two
+        savings account microservice
+        trading account microservice
+        cards microservice
+        loans microservice
+    three
+        savings account microservice
+        trading account microservice
+        debit card microservice
+        credit card microservice
+        home loan microservice
+        vehicle loan microservice
+        personal loan microservice
+strangler fig pattern
+challenges with microservices
+    deployment
+    portability
+    scalability
+linux namespace and control groups for docker
+docker client, docker host/server, docker registry
+
