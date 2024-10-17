@@ -26,3 +26,20 @@ challenges with microservices
 linux namespace and control groups for docker
 docker client, docker host/server, docker registry
 
+three ways to build docker images
+    -docker file
+    -buildpacks
+    -google jip
+to run jar file using java command
+     java -jar target/accounts-0.0.1-SNAPSHOT.jar
+
+docker commands
+    docker build . -t hemanthsiripireddy/accounts:s4
+    docker inspect image imageId
+    docker run -d -p 8080:8080 hemanthsiripireddy/accounts:s4
+     mvn spring-boot:build-image
+      mvn compile jib:dockerBuild
+       docker image push docker.io/hemanthsiripireddy/cards:s4
+       docker compose up -d
+       docker compose down
+
