@@ -1,0 +1,29 @@
+to run jenkins locally using docker
+docker run -p 8080:8080 -p 49259:50000 -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts-jdk11
+
+92b43ffab4444c61801f789e9fc0a4f8
+
+docker exec -it -u root e5a8f003fdcf /bin/bash
+
+apt-get update
+
+apt-get intall maven
+----------------------------------------------------------------
+to install maveen from online in jenkins container
+
+# 1. Download Maven 3.9.2 from the official Apache website
+wget https://dlcdn.apache.org/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz
+
+# 2. Extract the archive
+tar xzvf apache-maven-3.9.9-bin.tar.gz -C /opt
+
+# 3. Set up a symbolic link (optional) for easier Maven access
+ln -s /opt/apache-maven-3.9.9 /opt/maven
+
+# 4. Add Maven to the system PATH
+export M2_HOME=/opt/maven
+export PATH=$M2_HOME/bin:$PATH
+
+# 5. Verify Maven installation
+mvn --version
+---------------------------------------------------------------------
