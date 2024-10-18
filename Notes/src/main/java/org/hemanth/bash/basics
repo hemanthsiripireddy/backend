@@ -1,0 +1,71 @@
+pwd
+vim testfile.txt
+vim shelltest.sh
+./shelltest.sh
+bash shelltest.sh
+chmod u+x shelltest.sh
+read FIRST_NAME
+echo hello world > hello.txt
+echo good day to you >> hello.txt
+wc -w << hello.txt
+----------------------------------------------------------------
+#! /bin/bash
+
+if [ ${1,,} = hemanth ]; then
+        echo "hey welcome, you are loggedin"
+elif [ ${1,,} = help ]; then
+        echo "just enter you username"
+else
+        echo "i don't know who you are"
+fi
+----------------------------------------------------------------
+#! /bin/bash
+
+case ${1,,} in
+        hemanthsiripireddy | admin)
+                echo "welcom boss, you are logged in successfully"
+                ;;
+        help)
+                echo "please enter your usename"
+                ;;
+        *)      echo "your are not the owner of this account, or you have entered wrong username, please enter valid username"
+esac
+-------------------------------------------------------------
+LIST=(one two theree four five)
+echo $LIST
+echo ${LIST[@]}
+echo ${LIST[1]}
+----------------------------------------------------------------
+ for item in ${LIST[@]}; do echo -n $item | wc -c; done
+ ------------------------------------------------------------------
+ #! /bin/bash
+
+ showuptime(){
+         up=$(uptime -p | cut -c4-)
+         since=$(uptime -s)
+         cat << EOF
+ ----
+ This machine has been up for ${up}
+ It has be running since ${since}
+ ----
+ EOF
+ }
+ showuptime
+ ----------------------------------------------------------------------
+
+#! /bin/bash
+
+ showuptime(){
+         echo hello $1
+         if [ ${1,,} = hemanthsiripireddy ]; then
+            return 0
+         else
+            return 1
+         fi
+
+
+ }
+ showuptime $1
+ if [ $? = 1 ]; then
+    echo "someone else called the function"
+ fi
