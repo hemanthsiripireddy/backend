@@ -1,0 +1,18 @@
+separation of configs / properties
+inject configs / properties
+matina configs / properties
+- in springboot , there are multiple approaches to reading properties
+    using @Annotation
+    using Environment
+    using configurationProperties
+how to externalize configuration
+    using profiles
+    using command line arguments
+    using JVM arguments
+    using Environment variables
+command line arguments
+    --spring.profiles.active=prod --build.version=1.2
+JVM arguments
+    -Dspring.profiles.active=prod -Dbuild.version=1.3
+Environment variables
+    SPRING_PROFILES_ACTIVE=prod;BUILD_VERSION=1.4

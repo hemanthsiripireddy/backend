@@ -42,4 +42,43 @@ docker commands
        docker image push docker.io/hemanthsiripireddy/cards:s4
        docker compose up -d
        docker compose down
+cloud native applications
+    important characteristics of cloud native applications
+        microservices
+        scalability and  elasticity
+        containers
+        Devops Practices
+        Resilience and fault tolerance
+        cloud native services
+cloud native application vs traditional enterprise applications
+predictable behavior | un predictable behavior
+OS abstraction | OS dependent
+Right sized capacity and independent  | oversized capacity and dependent
+continuous delivery vs waterfall development
+rapid recovery and automated scaling | slow recovery
+12 and 15 factor methodology
+    1 once code base, one application
+    2 API First
+    3 Dependency Management
+    4 Design, build, release,run
+    5 Configuration, credential and code
+    6 logs - logs aggregation
+    7  Disposability - application is easily started and destroyed
+    8 backing services like FTP, SMTP, Database, Messaging are plugged and unplugged, can choose among different techonologies
+        no need to build docker image again if say database is changed from mysql to postgres sql
+    9 Environment parity
+        aims to minimize differences between various environments
+        time gap, people gap ie collaboration with operations devops
+        tools gaps, should be same tool across environments
+    10 Administrative tasks
+        management tasks to support application, such as database migration, batch jobs, maintenance tasks should be
+        treated as isolated processes
+    11 port biding
+        applications should be self contained, should expose their services through port binding
+    12 stateless processes
+    13: concurrency
+    14: telemetry : observability and  monitoring
+    15:  authentication and authorization
+
+
 
