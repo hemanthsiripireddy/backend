@@ -113,6 +113,20 @@
             CPU utilization
             request count per target
             average network in/out
+--rds
+    read replica
+    multi AZ or stand by
+    RDS Custom
+    features of aurora
+        automatic failover
+        backtrack
+    restore vs cloning vs snapshot, backup
+    rds proxy
+        fully managed database proxy for RDS
+        allows to poll and share DB connections established with the database
+    Amazon Elasticache
+        using Elasticache involves heavy code change in application code
+        Redis vs Memcached
 
 
 
