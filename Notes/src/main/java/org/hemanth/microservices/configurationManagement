@@ -16,3 +16,12 @@ JVM arguments
     -Dspring.profiles.active=prod -Dbuild.version=1.3
 Environment variables
     SPRING_PROFILES_ACTIVE=prod;BUILD_VERSION=1.4
+
+storing config files in different locations
+    in classpath
+    in file system
+    from github
+
+refreshing config files in dynamically without restarting microservice, by calling refresh endpoint
+refreshing using bus/messaging queue, one refresh call in enough to refresh all microservices
+using webhook, even sing refresh is not required, one files updated in git, automatically microservices get refreshed
