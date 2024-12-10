@@ -1,0 +1,31 @@
+single entry point for all microservices
+single place for logging, auditing, and security
+dynamic routing,
+API Gateway or Edge server:
+    Request validation,
+    include and exclude list
+    Authentication and authorization
+    Rate limits
+    Dynamic routing
+    Service Discovery
+    modify req/res
+    protocol conversion
+    exception handling
+    circuit breaker
+    logging monitoring, caching
+Spring cloud Gateway
+    Gateway handler mapping using routing configs
+    Predicates-to check if requests fulfill set of conditions
+    pre filter, post filter
+
+
+
+design patterns
+    gateway routing pattern
+        routes incoming client requests to appropriate backend microservices based on URL, headers, request parameters
+    gateway offloading pattern
+        offload certain cross cutting concerns  such as security, caching, ratelimiting, monitoring from individual
+        microservices to the gateway, this pattern centralizes and simply these concerns
+    backend for frontend pattern
+        separate gateway is created for each client type like web, mobile, tablet
+    gateway aggregator pattern

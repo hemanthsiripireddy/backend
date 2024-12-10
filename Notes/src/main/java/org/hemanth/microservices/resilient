@@ -1,0 +1,6 @@
+--to run load testing on a endpoint
+ab -n 10 -c 2 -v 3 http://localhost:8072/eazybank/cards/api/contact-info
+--to run redis docker container
+    docker run -p 6379:6379 --name eazyredis -d redis
+
+--bulk head pattern

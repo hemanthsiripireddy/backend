@@ -1,0 +1,18 @@
+route 53
+public vs private hosted zones
+Time to live (TTL)
+routing policy
+    simple,
+    weighted,
+    latency,
+    fail over,
+    geolocation,
+    Geoproximity,
+    IP based,
+    multi value,
+health checks
+DNS record types
+ A
+ AAAA
+ CNAME,
+ Alias

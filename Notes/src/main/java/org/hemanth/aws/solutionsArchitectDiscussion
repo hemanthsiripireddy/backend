@@ -1,0 +1,23 @@
+public vs private IP and EC2 instances
+Elastic IP vs Route 53 vs  Load Balancer
+Route 53 vs A records vs Alias Records
+Maintaining EC2 instances manually vs auto scaling groups
+Multi AZ to survive disasters
+ELB health checks
+Security group rules
+Reservation of capacity for cost savings
+
+ELB sticky sessions
+Web clients for storing cookies
+Elastic Cache
+    for caching data,
+    multi AZ
+RDS
+    for storing user data
+    Read replicas for scaling reads
+    Multi AZ    for disaster recovery
+
+EBS vs EFS
+
+
+Golden AMI

@@ -1,0 +1,37 @@
+s3 is key value pair
+S3 versioning
+S3 bucket policy
+S3 Replication
+S3 Storage classes
+S3 lifecycle, transition and expiration actions
+s3 Requester pays
+S3 event notificatons to SQS, SNS, lambda
+S3 performance 3000 writes per second, 5000 reads per second
+Se batch operations
+
+
+-s3 encryption
+    server side encryption
+        SSE=S3
+        SSE-KMS
+        SSE-C
+    client side encryption
+    encryption in transit (SSL/TLS)
+
+
+default encryption vs bucket policy
+    in bucket policy, define force encryption, if there is not encryption header, that put request is rejected
+
+S3 CORS
+S3 MFA Delete
+S3 access logs
+pre signed URL
+Glacier volt lock and s3 object lock
+s3 object lock
+    retention mode-compliance
+    retentation mode-governance
+    retention period
+    legal hold
+S3 access points
+3 Object lambda
+    
