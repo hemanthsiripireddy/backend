@@ -1,0 +1,29 @@
+snow portable devices are used for data migration
+--types
+    snowcone
+    snowball
+    snowmobile
+
+--Fsx
+    FSx for lustre
+    FSx for windows File server
+    FSx for NETAPP ONTAP
+--AWS Storage Cloud native options
+    --block
+        AWS EBS
+        EC2 instance store
+    --file
+        Amazon EFS
+        Amazon FSx
+    --object
+        Amazon S3
+        Amazon Glacier
+
+
+AWS Storage Gateway
+    S3 file gateway
+    FSx File gateway
+    Volume Gateway
+    Tape Gateway
+AWS transfer family
+AWS Datasync
