@@ -1,0 +1,27 @@
+synchronous communication vs asynchronous communication
+    SQS- queue model
+    SNS - pub/sub model
+    Kinesis - real time streaming model
+    Amazon MQ
+        RabbitMQ
+        ActiveMQ
+        
+SQS- queue model
+    producer, consumer
+    retention 4 days, max 14 days
+    consumer poll SQS for messages
+    security
+        encrption
+        Access controls
+        SQS access policies
+    message visibility timeout
+    Long polling
+    SQS-FIFO- first in first out
+    SQS + auto scaling
+SNS- simple notification service
+    SNS +SQS fan out pattern
+Kinesis
+    Kinesis data streams
+    Kinesis data  firehouse
+    Kinesis data Analytics
+    Kinesis Video stream

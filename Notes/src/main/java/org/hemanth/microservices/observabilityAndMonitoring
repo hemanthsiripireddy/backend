@@ -1,0 +1,2 @@
+ logging, metrics, traces
+ grafana, loki, promtail

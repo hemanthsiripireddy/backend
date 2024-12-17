@@ -1,0 +1,12 @@
+ mkdir -p /tmp/asia/india/bangalore
+to remove directory
+    rm -r /temp/my_dir1
+copy directory
+    cp -r dir /tmp/my_dir
+to create a empty file
+    touch new_file.txt
+to write to file
+    cat> new_file.txt, enter ctrl+D to exit
+to read from file
+    cat new_file.txt
+    
