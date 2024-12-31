@@ -1,0 +1,10 @@
+--ECSn- elastic container service
+--fargate
+--ECR image repository -elastic container registry
+--EKS - elastic kubernetes service
+--ECS
+    ECS cluster
+        Services
+            Tasks
+AWS APP Runner
+    easy to use without much infastructure knowledge
