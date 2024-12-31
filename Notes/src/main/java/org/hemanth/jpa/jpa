@@ -1,0 +1,18 @@
+springboot jdbc provides JDBCTemplate to remove all boilerplate code
+
+--------first level cache----------
+EntityManager
+PersistenceContext
+DispacterServlet
+first level caching
+JPARepository
+
+for each HTTP Request, a new EntityManager will be created, a persistent context is created
+-------second level cache------------------
+there dependencies needed in pom.xml, they are ehcache, hibernate-jcache, javax.cache:cache-api
+cache implementators are ecache, Caffeine, Hazelcast
+JCache is interface
+four concurrency levels are read_only, read_write , inconsistent_read_write,transactional
+
+spring.jpa.hibernate.ddl.auto:
+    none, update, validate, create, create-drop
