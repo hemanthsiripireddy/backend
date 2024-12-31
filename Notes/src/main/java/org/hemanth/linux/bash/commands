@@ -9,4 +9,62 @@ to write to file
     cat> new_file.txt, enter ctrl+D to exit
 to read from file
     cat new_file.txt
-    
+to move file
+    mv oldpath newpath
+to remove a file
+    rem filename
+to see current logged in user
+    whoami
+to get the current logged in user ID
+    id
+to switch user to ansible
+    su ansible
+to login to remote server
+ ssg name@132.234.3.4
+normals user don't have access root, to acces root we need to use sudo
+    sudo ls /root
+
+to download a file
+    wget or curl
+    wget url -o filename
+package management
+    to install packages
+        yum install packagename or rpm -i packagename.rpm
+    YUM
+    RPM
+    to query a package
+       rpm -q packagename
+    how to install maven using yum
+        sudo yum install maven
+    how to remove maven using yum
+        sudo yum remove maven
+services
+    to start a service
+        service httpd start --old way httpd is webserver
+        systemctl start httpd  --new way
+    to stop a service
+        systemctl stop httpd
+    to see status of  a service
+        systemctl status httpd
+    to make an application  a service create a file  with name.service under /etc/systemmd/system
+    to automatically start a service when rebotted
+        systemctl enable httpd
+
+to extract zip file
+ tar -xzf zipfile
+build tools of java
+    maven
+    ANT
+    gradle
+to document java class
+    javadoc -d doc MyClass.java
+
+Node
+    NPM
+for ubuntu/debain, use sudo apt install
+
+python
+ to run python file
+    python app.py
+ TO install multiple python packages where in txt file
+    pip install -r name.txt
