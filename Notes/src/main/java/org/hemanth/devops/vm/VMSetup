@@ -1,0 +1,10 @@
+vagrant init eurolinux-vagrant/centos-stream-9 --box-version 9.0.48
+--vagrant up
+--vagrant halt
+--vagrant box list
+--vagrant status
+--vagrant ssh
+sudo -i to switch to root user
+--vagrant reload
+--vagrant destroy
+--vagrant global-status
