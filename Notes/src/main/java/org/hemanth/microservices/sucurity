@@ -1,0 +1,7 @@
+client credentails granttype flow
+firewall protects all microservices from external world
+to start keycloak as container
+    docker run -d -p 7080:8080 -e KC_BOOTSTRAP_ADMIN_USERNAME=admin -e KC_BOOTSTRAP_ADMIN_PASSWORD=admin quay.io/keycloak/keycloak:26.1.0 start-dev
+types of grant flows
+    client credentails granttype flow
+    authorization granttype flow: when enduser is involved
