@@ -1,2 +1,7 @@
  logging, metrics, traces
- grafana, loki, promtail
+ grafana, loki, promtail, prometues
+ promtail is replaced by alloy
+micrometer
+
+tracing
+    tags/metadata, span id, trace id
