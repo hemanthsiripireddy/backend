@@ -1,3 +1,11 @@
+--topics
+    commands --syntax
+    files -- understanding, editing, filtering, security
+    software management
+    servers management
+
+
+
 pwd
 vim testfile.txt
 vim shelltest.sh
