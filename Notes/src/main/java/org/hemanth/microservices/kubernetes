@@ -1,0 +1,32 @@
+--automating deployements, rollouts, and rollbacks
+--making sure services are self healing
+--auto scaling
+minikube
+
+kubectl config get-contexts
+kubectl config use-context docker-desktop
+kubectl get nodes
+master node and worker node
+master node: kube API server , controller manager, scheduler, etcd
+worker node: kubelet, pod, kube-proxy, container run-time (docker)
+choco install kubernetes-helm
+helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
+helm upgrade --install kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard --create-namespace --namespace kubernetes-dashboard
+ kubectl -n kubernetes-dashboard port-forward svc/kubernetes-dashboard-kong-proxy 8443:443
+ --to create a empty file
+    echo. >dashboard-adminuser.yaml
+kubectl deployments
+kubectl services
+kubectl replicaset
+kubectl delete pod pod-name
+kubectl scale deployment accounts-deployment --replicas=1
+kubectl get events --sort-by=.metadata.creationTimestamp
+kubectl set image deployment gatewayserver-deployment gatewayserver=hemanthsiripireddy/gatewayserver:s11 --record
+kubectl rollout history deployment gatewayserver-deployment
+kubectl rollout undo deployment gatewayserver-deployment --to-revision=1
+kubernetes service types:
+    cluster Ip service
+    nodeport service
+    loadbalancer service
+kubectl delete -f 1_keycloak.yml
+
