@@ -1,0 +1,31 @@
+-event driven models
+    pub/sub model : rabbit MQ
+    Event streaming model: Kafka
+--spring cloud function
+    supplier
+    function
+    consumer
+--spring cloud stream
+--destination bindings
+--destination binders
+
+--to check if rabbitq is present and it's status
+    sc query RABBITMQ
+--to stop rabbitmq
+    sc stop RABBITMQ
+
+--to start rabbitmq
+        sc start RABBITMQ
+
+Kafka vs RABBITMQ
+    --kafka is distributed event streaming platform, while rabbitmq is message broker
+    --data retention: kafka stores data on disk, rabbitmq stores data in memory
+    --performance: kafka is generally faster
+    --scalability: kafka is highly scalable
+--kafka
+    producers
+    kafka cluster
+    broker, topic, partition
+    offset
+    consumer
+    replication,consumer groups, streams
