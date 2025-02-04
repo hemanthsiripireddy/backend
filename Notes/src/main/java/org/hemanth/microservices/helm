@@ -1,0 +1,41 @@
+package manager for kubernetes
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm install happy-panda bitnami/wordpress
+helm env
+>helm uninstall happy-panda
+helm create eazybank-common
+
+
+
+
+
+
+
+
+
+
+
+
+
+--ui
+helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
+helm upgrade --install kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard --create-namespace --namespace kubernetes-dashboard
+if above doesn't work use below
+helm upgrade --install kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard --create-namespace --namespace kubernetes-dashboard --set kong.admin.tls.enabled=false
+kubectl -n kubernetes-dashboard port-forward svc/kubernetes-dashboard-kong-proxy 8443:443
+
+
+helm dependencies build
+heml template .
+
+helm install keycloak keycloak
+>kubectl get pvc
+kubectl delete pvc data-happy-panda-mariadb-0
+
+helm dependencies build
+helm ls
+helm install keycloak keycloak
+helm uninstall keycloak
+helm upgrade
+helm history
+helm rollback accounts 1
