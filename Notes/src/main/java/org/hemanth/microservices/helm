@@ -39,3 +39,7 @@ helm uninstall keycloak
 helm upgrade
 helm history
 helm rollback accounts 1
+
+docker exec -it k8s_reports_mssapi-79f95588f8-cf9h5_default_1ed8369c-4884-4014-94a2-f8399599e5da_0 /bin/sh
+
+mvn clean install -P docker
