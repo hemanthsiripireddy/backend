@@ -1,0 +1,19 @@
+single entry point
+TLS/SSL termination
+path based routing
+host based routing
+load balancing
+types of traffic handled by ingress controller
+    ingress traffic
+    egress traffic
+    north-south traffic
+service mesh
+    service discovery
+    load balancing
+    circuit breaking
+    fault tolerance
+    metrics and tracing
+    security
+    data plane
+    control plane
+side car

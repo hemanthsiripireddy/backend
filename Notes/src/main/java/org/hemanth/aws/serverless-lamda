@@ -1,0 +1,11 @@
+lamda-limits
+lambda concurrency
+lamda snapshot
+cloud front function and lambda@Edge
+lambda in VPC(virtual private cloud)
+
+dynamoDB: read/write capacity modes - provisioned Mode(default) vs on demand mode
+API Gateway
+step functions
+DAX-dynamo DB accelarator
+Amazon Cognito
