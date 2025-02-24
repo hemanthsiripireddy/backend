@@ -1,3 +1,12 @@
+centos commands
+to switch to root user
+    sudo -i
+to move root directory
+    cd /
+to move to root user home directory
+    cd
+
+
  mkdir -p /tmp/asia/india/bangalore
 to remove directory
     rm -r /temp/my_dir1
@@ -23,7 +32,12 @@ to login to remote server
  ssg name@132.234.3.4
 normals user don't have access root, to acces root we need to use sudo
     sudo ls /root
-
+to remove everything from current directory
+     rm -r *
+to move all text files from one to another directory
+    mv *.txt dir/
+to see all commands types
+ history
 to download a file
     wget or curl
     wget url -o filename
@@ -69,5 +83,61 @@ python
  TO install multiple python packages where in txt file
     pip install -r name.txt
 
+--vim editor
+to download vim in centos
+    sudo yum install vim -y
+to create and edit file
+    vim filename.txt
+vim has three modes
+    command mode
+    insert mode (edit mode)
+    extended command mode
+    enter i to enter insert mode
+    enter esc to enter extended command mode
+    :q to exit
+    :w to save
+    :wq to save and exit
+    :q! to forcefully exit
+vim editor commands
+    U - to undo the  previous changes
+    ctrl + R to redo the changes
+    yy - to copy a line
+    nyy -to copy lines(5yy or 4 yy)
+    p - to paste live below cursor position
+    P- to paste the line above cursor position
+    dd- to delete entire line
+    ndd - to delete n number of lines from cursor position(5dd)
+    /- to search a word in the file
+    gg - to go first line vim editor
+    G to go first line
 
+
+file filename - to see what type of it is
+ls -l   -> it lists more details of all files
+ls -lt to list files by time stamp
+ls -ltr to list files by revers time stamp
+ln is "path to file" cmds, creates short link for the file
+unlink cmds, unlins the shortcut
+
+grep clouD cloudfile.txt - > finds clouD in the file, displays all lines which has that word
+grep -i clouD cloudfile.txt-> if we mention -i, it displays case insensitive words
+grep -i clouD *
+grep -iR clouD * -> if we mention -R, it check all folders recursively
+grep -R SELINUX /etc/*
+grep -vi cloud cloudfile.txt -> if we mention -vi, it displays all lines which doesn't have that wor'
+less filename -> less and more are like cat, but they are readers, mean they display only line that page,
+with down arrow -we can scroll
+more filename
+head filename
+head -2 filename
+tial filename
+tail -2 filename
+tail -f filename -> print tail of words and waits to see if any new words are coming to the file
+cut -d: -f4 /etc/passwd-> in each it separates words by ':', gives the words on specific column
+awk -F':' '{print $1}' /etc/passwd -> same as above command
+%s/originalworld/replaceword
+%s/originalworld/replaceword/g -> in extended mode in vim editor, to replace word globally mean: if two words
+        present in a single, it will replace both, it we don't mention g, it will replace only one word in  a line
+sed 's/covid19/coronavirus/g' pandemic.txt -> this will output after replaceword, doesn't save it
+sed -i 's/covid19/coronavirus/g' pandemic.txt -> to replace covid19 with coronavirus
 
