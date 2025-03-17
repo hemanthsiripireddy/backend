@@ -1,0 +1,16 @@
+Database Types:
+    RDMS: RDS, Aurora
+    NoSQL Database: Dynamo DB(JSON), Elastic cache(key value pair), neptune(graphs), document db(mongodb), keyspace(apache cassandra)
+    Object store: S3 (for large objects), Glacier(backups,archives)
+    Data warehouse(SQL Analytics/BI): RedShift,Athena, EMR
+    Search: OpenSearch(JSON)
+    Graphs: Amazon Neptune (displays relationships between data)
+    Ledger: Amazon quantum Ledger database
+    Time Series:  Amazon timestream
+Aurora: separate computer and storage
+Dynamo DB: key value pair where as document db which is built on top of mongodb is document model
+Neptune: graph database
+QLDB: quantum ledger database
+    ledger is a book recording financial transactions
+    immutable: no entry can be removed or modified, cryptografically verified
+    Amazon managed block chain is decentralized whereas QLDB is centralized
