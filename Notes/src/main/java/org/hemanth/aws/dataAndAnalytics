@@ -1,0 +1,57 @@
+Athena:
+    Serverless query service to analyze data stored in Amazon S3
+    Supports CSV, JSON, ORC, Avro, Parquet
+    use cases: Business Intelligence, analytics, reporting,etc
+Amazon Athena-Federated query
+    allows to run SQL query across data stored in relation, non-relational, documentdb, mongodb,s3
+    uses data connectors that run on aws lamda to run federated queries
+RedShift:
+    RedShift is based on PostgresSQL, but it's not used for OLTP(online transaction processing)
+    It's OLAP- online analytics processing
+    columnar storage of data (instead of row based),parallel query engine
+    two modes: provisioned, serverless
+    BI tools: Amamzon quicksight, Tableau integrate
+    Redshift cluster:
+        Leader Node: for query planning, results aggregation,
+        compute node: performing the query, send results to leader
+    Redshift cluster- snapshots
+        snapshots are point in time backups for cluster stored in S3
+    Amazon Kinesis Data firehouse: used to load data into Redshift
+    Redshift spectrum: query data that is already in s3 without loading
+OpenSearch service:
+    in dynamo db, queries exist only based on primary key or index,
+    with opensearch, we can search any field, with partial match
+    does not natively support sql, can be enabled with plugin
+    Ingestion from Kinesis data firehouse, Amazon IOT, Cloud watch logs
+Amazon EMR
+    EMR stand for Elastic MapReduce
+    EMR helps creating Hadoop clusters(Big data) to analyze and process vast amount of data
+    The clusters are made of hundreds of EC2 instances
+    EMR comes with bundled with Apache spark, HBase, Presto, Flink,
+    EMR takes care of all provisioning and configuration
+    Use cases: data processing, machine learning, web indexing, big data
+
+Amazon QuickSight:
+    Serverless machine learning-powered business intelligence service to create  interactive dashboards
+    Use cases: Business Analytics, Building Visualizations, get business insights using data
+Amazon Glue:
+    Managed Extract, transform, and load (ETl) service
+    useful to prepare and transform data for analytics
+    fully serverless service
+    covert data from csv from paraquet s3(csv) -> glue-> s3(paraquet)
+AWS Lake formation:
+    Data lake: Central place to have all your data for analytics purpose
+    Fully managed service that makes it easy to setup a data lake  in days
+Amazon managed service for apache flink:
+    Flink(java, Scala, SQL) is a framework for processing data streams
+    data comes to flink from Kineses data streams, apache kafka
+Big data Ingestion Pipeline discussion
+    IOT core allows to harvest data from IOT devices
+    Kinesis is great for real data collection
+    Firehouse help with data delivery to S3 in near real time
+    Lambda can help firehouse with data transformations
+    Amamzon s3 can trigger notifications to SQS
+    Athena is serverless SQL service and results are stored in S3
+    The reporting bucket contains analysed data, can be used by reporting tool  such as AWS QUICK Sight, Redshift
+
+
