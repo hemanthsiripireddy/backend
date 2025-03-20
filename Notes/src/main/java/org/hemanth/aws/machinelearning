@@ -1,0 +1,46 @@
+Amazon Rekognition
+    find objects, videos, text, scenes in images and videos using ML
+    content moderation:
+        detect content that is inappropriate, unwanted or offensive
+Amazon transcribe
+    automatically convert speech to text
+Amazon Polly
+    turn text into speech using deep learning
+    SSML - Synthesis markup language
+Amazon translate
+    natural and accurate translator
+Amazon Lex and Connect
+    Lex: same technology that powers  Alexa
+        ASR to convert speech to text
+        Natural language Understanding to recognize the intent of texts and calls
+        helps build chatbots, call center bots
+    Connect:
+        Receive calls, create contact flows, cloud based virtual contact center
+        can integrate with other CRM systems or AWS
+        phone call/schedule an appointment->call->[connect]->stream->[Lex(intent recognized)]->invoke->[lambda]->schedule->[CRM]
+Amazon comprehend
+    for natural language processing
+    fully managed and serverless service
+    uses Machine learning to find insights  and relationships in texts
+    sample use cases
+        analyze customer interactions(emails) to find what leads to positive or negative experience
+Amazon comprehend medical
+    Amazon comprehend medical detects and returns useful information in unstructured clinical text
+        physician notes, discharge summaries
+Amazon SageMaker
+    Fully managed service for developers/data scientists to build ML models
+    Machine learning process: simplified: predicting exam score
+Amazon Kendra
+    Fully managed document search service powered by machine learning
+    Extract answers from within a document (pdf,html, MS word, PPT,etc)
+    natural language search capabilities
+    learn from user interactions/feedback to promote preferred results (incremental learning)
+Amazon personalize:
+    Fully managed ML- service to build apps with real time personalized recommendations
+    ex: personalized product recommendations
+    same technology used by amazon.com
+    implement in days, not months (you don't need to build, train, deploy ML solutions)
+Amazon Textract:
+    Automatically extracts text, handwriting, and data from any scanned documents using AI and ML
+
+
