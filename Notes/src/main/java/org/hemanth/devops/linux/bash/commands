@@ -118,7 +118,6 @@ ls -lt to list files by time stamp
 ls -ltr to list files by revers time stamp
 ln is "path to file" cmds, creates short link for the file
 unlink cmds, unlins the shortcut
-
 grep clouD cloudfile.txt - > finds clouD in the file, displays all lines which has that word
 grep -i clouD cloudfile.txt-> if we mention -i, it displays case insensitive words
 grep -i clouD *
@@ -139,5 +138,35 @@ awk -F':' '{print $1}' /etc/passwd -> same as above command
 %s/originalworld/replaceword/g -> in extended mode in vim editor, to replace word globally mean: if two words
         present in a single, it will replace both, it we don't mention g, it will replace only one word in  a line
 sed 's/covid19/coronavirus/g' pandemic.txt -> this will output after replaceword, doesn't save it
-sed -i 's/covid19/coronavirus/g' pandemic.txt -> to replace covid19 with coronavirus
+sed -i 's/covid19/coronavirus/g' pandemic.txt -free -m
+if we wnat to send the output of a command to a file
+    ls -l > /tmp/sysinfo.txt
+if we give >>, this appends output to the file,
+if we >, this will overwrite the output
+free -m
+pipe, | is used to pass the output of a command as input to another command
+ ls | wc -l
+ls | grep host
+tail /var/log/messages | grep -i vagrant\
+------------users and groups
+--types of users
+    root
+    regular
+    service
+useradd useranme -> to add a user
+groupadd groupname -> to create/add a group
+usermod -aG groupname username -> to add users to group
+passwd username-> to set a password to the user
+su - username -> to switch to that user
+id username -> displays user details
+lsof -u username -> displays all files/commands entered by that user
+userdel -r username -> to delete a user along with home directory
+groupdel groupname -> to delete a group
 
+--user permissions
+    u,g, and o, u for user, g for group, o for other
+    +, - => + for grant, - for revoke
+    r,w,x => r for read mean you ls to that dir, w for write -> you can create, update dir/file
+              x for execurtion-> you cd to that dir
+   chmod o-r /opt/devopsdir-> for others revoke read access
+   chown -R ansible:devops /opt/devopsdir -> to change owner and group of a folder, -R indicates recursively 
