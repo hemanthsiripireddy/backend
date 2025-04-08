@@ -1,0 +1,113 @@
+AWS cloud watch metrics
+    Metric is a variable to monitor (CPU utilization, network)
+    metrics belongs to namespace
+    dimension is an attribute of a metric (instance id, environment, etc)
+    upto 30 dimensions per metric
+    we can stream cloud watch metrics to Amazon Kinesis data firehouse(and then to it's destination like S3, Amazon redshift, opensearch, )
+    to third party provider: datadog, new Relic, Splunk, sumo logic
+AWS Cloud watch logs:
+    log groups: arbitrary name, usually representing an application,
+    log stream: instances  within application/log files/ containers
+    can define expiration policies (never expire, 1 day to 10 years)
+    Cloud watch logs can send logs to:
+        S3,
+        Kineses data streams,
+        Kinesis data firehouse,
+        AWS Lambda,
+        Open Search
+    Cloud watch logs - sources:
+        SDK, Cloud watch log agent, cloud watch agent, cloud watch unified agent
+        Elastic Bean: Collection of logs from application
+        ECS: collection of logs from containers
+        etc
+    Cloud watch logs insights:
+        Search and analyse  log data stored in Cloud Watch logs
+          ex:  find a specific IP inside a log, count occurrences of ERROR
+        provides purpose-built query language,
+        can query multiple log groups in different AWS accounts
+        it's query language, not real time engine
+    live tail
+cloud watch alarms:
+    alarms can be created based on cloud watch logs metrics filters
+    composite alarms: monitoring state of multiple other alarms
+    using AND and OR conditions
+Amazon Event Bridge (formerly Amazon Cloud watch events)
+    Schedule: cron jobs(scheduled scripts)
+    Event Pattern: Event rules to react to a service doing something
+    sources:
+        EC2 instance: start instance
+        code build: failed build
+        S3 event: upload object
+    destinations:
+        compute: lambda, AWS batch, ECS task
+        Integration: SQS, SNS, Kineses data streams,
+        Orchestration: Step functions, Code pipiline, Code build
+        Maintenance: SSM,EC2 Actions
+    Event bridge: schema registry
+        Event bridge can analyse the events in the bus and infer the schema,
+        the schema registry allows you to generate code for your application, that will know in advance how data is structured in the event bus
+    resource based policy:
+        manage permissions for specific bus
+AWS cloud trail:
+    provides governance, compliance, and audit for your AWS account,
+    cloud trails are enabled by default
+    get history of events/api calls made within your AWS account by
+        CLI,
+        AWS console
+        SDK
+        AWS Services
+    can put logs from cloud trail into cloud watch logs or s3
+    if a resource is deleted in AWS, investigate in cloud trail first
+    Cloud trail events
+        Management events
+            operations that are performed on resources in your AWS account
+            by default, trails are configured to log management logs
+        data events
+            by default, they are not logged because of high volume
+        cloud trail insights events:
+            to detect unusual activity in your account
+                inaccurate resource provisioning
+                hitting service limits
+                bursts of AWS IAM actions
+            continuously analyzes write events to detect unusual patterns
+    Retention:
+        Events are stored for 90 days in cloud trail
+        to keep events beyond this period, log them to S3
+AWS Config:
+    Helps with auditing and recording compliance of your AWS resources
+    Helps record configurations and changes over time
+    you can receive alerts (SNS notifications) for any changes
+    AWS config is per region service
+    Possibility of storing the configuration data into S3(analysed by athena)
+    Config rules:
+        Can use AWS managed config rules (over 75)
+        can make custom config rules (must be defined in AWS lambda)
+            evaluate if EBS disk is of type gp2
+            evaluate if EC2 instance is t2.micro
+        rules can be evaluated or triggered
+            for each config change
+            at regular time intervals
+        AWS config rules doesn't prevent actions from happening
+    config rules - remediations
+        automate remediation of non-compliant resources using SSM automation documents
+
+cloud watch vs cloud trail vs config
+    cloud watch:
+        performance monitoring(metrics, cpu, network) and dashboards
+        events and alerting
+        log aggregation and analysis
+    cloud trail
+        record api calls made within your account by everyone
+    config
+        record configuration changes
+        evaluate resources against compliance rules
+    example for elastic load balancer:
+        cloud watch
+            monitoring incoming connections metric
+            visualize error codes as a %
+        config
+            track security group rules for load balancer
+            track configuration changes for load balancer
+        cloud trail
+            track who made any changes to the load balancer with api calls
+
