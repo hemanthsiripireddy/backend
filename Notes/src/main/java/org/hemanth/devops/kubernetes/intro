@@ -1,3 +1,79 @@
+Cluster, Nodes, Pods
+Master Node and worker Node
+Components:
+    API Server:
+    etcd: key value pair stored in distributed system
+    scheduler
+    controller
+    Container runtime
+    kubelet
+Container runtime interface (CRI)
+    Open container initiative - (OCI)
+        imagespec
+        runtimespec
+
+CLIs
+    ctr - from containerd, for debugging
+    nerdctl - from containerd, for general purpose
+    crictl- from kuberntes, for debugging
+
+Pods and multi-container pods
+Few important elements in kubernetes files are
+    apiVersion, kind, metadata, spec
+    apiVersion and kind are strings, metadata, spec are dictionaries, '-' indicates list in kubernetes files
+
+Replica controller and Replica Set
+    kubectl create -f filename.yaml
+    kubectl get replicaset
+    kubectl delete replicaset name
+    kubectl replace -f filename.yaml
+
+command, args in pod definition file
+-- when pod is created using pod definition file, we can't edit all fields of the pod, only few fields are editable
+--when pod is created using deployment file, all fields of pod can be edited
+
+
+configmap
+    apiVersion: v1
+    kind: ConfigMap
+    metadata:
+      name: webapp-config-map
+    data:
+      APP_COLOR: darkblue
+      APP_OTHER: disregard
+  pod definition for configmap
+    - env:
+        - name: APP_COLOR
+          valueFrom:
+            configMapKeyRef:
+              name: webapp-config-map
+              key: APP_COLOR
+Secrets
+    apiVersion: v1
+    kind: Secret
+    metadata:
+      name: db-secret
+    data:
+      DB_Host: c3FsMDE=
+      DB_User: cm9vdA==
+      DB_Password: cGFzc3dvcmQxMjM=
+values should be base64 encoded
+
+security context and docker security
+    processes and user priveleages
+
+     securityContext:
+          runAsUser: 1000
+          capabilities:
+            add: ["SYS_TIME","NET_ADMIN"]
+        resources: {}
+
+Service account:
+     serviceAccountName: dashboard-sa
+Resource Requirements:
+
+
+
  --kubectl get nodes
     to see  list of pods
 --kubectl create deployment nginx-depl --image=nginx

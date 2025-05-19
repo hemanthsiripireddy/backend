@@ -73,3 +73,9 @@ mongo
     volumes:
       mongo-data:
         driver: local
+
+
+Docker commands used in kubernetes cousre
+docker run python:3.6 cat /etc/*release*
+ENTRYPOINT, CMD
+

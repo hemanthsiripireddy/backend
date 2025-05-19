@@ -1,0 +1,135 @@
+before helm:
+    no dynamic values in deployment and services
+    not consistency between files and in cluster, it allows to change config in cluster
+    no revision history
+what is helm
+    helm is package manager like
+        windows installer, apt, yum, npm
+    revision history
+    Dynamic configuration
+    Consistency
+    Intelligent deployments
+    life cycle hooks
+    security
+helm repository: helm
+
+commands
+    helm repo add bitnami https://charts.bitnami.com/bitnami
+    helm repo list
+    helm repo remove bitnami
+    helm search repo mysql
+    kubectl create ns teamtwo
+    helm install mydb bitnami/mysql --set auth.rootPassword = test1234
+    helm install mydb bitnami/mysql --values C:\Users\Hemanth.Siripireddy\Documents\hdyralocal\learnhelm\values.yaml
+    helm upgrade mydb bitnami/mysql --values C:\Users\Hemanth.Siripireddy\Documents\hdyralocal\learnhelm\values.yaml
+     helm install mydb bitnami/mysql --reuse-values
+    kubectl get secrets
+    helm uninstall mydb --keep-history
+    helm install mydb bitnami/mysql --values values.yaml --dry-run
+    helm template bitnami/mysql --values C:\Users\Hemanth.Siripireddy\Documents\hdyralocal\learnhelm\values.yaml
+    kubectl get secret sh.helm.release.v1.mydb.v2 -o yaml
+    kubectl get secrets
+    helm get manifest mydb
+    >helm get values mydb --revision 1
+    helm get values mydb --all
+    >helm get values mydb
+    helm get notes mydb
+    helm history mywebserver
+    helm rollback mywebserver 3
+    >helm uninstall mywebserver --keep-history
+    helm install mywebserver bitnami/apache --namespace mynamespace --create-namespace
+    helm upgrade --install mywebserver bitnami/apache: if  mywebserver not present, it will install, otherwise it will upgrade
+    helm install bitnami/apache --generate-name : with random name :ex: apache-1744532240
+    helm install bitnami/apache --generate-name --name-template "mywebserver-{{randAlpha 7 | lower}}": starts with mywebserver and followed by lower case 7 alphas
+    helm install mywebserver bitnami/apache --wait --timeout 5m10s: it will wait until pod get creates,without that,
+        it will just submit manifest to kubernetes and give success message
+    helm install mywebserver bitnami/apache --atomic --timeout 5m10s, it will wait to get get pods created, if fails roll back to previous version
+    helm upgrade mywebserver bitnami/apache --force : force will delete deployment and install, instead of upgradeing
+    helm upgrade mywebserver bitnami/apache --cleanup-on-failure : cleans resources on failure
+    helm package chartName
+    helm lint firstchart : to check if there are any syntax or indendation errors
+
+
+
+
+    helm repo update
+how helm install works
+    load the chart and its dependencies
+    parse the values.yaml
+    generate the dynamic yams based of values.yaml and override values
+    parse the YAML to kube objects and validate
+    Generate the yaml and send it to kube
+_helpers.tpl
+    helper for templates, will have functions
+- in templates removes spaces, leading, trailing spaces
+
+Pipeline:
+    output of previous passed as input to next
+    ex:
+    {{.Values.my.custom.data | default "testdefault" | upper | quote}}
+variables:
+{{$myFlag := .Values.my.flag}}
+{{$myFlag := true}}
+{{- if $myFlag}}
+range:
+CountriesOfDeployment:
+{{- range .Values.my.values}}
+  - {{. | upper | quote}}
+{{- end}}
+
+dictionary
+    {{- range $key,$value := .Values.image}}
+      - {{$key}}: {{$value | quote}}
+    {{- end}}
+
+helm get manifest mydb
+    will what files used for deployment
+
+tags:
+tags:
+  enabled: false
+dependencies:
+  - name: mysql
+    version: 9.4.3
+    repository: "http://charts.bitnami.com/bitnami"
+    tags:
+      - enabled
+
+  {{template "firstchart.mytemplate" .}}
+  {{ .Values.my.custom.data}}
+  {{ .Chart.Name}}
+  {{ .Chart.Version}}
+  {{ .Chart.AppVersion}}
+  {{ .Chart.Annotations}}
+  {{ .Release.Name}}
+  {{ .Release.Namespace}}
+  {{ .Release.IsInstall}}
+  {{ .Release.Service}}
+  {{ .Template.Name}}
+  {{ .Template.BasePath}}
+  {{ .Values.my.custom.data | default "testdefault" | upper | quote}}
+{{$myFlag := .Values.my.flag}}
+{{$myFlag := true}}
+{{- if $myFlag}}
+{{"output of if" | nindent 2}}
+{{- else}}
+    {{"output of else" | nindent 2}}
+{{- end}}
+
+{{- with .Values.my.values}}
+CountriesOfDeployment:
+{{- toYaml . | nindent 2}}
+{{- end}}
+CountriesOfDeployment:
+{{- range .Values.my.values}}
+  - {{. | upper | quote}}
+{{- end}}
+
+{{- range $key,$value := .Values.image}}
+  - {{$key}}: {{$value | quote}}
+{{- end}}
+
+
+
+
+
