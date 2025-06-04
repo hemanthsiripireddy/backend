@@ -5,3 +5,64 @@ AWS Organizations:
     Other accounts are member accounts
     Member accounts can only be part of one organization
     Consolidated billing across all accounts - single payment method
+Root organizational unit
+    Dev organizational unit
+    Prod organizational unit
+AWS Organization
+    advantages:
+        Multi account vs one account multi VPC
+        Use tagging standards for billing purpose
+        Enable cloud trail logs on all accounts and send to central S3 bucket
+        enable cross account roles for admin purposes
+    Security: (Service control polices):
+        IAM polices applied to OU or accounts to restrict users and roles
+        they don't apply to management account
+        Must have an explicit allow from the root through each OU in the direct path to the target
+        group(doesn't allow anything by default-like IAM)
+
+IAM Role vs resource based policy
+    When you assume a role(User, application, Service), you give up your original permissions, and take the permissions
+    assigned to the role
+    when using resource based policy, the policy doesn't have to give up his permissions
+
+User vs Role vs Group
+
+IAM Policy evolution logic
+    Deny evolution
+    Organizations SCPs
+    Resource based policies
+    Identity based policies
+    IAM permissions boundaries
+    Session policies
+AWS IAM Identity center
+    Multi account Permissions:
+        Manage access across AWS accounts in your AWS organization
+        Permission sets: a collection of one or more IAM policies assigned to users
+        and groups to define AWS access
+    Application assignments:
+        SSO access to many SAML 2.0 applications
+    Attribute based access control:
+        Fined grained permissions based on users' attributes stored in IAM Identity center
+
+
+AWS Directory Services:
+    Microsoft Active Directory:
+        found on any windows server with AD Domain services
+        Database of objects: user accounts, computers, Printers, File shares, Security groups
+        Centralized security management, create account, assign permissions
+        objects are organized in trees, a group of trees is a forest
+    AWS managed Microsft AD
+        create your own AD in AWS, manager users locally, supports MFA
+        establish trust connection with on premise AD
+    AD connector:
+        Directory gateway(proxy) to redirect to on prem AD, supports MFA
+        users are managed on the on-premise AD
+    Simple AD:
+        AD- compatible managed directory on AWS
+        cannot' be joined with on-premise AD
+    IAM Identity center - Active Directory setup
+        connect to aws managed Microsoft AD
+        connec to self managed directory
+AWS Control tower
+AWS Config
+
