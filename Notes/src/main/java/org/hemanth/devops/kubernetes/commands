@@ -19,3 +19,82 @@ kubectl scale deployment nginx --replicas=4
 kubectl create deployment nginx --image=nginx--dry-run=client -o yaml > nginx-deployment.yaml
 kubectl expose pod redis --port=6379 --name redis-service --dry-run=client -o yaml
 kubectl expose pod nginx --port=6379 --name nginx-service --type=NodePort --dry-run=client -o yaml
+
+
+
+--taints
+kubectl taint nodes node01 spray=mortein:NoSchedule
+kubectl run mosquito --image=nginx --restart=Never
+kubectl taint nodes controlplane node-role.kubernetes.io/control-plane:NoSchedule-
+-- yaml to create a pod with toleration
+apiVersion: v1
+kind: Pod
+metadata:
+  name: bee
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+  tolerations:
+  - key: "spray"
+    operator: "Equal"
+    value: "mortein"
+    effect: "NoSchedule"
+
+
+Node Selector and Node affinity
+kubectl label nodes node01 color=blue
+--yaml 1
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: red
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: red
+  template:
+    metadata:
+      labels:
+        app: red
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: node-role.kubernetes.io/control-plane
+                operator: Exists
+--yaml2
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blue
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: blue
+  template:
+    metadata:
+      labels:
+        app: blue
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: color
+                operator: In
+                values:
+                - blue

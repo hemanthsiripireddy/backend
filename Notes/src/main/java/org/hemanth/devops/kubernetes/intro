@@ -71,7 +71,8 @@ security context and docker security
 Service account:
      serviceAccountName: dashboard-sa
 Resource Requirements:
-
+Taints and Tolerations:
+Multi Container pod and Init Container
 
 
  --kubectl get nodes
