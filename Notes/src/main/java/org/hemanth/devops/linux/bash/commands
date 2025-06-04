@@ -169,4 +169,7 @@ groupdel groupname -> to delete a group
     r,w,x => r for read mean you ls to that dir, w for write -> you can create, update dir/file
               x for execurtion-> you cd to that dir
    chmod o-r /opt/devopsdir-> for others revoke read access
-   chown -R ansible:devops /opt/devopsdir -> to change owner and group of a folder, -R indicates recursively 
+   chown -R ansible:devops /opt/devopsdir -> to change owner and group of a folder, -R indicates recursively
+
+
+cd /etc/sudoers.d/ -- where we can store files which has users of root priveleges
