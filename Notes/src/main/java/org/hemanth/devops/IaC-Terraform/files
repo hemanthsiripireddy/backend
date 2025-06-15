@@ -1,0 +1,140 @@
+---------------------------count------------------
+resource "local_sensitive_file" "name" {
+    filename = var.users[count.index]
+    content = var.content
+    count = length(var.users)
+
+}
+
+-----for each---------------
+resource "local_sensitive_file" "name" {
+    filename = each.value
+    content = var.content
+    for_each = toset(var.users)
+
+}
+------------version constraint-----------------
+terraform {
+  required_providers {
+    k8s = {
+      source  = "hashicorp/kubernetes"
+      version = "> 1.12.0, != 1.13.1, < 1.13.3 "
+    }
+
+    helm = {
+      source  = "hashicorp/helm"
+      version = "~> 1.2.0"
+    }
+  }
+}
+
+----------------------------------------
+resource "aws_iam_user" "users" {
+   count = length(var.project-sapphire-users)
+   name = var.project-sapphire-users[count.index]
+}
+variable "project-sapphire-users" {
+     type = list(string)
+     default = [ "mary", "jack", "jill", "mack", "buzz", "mater"]
+}
+----------------------------------
+resource "aws_s3_bucket" "dc_bucket" {
+  bucket = "dc-is-better-than-marvel"
+}
+
+-----------------------
+resource "aws_s3_bucket_object" "upload" {
+  bucket = "pixar-studios-2020"
+  key    = "woody.jpg"
+  source = "/root/woody.jpg"
+  etag   = filemd5("/root/woody.jpg")
+}
+
+----------------------
+resource "aws_dynamodb_table" "project_sapphire_user_data" {
+  name         = "userdata"
+  billing_mode = "PAY_PER_REQUEST"
+  hash_key     = "UserId"
+
+  attribute {
+    name = "UserId"
+    type = "N"  # N = Number
+  }
+
+
+}
+----------------------------
+resource "aws_dynamodb_table_item" "upload" {
+  table_name = aws_dynamodb_table.project_sapphire_inventory.name
+  hash_key   = aws_dynamodb_table.project_sapphire_inventory.hash_key
+
+  item = jsonencode({
+    AssetID    = { "N" = "1" },
+    AssetName  = { "S" = "printer" },
+    age        = { "N" = "5" },
+    Hardware   = { "B" = "true" }
+  })
+}
+----------------
+terraform {
+  backend "s3" {
+    key = "terraform.tfstate"
+    region = "us-east-1"
+    bucket = "remote-state"
+    endpoint = "http://172.16.238.105:9000"
+    force_path_style = true
+
+
+    skip_credentials_validation = true
+
+    skip_metadata_api_check = true
+    skip_region_validation = true
+  }
+}
+
+--------------------------
+resource "aws_eip" "eip" {
+  vpc      = true
+  instance = aws_instance.cerberus.id
+
+  provisioner "local-exec" {
+    command = "echo ${self.public_dns} > /root/cerberus_public_dns.txt"
+  }
+}
+resource "aws_instance" "cerberus" {
+  ami           = "ami-06178cf087598769c"
+  instance_type = "m5.large"
+  key_name      = aws_key_pair.cerberus-key.key_name
+  user_data     = file("install-nginx.sh")
+
+  tags = {
+    Name = "cerberus"
+  }
+}
+------------------------
+resource "aws_iam_user" "cloud" {
+     name = split(":",var.cloud_users)[count.index]
+     count = length(split(":",var.cloud_users))
+
+}
+resource "aws_s3_bucket" "sonic_media" {
+     bucket = var.bucket
+
+}
+resource "aws_s3_object" "upload_sonic_media" {
+  for_each = toset(var.media)
+
+  bucket = aws_s3_bucket.sonic_media.bucket
+  key    = replace(each.value, "/root/", "")
+  source = each.value
+  etag   = filemd5(each.value)
+}
+--------------------------
+resource "aws_instance" "mario_servers" {
+  ami           = var.ami
+  instance_type = var.name == "tiny" ? var.small : var.large
+
+  tags = {
+    Name = var.name
+  }
+}

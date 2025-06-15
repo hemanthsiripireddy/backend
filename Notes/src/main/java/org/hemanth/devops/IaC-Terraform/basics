@@ -1,0 +1,68 @@
+Configuration management:
+    Ansible
+    Puppet
+    SaltStack
+Server Templating:
+    Docker
+    Packer
+    Vagrant
+Provisioning tools:
+    Terraform
+    cloudformation
+three phases of terraform:
+    Init
+    Plan
+    Apply
+HCL- hashicorp configuration language
+types of providers:
+    official
+    partner
+    community
+multiple providers
+variables
+    output variables
+
+resource attributes
+    how to link one resource attribute to another resource
+    implicit dependency
+    explicit dependency: using depends_on
+
+terraform state file
+    can be saved in S3
+mutable and immutable infrastructure
+life cycle rules
+
+    lifecycle {
+    prevent_destroy = true
+    }
+   lifecycle {
+     create_before_destroy = true
+   }
+data sources:
+meta arguments
+    count
+    for-each
+version constraints
+remote state and state locking
+terraform state commands
+terraform provisions
+    remote-exec
+    local-exec
+terraform taint and untaint
+terraform import
+terraform modules
+terraform functions:
+    Numeric functions
+    String functions
+    Collection Functions
+    Type Conversion functions
+Conditional expression
+    equality operators
+terraform workspaces
+
+
+
+
+
+
+

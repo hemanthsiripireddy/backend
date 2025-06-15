@@ -1,0 +1,26 @@
+terraform destroy
+terraform init
+terraform plan
+terraform show
+validate, refresh, graph, fmt, providers, output
+terraform state show <resource_type>.<resource_name>
+terraform state show local_file.top10
+terraform state rm local_file.hall_of_fame
+terraform state show random_pet.super_pet_2
+terraform state mv random_pet.super_pet_1 random_pet.ultra_pet
+
+terraform untaint aws_instance.ProjectB
+--------------------------
+aws ec2 describe-instances \
+  --filters "Name=image-id,Values=ami-082b3eca746b12a89" \
+           "Name=instance-type,Values=t2.large" \
+           "Name=key-name,Values=jade" \
+  --endpoint http://aws:4566 \
+  --query "Reservations[*].Instances[*].{ID:InstanceId,Name:Tags[?Key=='Name']|[0].Value}" \
+  --output table
+--------------------------
+terraform import aws_instance.jade-mw i-fa65cb9183202ee9f
+terraform console
+terraform workspace new ProjectA
+terraform workspace list
+terraform.workspace
