@@ -1,0 +1,13 @@
+import json
+import boto3
+import os
+ssm=boto3.client('ssm',region_name='us-east-1')
+dev_or_prod=os.environ['DEV_OR_PROD']
+def lambda_handler(event, context):
+    # TODO implement
+    db_url=ssm.get_parameters(Names=["/my-app/"+dev_or_prod+"/db-url"])
+    db_pwd=ssm.get_parameters(Names=["/my-app/"+dev_or_prod+"/db-pwd"], WithDecryption=True)
+    print(db_url)
+    print(db_pwd)
+    return "worked!"
+----------------------------------------------

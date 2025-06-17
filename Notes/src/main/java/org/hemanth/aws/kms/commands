@@ -1,0 +1,5 @@
+
+commands:
+    aws ssm get-parameters --name /my-app/dev/db-url /my-app/dev/db-pwd
+    aws ssm get-parameters --name /my-app/dev/db-url /my-app/dev/db-pwd --with-decryption
+    aws ssm get-parameters-by-path --path  /my-app/dev

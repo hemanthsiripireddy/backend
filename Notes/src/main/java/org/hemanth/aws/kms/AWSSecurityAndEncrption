@@ -1,0 +1,158 @@
+Encryption:
+    Encryption at flight(TLS and SSL)
+        data is encrypted before sending and decrypted after receiving
+        TLS certificates help with encryption
+    Server side encryption at rest:
+        data is encrypted after being received by the server
+        data is decrypted before being sent
+        it is stored in encrypted form (using keys)
+    Client Side encryption:
+        Data is encrypted by the server and never decrypted by the server
+        data will be decrypted by a receiving client
+        the server shouldn't not be able to decrypt the data
+AWS KMS (Key Management Service)
+    AWS manages encryption keys for us
+    fully integrated with IAM for authorization
+    able to audit KMS Key usage using cloud trail
+    seamlessly integrated with most AWS Services(EBS, S3, RDS,SSM)
+    KMS Key types:
+        Symmetric(AES-256 keys)
+            single key for both encryption and decryption
+        Asymmetric (RSA and ECC key pairs)
+            public and private key
+    types of KMS keys
+        AWS owned keys
+        AWS Managed keys
+        customer managed keys
+    KMS Key policies
+        control access to KMS keys
+        Default KMS key policy:
+            created if you don't provide a specific KMS key policy
+            complete access to the key to the root user=entire AWS account
+        Custom KMS key policy
+            define users, roles that can access the  KMS key
+            define who can administer the key
+            useful for cross account access
+
+KMW Multi-Region keys:
+    Identical KMS keys in different AWS Regions that can be used interchangeably
+    Multi Region keys have the same key id, key material, automatic rotation
+    Encrypt in one region and decrypt in other Regions
+    no need to re Encrypt or making cross region api calls
+    KMS Multi region are not global(primary and replicas)
+    Each Multi Region key is managed independently
+    Use Cases: Global client side encryption, encryption on global DynamoDB, Global Aurora
+S3 Replication Encryption Considerations:
+    Unencrpted objects and objects encrypted with SSE-S3 are replicated by Default
+    Objects encrypted with SSE-C(customer encrypted key) can be replicated
+    for Objects encrypted with SSE-KMS, you need to enable the option
+        specify which KMS key to encrpt the objects within the target bucket
+        adapt the KMS key policy for the target key
+        An IAM Role with kms: decrypt for the source KMS key and kms:Encrypt for target KMS key
+    you can use Multi-region AWS KMS keys but they are currently treated as independent keys by Amazon S3 (the objects still de decrypted and then encrypted)
+
+Amamzon AMI sharing process encrypted via KMS:
+    AMI in source account is encrypted with KMS Key from source account
+    Must specify the image attribute to add a launch Permission which corresponds to the specified target account
+    Must share the KMS Keys used to encrpted the snapshot the AMI with the target account/IAM policy
+    the IAM role/user must have the Permissions to describeKey, Reencrpt*, Create Grant, decrypt
+    when launching a new ec2 instace from the AMI optionally the target account can sepecify a new KMS Key in its own account  to re encrpt the volumes
+SSM paramter store:
+    secure store for environment variables and config values
+    Optional seamlessl encryption with KMS
+    serverless, scalable, durable, easy SDK
+    Version tracking of configurations ands secrets
+    Security through IAM
+    Notifications with Amazon Event Bridge
+    Integration with cloud formation
+    SSM parameter store hierarchy:
+        /my-dept 
+            /my-app 
+                dev/ 
+                    db 
+                    password
+                prod/
+                    db 
+                    password
+    Dev lambda function has only access to dev configs using IAM and same vice Version
+    standard vs advaned parameter tiers
+    paramters policies:
+        allos to assign a TTL to a parameter (expiration date) to force updating or deleting sensitive data
+    whereas AWS secret manager is used to store secrets, SSM for config and env variables
+
+
+AWS Secrets Manager:
+    Newer Service, meant for storing secrets
+    Capability of force rotation of secrets every X days
+    Automate generation of secrets on rotation(lambda)
+    Integration with Amamzon RDS
+    Secrets are encrpted with KMS
+    mostly meant for RDS Integration
+    Multi-region:
+        Replicate Secrets across Multiple AWS Regions
+        Secrets Manager keeps read replicas in sync  with the primary secret
+        use cases: multi region apps, disaster recovery strategies, multi region db
+AWS certificate Manager:
+Web application firewell:
+    protects your web applications from common web exploits(layer 7)
+    layer 7 is http (layer 4 is TCP/UDP)
+    deploy on 
+        application load balancer
+        API gateway
+        cloudfront
+        APPSync GraphQL API
+        cognito user pool
+    define web ACL Rules(Web access rules)
+        IP Setup 
+        HTTP headers, HTTP body, URI Strings protects from common attack - SQL Injection and cross site scripting
+        Size constraints, geo-match (block countries)
+        Rate based rules- for DDOS protections
+    WEB ACL is regional except for cloudfront
+    A rule group is a reusable set of rules that you cann add to a web ACL
+    WAF doesn't not support the Network load balancer
+    we can use global accelerator for fixed IP and WAF on ALB 
+AWS shield: for DDOS protection
+    AWS shield standard
+        free service that is activated for every AWS customer
+        provides protection from attacks such as SYN/UDP floods etc
+    AWS shield advaned
+AWS firewell manager:
+    manages rules of all accounts of an organization
+    Security policy: common set of security rules
+        WAF rules (ALB, API gateway, cloudfront)
+        AWS shield advaned (ALB,CLB, NLB, Elastic IP, cloud front)
+        Security groups for EC2, ALB, ENI resources in VPC
+        AWS Network firewell (VPC level)
+        route 53 resolver DNS firewell
+        policies are created at region level
+    rules are applied to new resources as they created (good for compliace) across all future accounts in you organization
+
+AWS WAF vs firewell manager vs AWS shield
+Amazon Guard duty:
+    Intelligent threat discovery  to protect you AWS account
+    uses machine learning algorithms, anamoly detection, 3 rd party data
+    one click to enable(30 days), no need to install software
+    input data includes:
+        Cloud trail event logs
+        VPC flow logs
+        DNS logs
+        option features: EKS audit logs, RDS & Aurora, EBS, lambda, s3 data events
+Amamzon Inspector:
+    automated security assessments
+    for EC2 instaces
+        analyse against unintended Network accessbility
+        analyse the running OS aginst known vulnerabilites
+    for container images push to Amamzon ECR 
+        assessment of container images as they are pushed
+    for lambda functions
+        identifies software vulnerabilites in function code and package depedencies
+    reporting and Integration with AWS Security HUB
+    sending findings to Amamzon Event Bridge
+Amamzon macie:
+    -macie is fully managed data security  and data privacy service that uses machine learning and pattern matching
+     to discovery and protect sensitive data in AWS
+    - macie identify and alert you to sensitive data, such as PII
+
+
+
+
