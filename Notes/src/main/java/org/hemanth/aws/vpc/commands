@@ -1,0 +1,8 @@
+chmod 0400 keypair.pem
+ssh ec2-user@10.0.26.152 -i keypair.pem
+sudo yum install httpd
+sudo systemctl enable httpd
+sudo systemctl start httpd
+sudo su
+echo "hello world"> /var/www/html/index.html
+aws s3 ls
