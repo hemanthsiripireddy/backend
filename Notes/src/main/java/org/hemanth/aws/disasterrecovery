@@ -1,0 +1,151 @@
+Any event that has a negative impact on a company's business continuity or finances is a disaster
+Disaster recovery is about preparing for and recovering from a disaster
+kinds of disaster recovery:
+    On-Premise=> on-premise traditional DR and very expensive
+    On-premise=> AWS cloud hybrid recovery
+    AWS cloud region A => AWS cloud region B
+terms
+    RPO- Recovery point objective
+    RTO- Recovery Time Objective
+Disaster recovery strategies
+    backup and restore
+    pilot light
+    warm standby
+    Hot site/ Multi Site Approach
+
+backup and restore:
+    AWS storage gateway
+    AWS snowball
+    S3, Glacier
+    AWS to AWS-> EBS, Redshift, RDS-> scheduled regular snapshots
+Pilot Recovery- pilot Light
+    A small version of the app is always running in the cloud
+    useful for the critical core
+    faster than backup and restore
+    stand by rds always running for replication, just need to spin up EC2 instances in case of disaster
+Warm standy
+    full system is up and running, but minimum size
+    upon disaster, we can scale up to production load
+multi site / hot site approach
+    very low RTO (minutes or seconds) -very expensive
+    full reproduction scale is running AWS and on-premise
+
+Disaster Recovery Tips:
+    backup
+        EBS snapshots, RBS automated backups/snapshots
+        Regular pushes to S3, S3IA, Glacier, lifecycle policy, cross region replication
+        from on-premise to cloud: snowball or storage Gateway
+    High Availability:
+        Use route53 to migrate DNS from region to region
+        RDS multi-AZ, ElasticCache multi-AZ, EFS, S3
+        Site to Site VPN as a recovery from direct connect
+    replication:
+        RDS Replication(Cross Region)
+        database replication from on-premise to RDS
+    Automation:
+        cloud formation /elastic beanstalk to recreate  a whole new environment
+        Recover/reboot EC2 instances with cloud watch if alarm fails
+        AWS lambda functions for customized automations
+    chaos:
+        Netflix has simian-army randomly terminating EC2
+
+DMS- data migration service:
+    quickly  and securely migrate databases to AWS, resilient, self healing
+    the source database remains available during migration
+    supports
+        homogenous migrations: oracle to oracle
+        heterogeneous migrations, sql server to aurora
+    continuous data replication using CDC(change data capture)
+    you must create a EC2 instance to perform the replication tasks
+    AWS schema conversion tool- SCT
+        convert your database's schema from one engine to another
+        OLTP: (SQL Server or oracle) to mySQL , postgressql, aurora
+        OLAP: (Teradata or oracle) to amazon redshift
+        you don't need to use SCT if you migrating the same DB engine
+
+
+RDS to Aurora MySQL migrations:
+    option 1: DB snapshots from RDS MySQL restored as mysql aurora DB
+    option 2: create an aurora read replica from your RDS and when replication lag is 0, promote it as own DB cluster
+
+    external RDS to aurora:
+        option 1: use percona xtrabackup to create  a file backup in S3 , create an Aurora MYSQL DB from Amamzon S3
+        option 2: create an auroa db, use the mysqldump, utility to migrate mysql into aurora
+
+on-premise strategy with AWS
+    ability to download Amazon linux 2 AMI as a VM
+        VMware, KVM, Virtualbox, microsoft hyper-v
+    VM import/export
+        migrate existing applications into EC2,
+        create DR(disaster recovery) repository strategy for your on-premise VMs
+        can export back the VMs from EC2 to on-premise
+    AWS application discovery service
+        gather information about you on-premise servers to plan a  migration
+        server utilization and dependency mappings
+        track with AWS migration hub
+    AWS database migration service (DMS):
+        replicate on-premise=> AWS, AWS=> AWS, AWS=> on-premise
+    AWS Server migration service(SMS)
+        incremental replication of on-premise live servers to AWS
+
+
+
+AWS backup service:
+    fully managed service
+    centrally manage and automate backups across AWS Services
+    no need to create custom scripts and manual process
+    supported services:
+        EC2, EBS,
+        S3,RDS, aurora, dynamodb, document db, neptune, EFS, FSx(Lustre, wondows file server)
+        Storage gateway
+    support cross region backups,
+    support corss account backups
+    support PITR -point in time recovery for supported services
+    on demand and schedule backups
+    tag based backup policies
+    backup policies
+        backup frequency (every 12 hours, daily, weekly, monthly, cron expression)
+        backup window
+        transition to cold storage (Never, days, weeks,months)
+        retention period-always, days, weeks, months,  years
+    AWS Vault lock:
+        enforce a WORM(write once read many) state for all the backups that you store in you AWS backup vault
+        additional layer of defense  to protect you backups against
+            inadvertent or malicious delete operations
+            updates that shorten or alter retention periods
+        even the root user  cannot delete backups when enabled
+
+
+AWS application discovery service:
+    plan migration projects by gathering information about on-premises data centers
+    server utilization data and dependency mapping are important for migrations
+    Agent less discovery (AWS agentless discovery connector)
+        VM inventory, configuration, and performance history such as CPU, memory, and disk usage
+    Agent-based discovery(AWS application discovery agenet)
+        system configuration, system performance, running processes, and details of the network connections
+        between systems
+    AWS application migration service (MGN):
+        lift and shift (rehost) solution which simplify migrating applications to AWS
+        converts you physical, virtual, and cloud-based servers to run natively on AWS
+        supports wide range of platforms, operating systems, databases
+        minimal downtime, reduced costs
+transferring large amount of data into AWS
+    example: transfer 200TB of data in the cloud, we have  a 100Mbs internet connection
+    over the internet/site-to-site VPN:
+        immediate to setup
+        will take 185days
+    over the direct connect 1Gbs:
+        long for a one time setup over a month
+        with take 18.5 days to transfer
+    over snowball, physically ship disks
+        takes about 1 week for the end-to-end transfer
+
+
+VMware cloud on AWS:
+    some customers use VMware cloud to manage their on-premises data center
+    they want to extend the data center capacity to AWS, but keep using the VMware cloud software
+    enter VMware cloud on AWS
+    use cases:
+        migrate VMware, vsphere-based worklaods to AWS,
+        run your production workloads across VMware vsphere-based, public, private, hybri environments
+        have a disaster recovery strategy
