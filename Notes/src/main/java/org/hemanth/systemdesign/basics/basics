@@ -1,0 +1,43 @@
+components of system design
+framework used to solve system design problem in hour
+
+
+in distributed systems,
+    reliability is continue to work correctly when things go wrong, example: minimum functionalities are working
+    minimum performance is achieved etc
+    wrongs:
+        faults: deviation of a component from it's usual behaviour
+        failures: systems as a whole goes down, stops providing required services to user
+        fault tolerant systems: a system that can anticipate faults and can cope up with them
+    faults:
+        hardware failure
+        software: buggy code
+        human error: 75-10% of outages are due to human error
+
+Scalability:
+    Systems able to cope up with the increased load
+    load:
+        web servers: throughput (req/sec), response times
+        database server: reads/writes ratio
+        cache: hit rates (70-80% is good)
+        chat rooms: concurrent users, latency
+    average cases matters the most
+    generally measured in terms of
+        mean
+        median
+        percentile (most common)
+
+    percentile:
+        defines our service level agreements(SLA)
+        it allows to demand a refund if SLA's are breached
+    handling scaling:
+        vertical scaling
+        horizontal scaling
+
+maintainability:
+    operable:
+        making life easy for operations person, easy to monitor-transparent, automation, good documentation
+    simple
+        loose coupling between components, avoid hacks- adding if else instead of good abstraction
+    evolvable:
+        easy to add new features
