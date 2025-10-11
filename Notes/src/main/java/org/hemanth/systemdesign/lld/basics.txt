@@ -1,0 +1,62 @@
+procedural vs object oriented programming
+prototype or blue print of real world entites  is called class
+instance of class is called  object
+state and behaviour 
+
+
+In OOPs, we either add new feilds or create methods, or update methods, fields, or create new classes
+need to validate does this break existing code or flow
+
+
+modularity, reusability, abstraction, encapsulation, polymorphsism, easy of maintenace
+
+encapsulation: hiding internal details and providing a clear interface for interaction, this promotes data integrity,
+promotes information hiding, reduces the impact of changes in one part of the system on other parts
+
+
+this
+    this(10,30) calls constructor of the cuurent object
+    return this -> returns current instance
+    passing this as argument to other class instances or constructor
+
+Calling One Constructor from Another(constructor chaining):
+    Using this() keyword, one constructor within a class can call another constructor in the same class. 
+    This is known as constructor chaining. 
+Initialization of Superclass:
+    If a constructor does not explicitly call a superclass constructor using super(),
+    Java automatically inserts a call to the no-argument constructor of the superclass.
+
+
+
+assocation, aggregation, composition
+    assocation:
+    aggregation:
+        A class acts as a container for list of other classes, other classes can live independent of that class
+        example: college has students, if college object is distroyed, student can still be there
+    composition:
+        A class acts as a container for list of other classes, the other classes can't live if the class is destroyed
+        example; humand body class has brain, lung, hearth objects
+
+
+
+
+encapsulation: data hiding
+advantages:
+    data hiding: external entities unanware of what data we have and how we process
+    increased flexibility: if we want to give only read , the enable getter or if only write, then enable setter
+    freedom of implementation: allows developers to refine and improve the implementation without impacting the external contract
+
+
+Always design a system using interfaces/abstracts, later we can implement concrete clases using the contract/interface,
+allow only interfaces/abstract to interact with other components
+
+abstraction advantages
+    complexity management:  systems often involve complex interactions between variout components. abstraction helps manage this complexity
+    by breaking down the system into manageable units
+    modularity:
+    encapsulation of implementation details
+    polymorphsism: abstraction enables polymorphic behaviour, where objects of different clases can be treated uniformly through a common interface
+
+
+
+

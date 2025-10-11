@@ -1,0 +1,43 @@
+SQS- simple queue service- pull
+SNS- simple notificaiton service- push
+Kineses- streaming
+Event Bridge- routing based on rules
+
+Caching strategies:
+    Cache-aside-lazy loading
+    write through
+    write behind
+    read through
+    refresh ahead
+    TTL time to live
+
+blocking an IP address:
+    NACL, Security Group, ALB, AWS WAF, cloud front
+
+High performance computing(HPC):
+    the cloud is the perfect place to perform HPC
+    we can create high number of resources in no time
+    we can pay only for the systems you have used
+
+    perform genomics, computational chemistry, finanacial risk modeling, weather prediction, machine learning
+    deep learning, autonomous driving
+Data management and transfer
+    Direct connect
+    snowball
+    AWS data synch
+compute and networking
+    CPU optimized
+    EC2 placement groups: cluster for good network performance
+EC2 enhanced networking
+elastic fabric adapter
+AWS batch
+AWS parallel cluster
+
+High available EC2 instance
+    create a stand by EC2 instace  in another AZ, : cloud watch event trigget lamdb function, lamda function creates new instace in another AZ and attaching to same elastic IP address
+    auto scaling
+        if instance in one AZ is terminated, crate a new instance in another AZ
+
+Elastic Fabric Adapter(EFA)
+Elastic Network Interface(ENI)
+Elastic Network Adapter(ENA)

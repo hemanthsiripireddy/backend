@@ -1,0 +1,81 @@
+cloudFormation:
+    cloud formation is a declarative way of outlining your AWS Infrastructure, for any resources(most of them are supported)
+    within a cloud format template, we can say, 
+        i want a security group
+        i wnat two EC2 instances
+    then cloud formation creates these rosources in right order
+    benefits:
+        infrastructure as code:
+            no resources are manually created, which is excellet for control
+            changes to the infrastructure are revived through code
+
+        cost:
+            each resources within the stack is tagged with an identifier so you can easily see how much a stack costs you
+            we can estimate the costs of our resources using cloud formation template
+            saving strategy: in Dev,    we could do automation deletion of templates at 5pm and recreated at 8pm 
+        productivity:
+            ability to destroy and re-create an infrastructure on the cloud on the fly
+            automated generation of diagram for your templates
+            declarative programming(no need to figure out ordering or orchestration)
+        don't re-invent the wheel
+            leverage the existing templates on the web
+            leverage the documentation
+        supports all AWS resources
+
+SES- AWS Simple Email Service
+    fully managed service to send emails securily, globally and at scale
+    allows inbound/outbound emails
+    reputation dashboard, performance insights, anti-spam feedback
+    provices statistics such as email deliveries, bounces, feedback loop results, email open
+    supports DMIK(Doemainkeys Indentified Mail), SPF(sender policy framework)
+    use cases: transactional, marketing and bulk email communications
+Amazon pinpoint
+    scalable 2-way(outbound/inbound) marketing communications service
+    supports email, SMS, push, voice, and in-app messaging
+    ability to segment and personalize messages with the right content to customers
+    scales to billions of messages per day
+    use cases: run campaigns by sending marketing, bulk transactional SMS messages
+
+
+System manager- SSM session manager
+    allows you to start a secure shell on your ec2 instace and on-premise servers
+    No SSH, bastion hosts, SSH keys needed
+    no port 22 needed
+    supports linux, mac, windows
+    Send session log data to S3 or cloud watch logs
+System manager - Run command
+System Manager - patch manager
+System manager - maintenance windows
+System manager - Automation
+
+
+Cost explorer:
+    Monthly cost by AWS Service
+    forcase usage
+AWS Cost Anomaly Detection
+AWS Outpost:
+    Hybrid cloud: businesses that keep an on-premises infrastructure along side a cloud infrastructure
+    therefore, two ways of dealing with IT systems, 
+        one for AWS cloud(using the AWS console, CLI, AWS APIs)
+        one for their onpremise infrastructure
+    AWS OutPosts are server racks that offers the same AWS infrastructure, services, apis and tools to build your own applications on-premises just as in the cloud
+    AWS will set up and manage  Outposts Racks within your on-premise infrastructure and you can start leveraging AWS services on premises
+    you are responsible for Outpost rack security
+    Benefits:
+        low-latency access to on-premises systems
+        local data processing
+        data residency
+        easier migration from on-premises to cloud
+        Fully manged service
+    some services that  work on outpose are 
+        EC2, EBS, S3, EKS, ECS, RDS, EMR
+
+AWS Batch:
+Amazon Appflow:
+    fully managed integration service that enables you to securely transfer data from SAAS applications to AWS
+    sources: salesforce, SAP, 
+    destinations; S3, redshift
+    don't spend time writing the integrations and leverage APIs immediately 
+AWS Amplify- web and mobile application
+    a set of tools and services that helps you develop and deploy scalable full stack web and mobile applications
+instance scheduler in AWS

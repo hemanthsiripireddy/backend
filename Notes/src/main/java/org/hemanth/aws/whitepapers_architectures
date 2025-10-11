@@ -1,0 +1,16 @@
+well architected framework
+    stop guessing your capacity needs: use auto scaling
+    Test systems at production scale
+    automate to make architectural experimentation easier
+    allow for evolutionary architectures
+        design based on change requirements
+    drive architectures using data
+    6 pillars
+        operational excellence
+        security
+        Reliability
+        Performance efficiency
+        cost optimation
+        sustainability
+trusted advisor
+examples of architecture
