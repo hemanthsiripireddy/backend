@@ -1,6 +1,7 @@
 route 53
 public vs private hosted zones
-Time to live (TTL)
+Time to live (TTL):
+    how long a DNS record is cached by DNS resolvers and clients before they must query the authoritative DNS server again
 routing policy
     simple,
     weighted,
@@ -13,6 +14,9 @@ routing policy
 health checks
 DNS record types
  A
+    maps a domain name to an IPv4 address
  AAAA
+    maps a domain name to an IPv6 address
  CNAME,
+    maps a domain name to another domain name
  Alias

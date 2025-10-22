@@ -28,12 +28,25 @@ IAM Role vs resource based policy
 User vs Role vs Group
 
 IAM Policy evolution logic
-    Deny evolution
-    Organizations SCPs
+    Deny evolution:
+        
+    Organizations SCPs(Service control policies)
+        if a user has IAM policy that allows an action, but the SCP denies that action, the user is denied
+        SCPS don't grant permissions, they only restrict them
     Resource based policies
+     applies direclty on AWS resources (S3 bucket, SQS queue, SNS topic, Lambda function)
     Identity based policies
+        applies to IAM users, groups, and roles
+        define what actions the identity can perform on which resources.
+        most commonly used for granting permissions
     IAM permissions boundaries
+        optional advanced feature
+        define the maximum permissions that an IAM entity(user or role) can have
+        acts like a filter:  even  if an identity based policy allows an action, it must also be allowed by the permissions boundary
     Session policies
+        temporary policies that are passed when assuming a role
+        further restrict the permissions during the session
+        useful for scoping down access dynamically
 AWS IAM Identity center
     Multi account Permissions:
         Manage access across AWS accounts in your AWS organization
