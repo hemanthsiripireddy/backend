@@ -1,0 +1,219 @@
+section CI/CD pipeline
+1 what is a CI/CD pipeline and why is it important in devops
+2. how does jenkins work internally?
+3. difference between declarative and scripted Jenkins pipelines?
+4. what is the difference between continuous delivery and continuous deployment?
+5.difference between jenkins and github actions?
+6.how do you scale jenkins for high availability?
+7. what is a jenkins shared library?
+8. explain blue green deployment strategy in jenkins pipeline
+9 what are github actions runners?
+10 what is gitlab CI/CD pipeline and how does it differ from jenkins?
+11. how do you troubleshoot a failing jekins pipeline?
+
+ docker
+1 what is docker and why do we use it?
+2 difference between docker container and docker image?
+3. explain docker architecture?
+4. what is dockerfile and how to create one?
+5. explain docker storage drivers?
+6. how does docker networking work?
+7. difference between entrypoint and cmd in dockerfile?
+8. how do you reduce the size of a docker image?
+9. what is docker compose and how is it used?
+10. how do you secure docker containers?
+11. what is docker swarm and how does it compare to kubernetes?
+12. how do you persist data in docker containers?
+13. how do you troubleshoot a docker container that keeps crashing?
+14. difference between docker and virtual machines?
+15. what is a multi-stage docker build?
+
+Kubernetes
+1. what is kubernetes and why is it used?
+2. explain the architecture of kubernetes?
+3. what are pods in kubernetes?
+4. difference between replica set and deployment in kubernetes?
+5. explain kubernetes services and their types?
+6. what are config maps and secrets in kubernetes?
+7. explain kubernetes ingress?
+8.  how does kubernetes handle service discovery?
+9. explain rolling update vs recreate strategy in kubernetes?
+10. how does kubernetes handle scaling?
+11. what is etcd in kubernetes?
+12. explain taints and tolerations in kubernetes?
+13. how do you monitor a kubernetes cluster?
+14. how does kubernetes manage networking?
+15. what is statefulset in kubernetes and when to use it?
+16. explain kubernetes namespaces?
+17. difference between docker swarm and kubernetes?
+18. how do you troubleshoot a failing pod in kubernetes?
+19. difference between NodePort and LoadBalancer service in kubernetes?
+20. how do you secure a kubernetes cluster?
+
+
+Infrastructure as Code (IaC) terraform,cloudformation
+
+1. what is Infrastructure as Code (IaC) and why is it important?
+2. what is terraform and why is it popular for IaC?
+3. explain the architecture of terraform?
+4. compare terraform and cloudformation?
+5. what is terraform state and why is it important?
+6. what are terraform backends?
+7. explain terraform init, plan, apply, and destroy commands?
+8. how do you manage secrets in terraform?
+9. explain terraform modules and their benefits?
+10. how do you handle drift in terraform?
+11. what is terraform providers?
+12. how do you upgrade terraform version safely?
+13. explain depends_on in terraform?
+14. how do you ensure team collaboration in terraform projects?
+
+
+Configuration Management - Ansible, Puppet, Chef
+ 1. what is configuration management and why is it important?
+ 2. what is ansible and why is it popular?
+ 3. explain the architecture of ansible?
+ 4. what is an ansible playbook?
+ 5. how does ansible differ from puppet and chef?
+ 6. how do you manage secrets in ansible?
+ 7. what are ansible roles?
+ 8. how do you test ansible playbooks before running in production?
+ 9. how does ansible ensure idempotency?
+ 10. what is the difference between ansible ad-hoc commands and playbooks?
+ 11. how do do handle dynamic inventory in ansible?\
+ 12. what are ansible facts?
+ 13. how do you scale ansible for large environments?
+ 14. what is the difference between handlers and tasks in ansible?
+ 15. how do you debug ansible playbooks?
+ 16.
+
+ Monitoring and Logging - Prometheus, Grafana, ELK Stack
+1. why is monitoring important in devops?
+2. what is  prometheus and why is it used?
+3. how does prometheus architecture work?
+4. what is grafana and how does it integrate with prometheus?
+5. explain the ELK stack and its components?
+6. difference between push and pull in prometheus?
+7. what is prometheus alert rule?
+8. how do you secure prometheus and grafana?
+9. what are blackbox and whitebox monitoring?
+10. how do you monitor logs in microservices architecture?
+11. how do you set up alerts in grafana?
+
+
+AWS cloud services
+
+1. what are core AWS services used in devops?
+2. explain ec2 instance types?
+3. what is auto scaling group in AWS?
+4. explain IAM roles vs IAM policies?
+5. difference between S3 and EBS?
+6. what is an AWS VPC
+7 explain AWS best practices?
+8. how does Lambda work?
+9. difference between ECS and EKS?
+10. what is AWS CloudFormation?
+11. how do you secure S3 buckets?
+12. how do you implement CI/CD in AWS?
+13. how does load balancing work in AWS?
+14. how do you implement high availability in AWS?
+15. expalin route 53 and its use cases?
+16. how do you monitor AWS resources?
+17. how do you manage secrets in AWS
+18. what is the difference between RDS and DynamoDB?
+19. how do you implement disaster recovery in AWS?
+20. how does AWS support devops culture?
+
+Security and networking in AWS
+1. how do you secure a CI/CD pipeline?
+2. what is the principle of least privilege in AWS?
+3. how do you secure containers in AWS?
+4. what is a WAF?
+5. how do you implement zero trust architecture in AWS?
+6.
+
+Scenario based questions
+1. your production application is running on kubernetes. suddenly, some pods keep restarting, how do you troubleshoot?
+2. you need zero downtime deployment for a microservice on AWS, how would you achieve that?
+3. A jenkins pipeline fails at the build randomly, how do you troubleshoot and fix it?
+4. your AWS EC2 instances are getting high CPU usage during traffic spikes, what is your solution?
+5. how do you migrate an on-prem application to AWS cloud with minimal downtime?
+6. your CI pipeline takes more time to run tests. how can you optimize it?
+7. you fine a key is accidentally committed to a public git repo, what steps do you take to mitigate the issue?
+8. one microservice is slow, others are fine.how do you identify and fix the bottleneck?
+9. you need to deploy an app across multiple regions for disaster recovery, how do you design it on AWS?
+10. you see a kubernetes pod stuck in pending state, how do you check?
+11. you docker container keeps growing in size after each build, how do you fix it?
+12.  your deployment failed because of a terraform state file corruption, how do you recover?
+13. you need to rollback a failed deployment in kubernetes, how do you do it?
+14. you need to monitor logs for all microservices in kubernetes cluster, how do you centralize logging?
+15. how do you implement canary deployment in kubernetes?
+16. you fine multiple failed login attempts in your AWS account, what actions do you take?
+17. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+available ci/cd tools
+    Jenkins, Harness, Github Actions, GitLab CI/CD, AWS CodePipeline
+5.difference between jenkins and github actions?
+    Jenkins:
+        self-hosted, plugin rich, highly customizable
+    Github Actions:
+        Cloud-based, yaml workflows,built into github ecosystem, auto-scaling runners
+
+1. what is kubernetes and why is it used?
+   features: self-healing, auto-scaling, service discovery, load balancing
+
+how does kubernetes handle scaling?
+    Horizontal Pod Autoscaler (HPA) adjusts the number of pod replicas based on CPU/memory usage or custom metrics.
+    Vertical Pod Autoscaler (VPA) adjusts resource requests/limits for containers in pods.
+    Cluster Autoscaler adjusts the number of nodes in the cluster based on pod resource requests.
+
+13. how do you monitor a kubernetes cluster?
+     prometheus + grafana, ELK stack, Kube-state-metrics, Lens dashboard
+3. explain the architecture of ansible?
+     control Nodes: Runs playbooks
+     Managed Nodes: Machines being configured
+     Inventory: List of managed nodes
+     Modules: pre-built scripts for tasks
+10. what is the difference between ansible ad-hoc commands and playbooks?
+        Ad-hoc commands: one time tasks
+        Playbooks: structured, reusable automation scripts
+
+ 1. why is monitoring important in devops?
+    ensures system reliability, detects issues early, supports SLO/SLI/SLA compliance,
+5. explain the ELK stack and its components?
+    elasticsearch: search and analytics engine
+    logstash: data processing pipeline
+    kibana: data visualization and exploration tool
+1. what are core AWS services used in devops?
+    compute: EC2, Lambda, ECS, EKS
+    storage: S3, EBS,EFS
+    networking: VPC, Route 53,ALB/NLB
+    databases: RDS, DynamoDB
+    ci/cd: CodePipeline, CodeBuild, CodeDeploy
+    monitoring: CloudWatch, X-Ray
+    infrastructure as code: CloudFormation, CDK
+7. what is an AWS VPC
+    virtual private cloud for isolating resources
+    contains subnets, route tables, internet gateways, NAT gateways
+    enables secure networking and access control
+16. how do you monitor AWS resources?
+    cloudwatch  metrics,logs,alarms
+19. how do you implement disaster recovery in AWS?
+    backup to s3, cross-region replication, Multi-AZ RDS
+
