@@ -1,0 +1,11 @@
+inventory files in ansible
+inventory formats
+    INI
+    YAML
+Grouping and Parent-Child Relationships
+Ansible Variables
+Group Variables vs Host Variables
+Registering Variables
+Variables Precedence
+    Role Defaults, Group Vars, Host Vars,Host facts, Playbook Vars, Role vars, Include Vars,Set vars, Extra Vars
+Variables Scope
