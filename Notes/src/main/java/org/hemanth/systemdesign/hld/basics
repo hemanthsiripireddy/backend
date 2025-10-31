@@ -1,0 +1,35 @@
+client server architecture
+    light clients
+        process least amount of information and heavily rely on the server. ex: web browsers
+    thick clients
+        process larges amount of information and rely less on the server. ex: game applications, video editing applications
+    2-tier architecture
+        client-server
+    3-tier architecture
+        client-server-database
+    n-tier architecture
+        client - load balancer web server - application server - database server-database
+Network protocols and proxies
+    OSI Model
+        application layer
+        presentation layer
+        session layer
+        transport layer
+        network layer
+        data link layer
+        physical layer
+    TCP/IP Model
+        Application Layer
+        Transport Layer
+        Internet Layer
+        network Access Layer
+    Common Protocols
+        HTTP: Hypertext Transfer Protocol: stateless
+        TCP VS UDP
+            TCP: connection-oriented, reliable, ordered, error-checked delivery of data. ex: web browsing, email, file transfer
+            UDP: connectionless, faster but less reliable, no guarantee of order or error-checking. ex: video streaming, online gaming, VoIP
+    Proxies
+        farward Proxy
+            acts on behalf of clients, masking their IP addresses and providing access control, caching, and anonymity.
+        reverse Proxy
+            acts on behalf of servers, distributing incoming requests, enhancing security, and providing load balancing.
