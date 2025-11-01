@@ -19,7 +19,13 @@ Most Linux Distributions Currently
     files -- understanding, editing, filtering, security
     software management
     servers management
+shell vs terminal
+         terminal is an interface to interact with the shell
+         example: gnome terminal, konsole, xterm
+         shell is a program that accepts commands from the terminal and executes 
+         example: bash, zsh, ksh
 
+    
 
 
 pwd
