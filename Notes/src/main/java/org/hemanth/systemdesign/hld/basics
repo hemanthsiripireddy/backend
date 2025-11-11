@@ -46,3 +46,7 @@ Search functionality:
 	advanced:
 		vectors(embeddings)
 		measure similatiry using cosine distance
+    web app also has search funcationalty
+        once they recieve json list, they can perform search on that
+        like the partial search, ignore case & typos, highlights matches, ranks by relevance
+        uses react libraries
