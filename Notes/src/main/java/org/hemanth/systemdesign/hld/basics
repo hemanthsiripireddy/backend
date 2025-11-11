@@ -33,3 +33,16 @@ Network protocols and proxies
             acts on behalf of clients, masking their IP addresses and providing access control, caching, and anonymity.
         reverse Proxy
             acts on behalf of servers, distributing incoming requests, enhancing security, and providing load balancing.
+
+
+Search functionality:
+    how does search works in applicatoins:
+	indexing
+	Ranking and relevence:
+		TF(Term frequency):
+		IDF: inverse document frequency
+	prefix index or trie structure for auto complete
+	
+	advanced:
+		vectors(embeddings)
+		measure similatiry using cosine distance
