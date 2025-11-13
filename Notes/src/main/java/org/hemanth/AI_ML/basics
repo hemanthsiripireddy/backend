@@ -9,3 +9,43 @@ Types of Machine Learning Algorithms
 
 
 fine-tuning foundation model
+
+
+labeled data vs unlabeled data
+
+batch interfacing vs real-time interfacing
+
+Large language models
+    diffusion models
+        forward diffusion models
+        reverse diffusion models
+    multi-modal models
+        text-to-image models
+        image-to-text models
+    other generative models
+        GANs (Generative Adversarial Networks)
+        VAEs (Variational Autoencoders)
+prompt engineering
+Retrieval-Augmented Generation (RAG)
+
+AWS Resources:
+    ML frameworks:
+        Amazon SageMaker
+    AI/ML services
+        chatbots:
+            Amazon Lex
+        text and document analysis:
+            Amazon Comprehend
+            Amazon Textract
+            Amazon Translate
+        vision:
+            Amazon Rekognition
+        Search:
+            Amazon Kendra
+        speech:
+            amazon Polly
+            amazon transcribe
+        Recommendation:
+            amazon personalize
+        MISC:
+        amazon deepracer
