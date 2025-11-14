@@ -44,4 +44,11 @@ maintainability:
 resilient vs reliable:
     reliable system consistently performs intended functions without failure over a specified period of time
     resilient system: able to recover quickly and continue to operate even after a failure or disruption
+types of APIs
+    rest APIs
+    soap APIs
+    grpc APIs
+    websocket APIs
+    graphQL APIs
+    webhooks
     
