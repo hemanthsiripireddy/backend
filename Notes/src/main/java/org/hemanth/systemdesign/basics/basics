@@ -41,3 +41,7 @@ maintainability:
         loose coupling between components, avoid hacks- adding if else instead of good abstraction
     evolvable:
         easy to add new features
+resilient vs reliable:
+    reliable system consistently performs intended functions without failure over a specified period of time
+    resilient system: able to recover quickly and continue to operate even after a failure or disruption
+    
