@@ -1,0 +1,8 @@
+--requirement gathering
+--MVP
+--system should be extensible to add more features in future
+--first start with monolithic architecture, then move to microservices
+--performance vs scalability tradeoff,
+    performance: low latence, how fast the system responds to a request
+    scalability: how well the system can handle increased load
+-- don't invent the wheel, use existing solutions
