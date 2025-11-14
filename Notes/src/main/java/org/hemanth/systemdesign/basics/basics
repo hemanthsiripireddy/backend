@@ -51,4 +51,9 @@ types of APIs
     websocket APIs
     graphQL APIs
     webhooks
-    
+CAP theorem
+    Consistency
+    Availability
+    Partition tolerance
+    in distributed systems, we can only have two of the three properties at the same time
+    most web services choose availability and partition tolerance over consistency
