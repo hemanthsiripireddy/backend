@@ -1,0 +1,10 @@
+1 can you we print something withoug using main method in java?: using static block
+2 can we have multiple static blocks? and purpose of that?
+3 can we use class as a key in hasmap? mutable vs immutable ojbect, key can only be immutable (can be done by overiding hashcode and equals method)
+4 what is the reflection in java?
+5 explain java8 features?
+6 diff spring vs springboot?
+7 scopes of bean?
+8 diff between requestparam and path variable
+8 explain about design patterns
+9 explain about jpa
