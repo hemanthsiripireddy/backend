@@ -1,0 +1,33 @@
+java interview questions:
+   1. is java platform independent, if yes, how?
+   2.why choose java, features of java?
+   3. explain jvm, jre, jdk?
+   4. what is JIT compiler?
+
+
+
+
+2.why choose java, features of java?
+why choose java?
+    platform independent,
+    Strong community and ecosystem
+        has massive developer community, extensive libraries and frameworks, and tools that make development faster and easier.
+    Performance and optimization
+        while not fast as c++, java offers good performance with just-in-time (JIT) compilation and good memory management.
+    versatility
+        java is used in various domains, including web development, mobile apps (android), desktop applications, cloud services
+    secutity
+        java has built-in security features, such as the sandbox environment, which helps protect against malicious code.
+features of java:
+    object-oriented
+        java is based on the object-oriented programming (OOP) paradigm, which promotes code reusability, modularity, and maintainability.
+    platform independence
+        java code is compiled into bytecode, which can run on any platform with a compatible Java Virtual Machine (JVM).
+    automatic memory management
+        java has a built-in garbage collector that automatically manages memory allocation and deallocation, reducing the risk of memory leaks.
+    multithreading
+        built in support for concurrent programming,
+    Dynamic and extensible
+        classes can be loaded dynamically at runtime
+    robust and secure
+        strong type checking, exception handling, and memory management features
