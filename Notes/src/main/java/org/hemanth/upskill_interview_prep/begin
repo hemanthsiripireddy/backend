@@ -22,6 +22,6 @@ tools that help feature development , improve architecture,
 topics to learn
     tech stack  
         multithreading,
-        comparator vs 
+        Comparable vs Comparator
         collections framework
         streams
