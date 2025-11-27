@@ -1,0 +1,27 @@
+Comparable vs Comparator in java:
+    Comparable:
+        if a class implements Comparable<T>, means:
+            that class decides how objects should be sorted
+            sorting logic lives inside the class
+            we can sort using collections.sort(list)
+    Comparator:
+        multiple sorting options
+        sorting logic outside the class
+        can't modify the class
+    pros and cons of Comparable
+        pros:
+            less boiler code
+            useful for default sorting
+        cons:
+            only one sorting rule is allowed
+            requires modifing the class
+            sorting logic stays inside the class
+    pros and cons of Comparator:
+        pros:
+            unlimited sorting rules
+            no modification of class required
+            more flexible
+            work beatifully with streams
+        cons:
+            more verbose
+            everytime you start, you must specify the comparator
