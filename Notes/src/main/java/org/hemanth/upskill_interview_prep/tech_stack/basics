@@ -25,3 +25,17 @@ Comparable vs Comparator in java:
         cons:
             more verbose
             everytime you start, you must specify the comparator
+
+
+multithreading in java:
+        we can create multithreading in java by two ways:
+            extending thread class
+            implementing runnable interface
+            advantage of runnable interface over thread class:
+                java supports only single inheritance, so if we extend thread class, we can't extend any other class
+                by implementing runnable interface, we can extend another class as well
+                when multiple threads share same data using runnable interface, it saves memory
+                better CPU utilization
+        we can create thread safe methods by:
+            synchronized keyword
+            using locks
