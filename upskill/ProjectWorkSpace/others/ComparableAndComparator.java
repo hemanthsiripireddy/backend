@@ -3,10 +3,10 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
- class JavaProject {
+ public class ComparableAndComparator {
     public static void main(String[] args) {
 
-        JavaProject.comparableAndComparatorExample();
+        ComparableAndComparator.comparableAndComparatorExample();
             
 
     }
@@ -34,7 +34,7 @@ import java.util.List;
 
 }
 //comparable interface implementation
-public class Employee implements Comparable<Employee> {
+ class Employee implements Comparable<Employee> {
     private int employeeId;
     private String name;
     private double salary;
