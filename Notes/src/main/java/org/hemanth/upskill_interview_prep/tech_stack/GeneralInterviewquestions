@@ -1,0 +1,6 @@
+1. have you faced any performance issue in you application? if so, how have you solved it?
+2. can you explain the high level architecture of your application?
+3 what kind of caching have you used? inmemory vs distributed?
+4 have you developed and implemented any API in your application? if so can you give details about that
+5 have you faced any issue with your application? whare are the step you have taken to drill down the issue and find the root cause?
+6 how are you monitoring the health of your system? what are the tools are you using for that?
