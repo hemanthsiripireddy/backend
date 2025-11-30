@@ -39,3 +39,8 @@ multithreading in java:
         we can create thread safe methods by:
             synchronized keyword
             using locks
+
+Singleton pattern using double check in mutli thread:
+    if multiple threads try to create instance at the same time, it may create multiple instances which breaks singleton pattern
+    we could synchronize the whole getInstance() method, but that kills performance because every call becomes synchronized even after instance is created
+
