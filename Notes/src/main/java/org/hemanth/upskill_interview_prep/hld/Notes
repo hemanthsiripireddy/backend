@@ -16,3 +16,11 @@ Caching: which cache to use in which situaion:
         Database query cache:
             (database or ORM level: Hibernate L2 Cache)
             best for repeated read heavy DB queries
+
+Partitioning:
+    vertical partitioning
+    horizontal partitioning(this is sharding)
+        range based
+        hash based
+        directory based
+        composite based

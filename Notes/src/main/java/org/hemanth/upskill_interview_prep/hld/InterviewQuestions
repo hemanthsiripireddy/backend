@@ -1,0 +1,25 @@
+Database Management and Storage
+    1. We are building an e-commerce order history service, would you use relational database or no-sql, why?
+    key concepts: ACID concepts, structured data vs unstructured data, complex joins
+    2 our API is getting slow because of heavey database reads. how would you introduce a cache?(Redis Memcache)
+    -- follow up: what is your cache invalidation policy? (LRU/LFU). how do you handle cache invalidation when data updates?
+
+Communication and concurrency:
+    Rest vs RPC vs GraphQL
+        when would you chose gRPC over rest for inter service communication?
+    Synchronous vs Asynchronour Communcation:
+        A user uploads a massive video file to be processed. if we process it synchronously, the connection time outs, how do you handle it?
+        Expected answer: message queues (Rabbit MQ/ Kafka) for asynchronous processing
+    handling concurrency:
+        two users try to book the last seat on a flight at a exact milli second, how would you prevent double booking?
+    key concepts: database lockging (optimistic locking vs pessimistice locking
+
+Resilience and Operational Excellence:
+    writes code that handles failures gracefully
+    circuit breaking:
+        Service A calls Service B, Service B is down, how do you prevent service A hanging and crashing the whole system?
+    Idempotency:
+        A client clicks the pay button twice because of lag, how do you ensure they aren't charged twice?
+    bottlenecks:
+        I'll point to a specific part of you design(e.g database instance) and ask what happens if this specific instance fails
+
