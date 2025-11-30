@@ -4,3 +4,24 @@
 4 have you developed and implemented any API in your application? if so can you give details about that
 5 have you faced any issue with your application? whare are the step you have taken to drill down the issue and find the root cause?
 6 how are you monitoring the health of your system? what are the tools are you using for that?
+
+
+
+
+1 How to improve API performance?
+    Pagination:
+        Instead of returning massive data in single response, break it into pages
+        reduces payload size
+        faster load time
+        ideal for loading products
+    Aync Logging: 
+        logging synchonously blocks API calls:
+        switch to asynchronous logging to reduct latency
+    caching:
+        store frequently accessed data in memory
+        avoid repetitive DB calls
+        serve low latency responses
+    Connection pooling:
+        creating repetitive database Connections is costly
+        reuse active connections
+        improve database performance dramtically

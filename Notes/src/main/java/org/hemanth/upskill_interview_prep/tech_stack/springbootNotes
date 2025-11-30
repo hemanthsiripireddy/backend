@@ -1,0 +1,6 @@
+@Async
+    @Async runs your method in a new thread
+    Spring uses proxy to intercept the call
+    self calls do not work because proxy is skipped
+    it uses a thread pool internally
+    supports Async return types like Completable future

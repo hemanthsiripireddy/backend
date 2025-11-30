@@ -20,8 +20,18 @@ tools that help feature development , improve architecture,
 
 
 topics to learn
-    tech stack  
-        multithreading,
-        Comparable vs Comparator
-        collections framework
-        streams
+    tech stack 
+        java
+            collections framework
+            streams
+            Exception handling
+            java 8 features: streams, lamda, optional, functional interface
+        Springboot:
+            Jpa and Hibernate: @Transactional
+            Error handling: @ControllerAdvice and @ExceptionHandler
+            Testing: @WebMvcTest, @DataJpaTest, and Mockito
+        LLD:
+            Solid principles and Design patterns
+            Object oriented programming-four pillars of OOPs
+        HLD:
+            DB design, API Design, System Design

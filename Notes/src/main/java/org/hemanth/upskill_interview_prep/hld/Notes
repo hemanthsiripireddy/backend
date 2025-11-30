@@ -1,0 +1,18 @@
+Caching: which cache to use in which situaion:
+    1 In memory cache(Local Cache-> caffeine, Guava)
+        best for
+            ultra low latency reads,
+            single instance services,
+            caching small frequently accessed data
+            computation heavy results
+        Distributed Cache(Redis, Memcached)
+            microservices
+            shared across instances
+            user sessions, tokens
+        CDN cache (Cloud front, Akamai, Fastly)
+            static assests (CSS, JS, images)
+            API edge caching
+            Global Distributed and low latency for users worldwide
+        Database query cache:
+            (database or ORM level: Hibernate L2 Cache)
+            best for repeated read heavy DB queries
