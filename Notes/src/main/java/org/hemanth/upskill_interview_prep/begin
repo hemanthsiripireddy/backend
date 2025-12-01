@@ -26,6 +26,7 @@ topics to learn
             streams
             Exception handling
             java 8 features: streams, lamda, optional, functional interface
+            hashcode equals override
         Springboot:
             Jpa and Hibernate: @Transactional
             Error handling: @ControllerAdvice and @ExceptionHandler
