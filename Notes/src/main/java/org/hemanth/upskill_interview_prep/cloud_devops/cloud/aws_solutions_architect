@@ -1,3 +1,25 @@
+topics
+    build secure architectures
+    build resilient systems
+    build high performing systems
+    build cost optimised systems
+
+modules:
+    1: AWS global infrastructure: Data centers, Availability zones, Local Zones, Wavelength Zones, Well architected framework
+    2: Securing AWS accounts and resources: users, roles, groups, policies, AWS organizations
+    3: AWS basic networking concepts: IP, CIDR, VPC, Subnet, private/public subnets, Elastic IP, NAT gateway, NACL, Security group
+    4: compute in the cloud: EC2, pricing, storage, types, lambda(serverless)
+    5: AWS storage and types: block, object, file, data migration
+    6: AWS services and types: Relational and non relational, caching, db migration
+    7: monitoring AWS infrastructure and AWS scaling: auto scaling, load balancing, cloud watch, cloud watch alarm, cloud trail(user action monitoring)
+    8: automation infrastructure and application creation: cloud formation, elastic bean stalk
+    9: microservices in AWS: containers- ecs, eks, fragate
+    10: AWS advaned networking: VPC endpoints, VPC peering, TGW, VPN, direct connect
+    11: AWS serverless protipolio: SQA, SNS, Kinesis, API gateway, step function
+    12: AWS anywhere services:  route53, web application firewell, sheild, FM, outpost
+    13: AWS disaster recovery: backup plans and recovery strategy
+
+
 it validates ability to design scalable, cost-efficient, and secure applications on AWS.
 job is to plan, implement, and optimize cloud architectures based on business model
 this involves choosing right AWS services, ensuring security and keeping costs low.
