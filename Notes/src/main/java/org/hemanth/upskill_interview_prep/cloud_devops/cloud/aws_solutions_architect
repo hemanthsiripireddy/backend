@@ -63,19 +63,3 @@ modules:
 
 --AWS regions are connected through AWS backbone network, which is private and secure.
 
-it validates ability to design scalable, cost-efficient, and secure applications on AWS.
-job is to plan, implement, and optimize cloud architectures based on business model
-this involves choosing right AWS services, ensuring security and keeping costs low.
-
-
---cloudfront metrics are only available in the us-east-1 region in cloud watch.
---rds supports multi-az deployments for high availability and failover support., creates replica in different availability zone.
-    synchronous replication ensures data consistency between primary and secondary instances.
---types of roles in IAM
-    service role
-    trusted entity role
-    cross-account access role
-    trigger role, service role, event source role
--- AWS Web Identity Federation, AWS Security Token Service (STS)
---for accessing S3 bucket, we may need IAM role, bucket policy, ACLs
---ACLs used in s3(to controle who can access the objects, buckets), and vpc, to control traffic at subnet level
