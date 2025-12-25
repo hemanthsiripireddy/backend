@@ -1,5 +1,6 @@
 --requirement gathering
 --MVP
+--estimate- how many users expected, how munch api calls expected, etc
 --system should be extensible to add more features in future
 --first start with monolithic architecture, then move to microservices
 --performance vs scalability tradeoff,

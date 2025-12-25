@@ -1,3 +1,45 @@
+what is Cloud computing:
+    access services on demand
+    avoid large upfront investment
+    pay for what you use
+AWS data centers:
+    AWS data centers host cloud services and servers
+    data centers organized into Availability zones
+    All data centers use AWS backbone network equipment 
+-- 600+ point of presence
+AWS well architected framework:
+    set of best practices to help architects build secure, high-performing, resilient, and efficient infrastructure for their applications
+    6 pillars:
+        operational excellence:
+            perform operations as code, no human error
+        security:
+            stick to principle of least privilege
+            enable multi factor authentication
+        reliability:
+            recover from failures quickly
+            implement backup and restore strategy
+        performance efficiency:
+            reduct latency
+            chose right resource types and sizes
+            use serverless architectures where possible
+            monitor resources and applications
+        cost optimization
+            analyze expenditure over time
+            use cost effective resources
+            do not guess    
+        sustainability
+            understand your impact on environment
+            maximize utilization of resources
+       
+
+
+AWS Local zones vs wavelength zone vs edge locations:
+    local zones: extension of an AWS region that is geographically close to large population, industry, and IT centers. 
+        used for latency sensitive applications, there are two local zones in India
+    wavelength zones: infrastructure deployments that extend AWS infrastructure to the edge of the 5G network, to minimize latency for mobile and connected devices
+    edge locations: data centers that are part of AWS content delivery network (CDN) used to deliver content to end users with low latency,
+         there 600+ edge locations globally
+
 topics
     build secure architectures
     build resilient systems
@@ -10,15 +52,16 @@ modules:
     3: AWS basic networking concepts: IP, CIDR, VPC, Subnet, private/public subnets, Elastic IP, NAT gateway, NACL, Security group
     4: compute in the cloud: EC2, pricing, storage, types, lambda(serverless)
     5: AWS storage and types: block, object, file, data migration
-    6: AWS services and types: Relational and non relational, caching, db migration
+    6: AWS DB services and types: Relational and non relational, caching, db migration
     7: monitoring AWS infrastructure and AWS scaling: auto scaling, load balancing, cloud watch, cloud watch alarm, cloud trail(user action monitoring)
     8: automation infrastructure and application creation: cloud formation, elastic bean stalk
     9: microservices in AWS: containers- ecs, eks, fragate
-    10: AWS advaned networking: VPC endpoints, VPC peering, TGW, VPN, direct connect
-    11: AWS serverless protipolio: SQA, SNS, Kinesis, API gateway, step function
+    10: AWS advanced networking: VPC endpoints, VPC peering, TGW, VPN, direct connect
+    11: AWS serverless portfolio: SQA, SNS, Kinesis, API gateway, step function
     12: AWS anywhere services:  route53, web application firewell, sheild, FM, outpost
     13: AWS disaster recovery: backup plans and recovery strategy
 
+--AWS regions are connected through AWS backbone network, which is private and secure.
 
 it validates ability to design scalable, cost-efficient, and secure applications on AWS.
 job is to plan, implement, and optimize cloud architectures based on business model
