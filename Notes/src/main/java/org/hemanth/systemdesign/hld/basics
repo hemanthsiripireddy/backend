@@ -1,3 +1,18 @@
+Functional requirements vs non-functional requirements
+    functional requirements:
+        what the system should do
+    non-functional requirements:
+        how well the system performs its functions
+        -- performance
+        -- security
+        -- scalability
+            -- how many users it can handle
+            -- how much traffic it can handle
+        -- reliability vs availability
+        -- usability
+
+
+
 client server architecture
     light clients
         process least amount of information and heavily rely on the server. ex: web browsers

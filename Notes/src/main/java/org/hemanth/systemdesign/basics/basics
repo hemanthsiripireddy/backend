@@ -1,7 +1,30 @@
 components of system design
 framework used to solve system design problem in hour
 
+HLD vs LLD
+    HLD: what components exist and how they interact with each other
+    LLD: how each component is implemented internally
+        data structures, algorithms, class diagrams, sequence diagrams etc
 
+Missded design considerations:
+    non functional requirements:
+        consistency
+        observability:
+            logging strategy,
+            metrics to be captured: latency, throughput, error rates
+            tracing requests across services
+    data flow diagram for HLD
+    consistency:
+        strong consistency vs eventual consistency
+        distributed transactions vs saga pattern
+    deployments and environment:
+        blue green deployments
+        canary releases
+        rolling updates
+    In LLD:
+        mention controller, service, domain, dto, repository layers
+        database schema design
+        trasaction and isolation levels
 in distributed systems,
     reliability is continue to work correctly when things go wrong, example: minimum functionalities are working
     minimum performance is achieved etc
