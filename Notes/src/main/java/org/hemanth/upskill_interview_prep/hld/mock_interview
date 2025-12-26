@@ -8,3 +8,86 @@
     performance: low latence, how fast the system responds to a request
     scalability: how well the system can handle increased load
 -- don't invent the wheel, use existing solutions
+
+
+HLD requirement gathering vs LLD requirement gathering
+    HLD: business and system level
+        focus is breadth , not depth
+        you ask questions that affact:
+            architecture
+            technology choices
+            scaling
+            cost
+            risk
+        functional:
+            what are the core use cases?
+            who are the users?- roles
+            what actions can each role perform?
+            is this CRUD heavy or workflow based?
+        non-functional:
+            scalability: expected users now? after 1 years? after 5 years?
+                peack traffic (festival sales etc)
+                read heavy vs write heavy
+            Availability:
+                is 99% availability acceptable? or do we need 99.999%?
+                is downtime acceptable? for how long?
+
+            performance:
+                max acceptable response time
+            Security:
+                authentication types?
+                encryption requirements?
+                compliance needs?
+            data:
+                estimated data growth over time?
+                strong consistency needed? or eventual consistency acceptable?
+            example:
+                - 1 million registered users
+                - 100k daily active users
+                - 10k peak concurrent users
+                - 99.9% availability
+                - payment and order service must be strongly consistent
+                - latency less than 200ms for 95% of requests
+        LLD:
+            API level question:
+                exact request and response structure
+                mandatory vs optional fields
+                error codes
+                pagination format?
+            business requirments:
+                can order be cancelled after shipping?
+                partial refunds allowed?
+                retry behaviour on failure?
+                Idempotency requireed?
+            data level qeustions:
+                which fields require indexing?
+                unique constraints?
+                hard delete vs soft delete?
+                audit fields needed?
+            concurrency and edge cases:
+                what if two requests update the same record?
+                optimistic vs pessimistic lockging?
+                how to handle duplicate requests?
+            HLD:
+                users:
+                    customers,
+                    admins
+                funcational requirements
+                    user can place orders
+                    user can track orders
+                    admin can manage inventory
+                non-functional requirements
+                    system should handle 10k concurrent users
+                    99.9% uptime
+                    latency less than 200ms for 95% of requests
+                constraints:
+                    must run on AWS
+                    MVP by 3 months
+                    
+            LLD:
+                create order
+                cancel order
+                get order by id
+
+
+   
