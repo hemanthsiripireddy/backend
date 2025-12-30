@@ -19,6 +19,7 @@ AWS well architected framework:
             recover from failures quickly
             implement backup and restore strategy
         performance efficiency:
+            optimizing application performance for responsibility and scalability is essential for positive user experience
             reduct latency
             chose right resource types and sizes
             use serverless architectures where possible
@@ -36,7 +37,10 @@ AWS well architected framework:
 AWS Local zones vs wavelength zone vs edge locations:
     local zones: extension of an AWS region that is geographically close to large population, industry, and IT centers. 
         used for latency sensitive applications, there are two local zones in India
-    wavelength zones: infrastructure deployments that extend AWS infrastructure to the edge of the 5G network, to minimize latency for mobile and connected devices
+        local zones are available in 26 locationls globally
+    wavelength zones: this service deploys subset of AWS conpute and storage services within the infrastructure of telecom communication providers
+        wavelength zones are available in 30+ cities across the globe
+        infrastructure deployments that extend AWS infrastructure to the edge of the 5G network, to minimize latency for mobile and connected devices
     edge locations: data centers that are part of AWS content delivery network (CDN) used to deliver content to end users with low latency,
          there 600+ edge locations globally
 

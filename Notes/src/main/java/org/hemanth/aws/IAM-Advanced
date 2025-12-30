@@ -79,3 +79,35 @@ AWS Directory Services:
 AWS Control tower
 AWS Config
 
+IAM basics------------
+access is denied unless explicitly allowed
+users:
+	Aws users are entities who are associated with security credentials accesskey and secretkey, have specific permissions to interact with AWS services
+groups:
+	groups are collection of users. it simplifies assigning of permissions to users in a one go, it reduces the burden of individually assigning permissions to each user
+	by organsing users into groups, you can apply permissions to mulitple users simultaneously
+Roles
+	Role has a set of permission policies, what actions can be performed, what resources can be accessed, unlike  uses or groups, roles are not associated with entities, they can be
+	assumed by aws services, IAM users
+permission boundaries
+	permission boundaries can be assiciated with users or groups, it  defines the maximum permission a user or group can have regardless of attached policies. it acts as access
+	a addtional layer of control which prevents users or groups from exceeding a predetermined level access
+	
+AWS organizations
+	AWS organizations help to centrally manage AWS accounts related to a company, it has a heiracial structure which is calleed OU organizational Unit and there root organizational
+	accounts can be grouped under a OU , or can directly be associated to root, this structure helps consolidated billing,
+	consolidation of multiple accounts into an organizational unit
+	SCP- service control policy : is a set of restrictions that can be applied to root, OU, account. what actions or services are denied for the given unit. this helps centralized 
+	security
+	features:
+		cross account access: facilitates cross account access by  enabling creation of Role that provides permission to access another account within the organization
+	benifits of AWS organizations:
+		cost optimization: consolidatin billing and gainging holistic view of resource utilization helps cost optimization more effectively. able to allocat cost to project or department prcisely
+		Administrative efficiency: heirarcial structure of organization unit enhances administrative efficiency by allowing organizations to apply polices at different levels 
+		. this streamlines management of permissions across the account
+		Security: SCP empower organizations to enforce security measures by controlling access to specific AWS services
+		Scalabiility: As Organizations grow, AWS organizations can scale with them, whether adding new accounts or adjusting hieracial structure 
+		collabration and governance: 
+			cross account access and tag policies facilitates collabration while maintaining governance
+		
+	
