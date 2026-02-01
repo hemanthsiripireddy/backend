@@ -80,3 +80,124 @@ CAP theorem
     Partition tolerance
     in distributed systems, we can only have two of the three properties at the same time
     most web services choose availability and partition tolerance over consistency
+
+Softwae development life cycle SDLC
+    requirement gathering
+    system design
+    implementation
+    testing
+    deployment
+    maintenance
+    it should be iterative and incremental
+    product owner gather the requirements from stakeholders
+    scrume master facilitates the process
+    architecture designers create HLD and LLD documents
+    engineering manager oversees the implementation
+    software engineers write code
+
+techniques for gathering requirements:
+    interviews:
+        one on one interviews with stakeholders and end users help in gathering requirements
+    workshops:
+        group discussions with stakeholders and end users help in gathering requirements
+    surveys and questionnaires:
+        collecting feedback from a large number of users help in gathering requirements
+    prototyping:
+        until users use the system, experience the system, it's hard to give feedback by them
+        so building a prototype helps in gathering requirements
+    observation::
+        users may feel that's how system works, but may not be find the inefficiencies and  challenges,
+        so observing users using the system helps in gathering requirements
+    document analysis:
+        Prioritation of requirements:
+        feasability analysis:
+            technical feasibility
+            operational feasibility
+            economic feasibility
+        requirement categorization and grouping
+        requirment validation and verification
+    Tools to used to gather requirements:
+        JIRA
+        Confluence
+        excell, word
+    best practices:
+        involve all the right stakeholders
+        ask end to end questions
+        document everything
+        validate requirements with stakeholders
+        use prototype or mockups
+        iterative approach
+
+lets compate how HLD and LLD interview goes on:
+    question: design Ecommerce system, same questionf for HLD and LLD
+    HLD:
+       I say, I'll start by clarfying the requirments. I'll divide them into funcational and non functional requirements.
+       core business flows:
+         core user actions:
+            browser products,
+            add to cart,
+            place order,
+            make payment,
+            track order
+        actors:
+            customers only?
+            sellers?
+            admin?
+        scope control:
+            do we handle returns and refunds?
+            digital products? or physical products only?
+            these qeustions limit scope, not expand it?
+        Non funcational requirments:
+            scalability:
+                expected number of users?
+                orders per day?
+                peak traffic?
+            performance:
+                accepted page load times?
+                search latency?
+            availability:
+                should checkout be highly available?
+                can browsing tolerate some downtime?
+            consistency:
+                is strong consistency needed for inventory counts?
+                eventual consistency acceptable for user reviews?
+            security:
+                payment handled internally or by 3rd party?
+                any PCI compliance needs?
+        after asking these questions, interviewer gives anwers or assumptions
+        then I summarize like design ecommerce B2C system with 1M daily active users, peak traffic at sales (10M users),load page under 1sec,  high availability for checkout,
+            strong consistency for inventory, payment via 3rd party gateway
+        then I move to high level architecture, 
+            services,databases,caches,message queues,CDN etc
+        then I explain each component, how they interact
+        Interviews test:
+            how big picture i can think
+            scope the requirments
+            can you separate the funcational and non funcational requirments
+            can you handle the scale and trade off
+    LLD:
+        I say, I'll focus on detailed fuctional behaviour and egde cases:
+            go deep:
+            user behaviour details
+                can user have multiple carts?
+                can order be cancelled after shipping?
+            state transitions:
+                created, paid, shipped, delivered, cancelled
+            validation rules:
+                price locked at cart or checkout?
+        non funcational:
+            i don't talk about millions of users but about:
+                thread safty,
+                concurrent users,
+                transactions,
+                Idempotency
+        then I move to detailed design:
+            class diagrams, design patterns, solid principles, uml digrams
+            sequence diagrams
+            database schema
+        then I explain each class, methods, attributes
+        they want test 
+            can you translate requirments into code
+            can you design clean,extensible model
+            can you understand OOP, solid, design patterns
+            can someone actually implment from your design
