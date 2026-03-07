@@ -1,0 +1,28 @@
+Ai Model
+    GPT‑4‑scale (1.8T params) → 7.2 TB VRAM
+    Claude Opus (~6T params) → 24 TB VRAM
+    require this much of VRAM to run inference
+    NVIDIA H100 NVL (2024–2026 era)
+        ~94 GB usable FP16-equivalent HBM per GPU
+        FP32 effectively halves usable params → ~47 GB FP32 effective capacity
+    For Claude‑scale 6T params:
+        24 TB = 24000 GB
+        24000 / 47 ≈ 510 GPUs
+    LLMs have compute cost roughly:
+        FLOPs ≈ 2 × parameters × sequence_length
+    For a 1.8T model generating 1 token:
+        FLOPs ≈ 3.6e12 FLOPs ≈ 3.6 TFLOPs/token
+    Serving 10 concurrent users at 2 tokens/sec each = 20 tokens/s:
+       total = 20 × 3.6 TFLOPs ≈ 72 TFLOPs/s
+    A single H100 does ~60–90 TFLOPs FP32 (depending on exact spec).
+    Thus, compute‑wise, 1 H100 could theoretically handle 10 users.
+    But memory scaling dominates, so you still need 150 GPUs to hold the model.
+    To serve a model split over 150+ GPUs, you need:
+
+    NVLink/NVSwitch fabric
+    ~900 GB/s intra‑cluster bandwidth
+    Extremely low‑latency topology (similar to GPT‑4 training clusters)
+
+CPU Ram
+    can range from GBs to 25 TB+ for large inference servers for memory‑optimized
+    storage optimized: 1.5TB RAM, 11.4TB SSD

@@ -44,6 +44,10 @@ AWS Local zones vs wavelength zone vs edge locations:
     edge locations: data centers that are part of AWS content delivery network (CDN) used to deliver content to end users with low latency,
          there 600+ edge locations globally
 
+edge location vs regional edge location:
+    edge location: caches frequently accessed content for faster delivery to users
+    regional edge location: sits between origin server and edge location, used to cache larger content that isn't popular enough to be stored at edge locations,
+        but still needs to stay closer to end users for faster delivery
 topics
     build secure architectures
     build resilient systems

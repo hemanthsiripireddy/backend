@@ -8,6 +8,8 @@ AWS Organizations:
 Root organizational unit
     Dev organizational unit
     Prod organizational unit
+
+Control Account vs member account
 AWS Organization
     advantages:
         Multi account vs one account multi VPC

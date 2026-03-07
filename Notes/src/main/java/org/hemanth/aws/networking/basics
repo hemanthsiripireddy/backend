@@ -1,6 +1,9 @@
 Ipv4 is divided into public and private Ipaddress
+In AWS, we reserve 5 IP address,   1 for n/w, 2 for route, 3 for DNS, 4 for future purpose,     last   for broadcasting
 CIDR- classless Inter-Domain Routing
-VPC- virtual private network
+    CIDR example: 192.168.0.0/20, how many ip address can we create for this? (2pown-2)-5=2pow12-5=4906-5=4094
+VPC- virtual private network, vpc can have a CIDR
+    VPC can have mutiple subnets, each subnet will have a CIDR which is subset of VPC's CIDR
     you can multiple VPCs in AWS account (soft limit 5)
     max CIDR is 5 per VPC
         min size is /28 16 ip address
@@ -8,6 +11,9 @@ VPC- virtual private network
     Because VPC is private, only the private IP4 ranges are allowed
     you VPC CIDR should not overlap with you other networks (eg corporate)
 VPC-subnet IPv4
+    there are private vs public subnet
+    to make public subnet, create route table and attach to internet gateway
+    route table has target and destination
     AWS reserves 5 IP addresses(first 4 and last 1) in each subnet
     these IP addresses are not available for use and can't be assigned to an EC2 instance
 Internet gateway, Route table
