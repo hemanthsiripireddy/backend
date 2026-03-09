@@ -1,0 +1,13 @@
+agentic AI
+MCP- nodel context protocol
+mcp host, mcp server, mcp client
+session storage
+RAG - retreiveal augmentation generation
+RAG vs MCP 
+each agent run in a separate docket container
+each agent instace run inside it's own docker container
+all agents can run a large instance ic2 or something
+most agent model we use is single agent model
+
+in local , it's automation tool(it’s a shell script + Python script + Git operations + API calls.) no ai, we send prompts to llm
+The local  runner only automates the mechanical steps.
