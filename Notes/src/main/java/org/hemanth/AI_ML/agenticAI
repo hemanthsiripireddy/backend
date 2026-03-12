@@ -1,5 +1,5 @@
 agentic AI
-MCP- nodel context protocol
+MCP- Model context protocol
 mcp host, mcp server, mcp client
 session storage
 RAG - retreiveal augmentation generation
@@ -11,3 +11,16 @@ most agent model we use is single agent model
 
 in local , it's automation tool(it’s a shell script + Python script + Git operations + API calls.) no ai, we send prompts to llm
 The local  runner only automates the mechanical steps.
+
+Agentic Software Development
+AI ready repostitory framework
+
+Agentic AI vs spec driven development
+Five pillars of AI readiness
+    custom instrucations
+    agent skills
+    custom agents
+    prompts
+    MCP servers
+
+Clade code vs calude cowork

@@ -1,0 +1,21 @@
+Model parallelism
+    Tensor parallelism
+    pipeline parallelism
+    layer/model parallelism
+    expert parallelism/Moe
+Distributed inference systems:
+    DeepSpeed Inference
+    NVIDIA Triton Inference Server
+    megatron-LM inference engine
+    vLLM distributed 
+    Custome orchestration frameworks
+
+AI terminology:
+    Agentic AI
+    Large reasoning models
+    Vector databases
+    RAG- Retrieval Augmented Generation
+    MCP -to interact with external data sources
+    MoE - Mixture of Experts
+    ASI - Artificial Super Intelligence
+    AGI - Artificial General Intelligence

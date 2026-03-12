@@ -1,0 +1,22 @@
+LLM - large language model
+Tokinization
+    input text is broken down into smaller units called tokens
+vectorization
+Attention mechanism
+self supervised learning
+transformers
+fine tuning
+few shot prompting
+vector db
+context engineering
+    RAG (vector db)
+    MCP
+    few shot prompting
+agents
+reinforcement learning
+reasoning model
+multi modal models
+small language models
+    fewer parameters
+disillation
+quantization
