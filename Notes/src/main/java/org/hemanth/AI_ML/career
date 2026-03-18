@@ -1,0 +1,53 @@
+AI engineering
+    building software systems where AI via third party is integrated
+    Obervability
+        model response time and cost 
+    building ai application that are production ready
+ML engineering
+    deploy models at large scale and good efficiency 
+    deploy and maintain models at large scale effiently
+
+Research scientist / reasearch engineer
+
+
+AI engineer skillset
+    great swe skills 
+    machine learning concepts
+    programming language
+    Computer science concepts
+        DBMS, OS, networking
+    core tech stack
+        python
+            flaskAP
+            django
+    LLD 
+        how to write better code 
+        best practices 
+        design principles
+    HLD 
+        distributed systems
+    introduction of AI/ML
+
+ML engineer skillset
+    python
+    databases and SQL
+    maths
+        propability and statistics
+        introductory calcus
+        linear algebra
+    ML core concepts
+        supervised learning
+        unsupervised learning
+        computer vision
+            CNN, diffustion models
+        NLP
+            RNN, LSTM, transformers
+    engineering
+        data engineering
+            hadoop, spark
+        MLops
+        tools and frameworks
+            pytorch, scikt learn
+            numpy and pandas
+    ML system design
+
