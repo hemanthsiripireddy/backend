@@ -1,0 +1,15 @@
+priciples
+    Defense in Depth: Implementing multiple layers of security controls to protect 
+        against various types of threats.
+    Least Privilege: Granting users and systems only the minimum level of access
+    separation of Duties: Dividing responsibilities among different individuals or systems
+         to reduce the risk of insider threats and errors.
+    security by design: Integrating security considerations into the design and development
+        of systems and applications from the outset.
+    KISS: Keep It Simple, Stupid: Designing security measures that are straightforward and easy to understand
+    Security by obscurity: Relying on secrecy to protect systems and data, which is generally considered a weak security approach.
+    
+CIA architecture:
+    Confidentiality: Ensuring that sensitive information is only accessible to authorized individuals or systems.
+    Integrity: Maintaining the accuracy and consistency of data and systems, preventing unauthorized modifications. logging everything, if someone modifies or tempers, if we are aware of it
+    Availability: Ensuring that systems and data are accessible and usable when needed, minimizing downtime and disruptions.

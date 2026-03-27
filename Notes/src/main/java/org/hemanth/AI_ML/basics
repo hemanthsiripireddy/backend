@@ -52,3 +52,30 @@ AWS Resources:
 
 Tokens
 model weights
+
+---------AI stack-------------
+Infra
+Model
+Data
+Orchestration
+APP
+
+    Infra
+        Cloud
+        On premise
+        Local
+    Model
+        Open vs Proprietary
+        size
+        specialization
+    Data
+        Data sources
+        Pipelines
+        Vector Dbs + Retrieval
+    Orchestration
+        Think, Execute, Review
+    APP
+        Interfaces
+            text, image, video, audio
+        Integration
+            API, SDK, RAG, MCP
