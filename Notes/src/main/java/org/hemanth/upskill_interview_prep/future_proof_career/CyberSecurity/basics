@@ -13,3 +13,26 @@ CIA architecture:
     Confidentiality: Ensuring that sensitive information is only accessible to authorized individuals or systems.
     Integrity: Maintaining the accuracy and consistency of data and systems, preventing unauthorized modifications. logging everything, if someone modifies or tempers, if we are aware of it
     Availability: Ensuring that systems and data are accessible and usable when needed, minimizing downtime and disruptions.
+cybersecurity Architecture:
+    Role
+    Mindset
+    Tools
+    Domains
+    ---------------------
+    Business Context
+    System Context
+    Architecture Context
+    -----------
+    NIST CSF
+        Identity
+        protect
+        detect
+        respond
+        recover
+    Lifecycle
+        Risk Analysis
+        Policy
+        Architecture
+        Implemetation
+        Admin
+        Audit/Assess
