@@ -79,3 +79,26 @@ APP
             text, image, video, audio
         Integration
             API, SDK, RAG, MCP
+
+
+
+what is the difference between AI, ML and Deep learning
+    AI is broader term where building systems that can do tasks that normally  human intelligence is required, such as  reasoning, perception, decision making, language understanding, problem solving
+
+    ML is subset of AI where we train a model using  data, so they  can learn from patterns and predict things without explicitly programming every rule
+
+    Deep learning is subset of ML, that is a multi layer neural networks, during training it adjusts it's weights to learn complex pattern from data 
+
+
+what is the difference between supervised learning and un supervised learning
+
+    supervised learning is a type of machine learning where it is trained on labelled data, if learns  the relation ship between input and output example if we provide many images of dog and cat with it's
+    labels, it learns to distinguish, when we provide a new image, it can guess the label for this
+
+    unsupervised learning is a trained on un labelled data, where it finds patterns, structure, groups from it, example if we provide customer data without label, it finds purchasing behaviour
+what is the diff between generative ai and promp engineering
+
+    generative AI is a type of AI that can generate new content such as text, image, code text based on the input or prompt
+
+    prompt engineering is practice of designing or structuring prompts  to get accurate, relevant and consistence result from generative AI model. we provide sufficient context, examples, constraint
+    expected output format etc
