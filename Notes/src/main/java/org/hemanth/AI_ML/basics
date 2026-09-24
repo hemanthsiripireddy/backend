@@ -102,3 +102,18 @@ what is the diff between generative ai and promp engineering
 
     prompt engineering is practice of designing or structuring prompts  to get accurate, relevant and consistence result from generative AI model. we provide sufficient context, examples, constraint
     expected output format etc
+
+what is vector database, Retrieveal augmented Generation
+
+    vector database is a database where we store and search vector embeddings, text, image, other data are converted to numerical vectors called embeddings. then the db can then perform similarity searches to find data
+    semantically similar to  a query 
+
+    Retrieval Augmented generation is a technique where we retrieve relevant  data from external sources like vector database and provide that information as context to a AI model so it can generate 
+    more relevant results
+
+what is embeddings
+
+    embeddings is numerical vector representation of data such as text, images etc s, so AI can compare  how similar the different pieces of  information are 	
+
+what is agentic AI
+    Agentic AI is a AI system which plans and executes multiple steps to achieve a goal, unlike a chatbot that mainly  generates response for a query, AI agent that uses tools, to interact with external systems, make decisions based on results and continue taking actions until task is complted
