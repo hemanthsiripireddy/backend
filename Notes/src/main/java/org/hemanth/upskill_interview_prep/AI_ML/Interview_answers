@@ -1,0 +1,57 @@
+what is the difference between AI, ML and Deep learning
+    AI is broader term where building systems that can do tasks that normally  human intelligence is required, such as  reasoning, perception, decision making, language understanding, problem solving
+
+    ML is subset of AI where we train a model using  data, so they  can learn from patterns and predict things without explicitly programming every rule
+
+    Deep learning is subset of ML, that is a multi layer neural networks, during training it adjusts it's weights to learn complex pattern from data 
+
+
+what is the difference between supervised learning and un supervised learning
+
+    supervised learning is a type of machine learning where it is trained on labelled data, if learns  the relation ship between input and output example if we provide many images of dog and cat with it's
+    labels, it learns to distinguish, when we provide a new image, it can guess the label for this
+
+    unsupervised learning is a trained on un labelled data, where it finds patterns, structure, groups from it, example if we provide customer data without label, it finds purchasing behaviour
+what is the diff between generative ai and promp engineering
+
+    generative AI is a type of AI that can generate new content such as text, image, code text based on the input or prompt
+
+    prompt engineering is practice of designing or structuring prompts  to get accurate, relevant and consistence result from generative AI model. we provide sufficient context, examples, constraint
+    expected output format etc
+
+what is vector database, Retrieveal augmented Generation
+
+    vector database is a database where we store and search vector embeddings, text, image, other data are converted to numerical vectors called embeddings. then the db can then perform similarity searches to find data
+    semantically similar to  a query 
+
+    Retrieval Augmented generation is a technique where we retrieve relevant  data from external sources like vector database and provide that information as context to a AI model so it can generate 
+    more relevant results
+
+what is embeddings
+
+    embeddings is numerical vector representation of data such as text, images etc s, so AI can compare  how similar the different pieces of  information are 	
+
+what is agentic AI
+    Agentic AI is a AI system which plans and executes multiple steps to achieve a goal, unlike a chatbot that mainly  generates response for a query, AI agent that uses tools, to interact with external systems, make decisions based on results and continue taking actions until task is complted
+
+what is agentic workflow?
+    agentic workflow is a workflow where AI agents can autonomously execute multi step tasks with minimal human intervention. It can break down  a high level goal into smaller tasks, use available tools such as APIs, database, evaluate result, dynamically decide what the next step is. continues the same process until the goal is completed or human intervention is needed
+
+    example 
+    if we ask agent about a production issue, it will first analyse the logs, search database, identity the root case, search relevant services, generate the report or suggest a fix, the important thing is it decides the next step based on the results form previous step
+
+
+    in traditional workflow, the steps are predefined , run step 1, then step2, whereas in agentic workflow, it autonomously decides what to do next
+How does an LLM interact with external systems?
+    LLM itself doesn’t interact directly with external sources, An application or agent layer connects LLM to external systems
+    An application or agent can use APIs, database, or other tools to retrieve data external source, MCP is a standardized way to  expose these tools to LLM
+
+    for knowledge retrieval, we can use RAG, it can retrieve relevant data from sources such as vector database, provide that data as context to LLM
+
+    in simple terms, LLM reasons what it needs, agent executes the required operation , results are returned to LLM for further reasoning
+
+What is fine-tuning?
+    fine tuning is the process of taking a pre trained model and further training it on task specific data sets so the model can adapt the specific task or behaviour
+
+    for example, if we have general purpose LLM mode, if we want to use it for Hotel customer support, we can fine tune it using hotel customer support conversations, responses, terminology, behaviour, after fine tuning, it more likely to follow the desired patter when answering questions
+
