@@ -25,3 +25,26 @@
         creating repetitive database Connections is costly
         reuse active connections
         improve database performance dramtically
+
+1. have you faced any performance issue in you application? if so, how have you solved it?
+    yes, I’ve faced performance issues in the applications I worked on, particularly with API latency
+
+    one example was ab API that was taking significantly longer than expected, I started by check  API response time and then traced the request flow to identity where latency was coming from ,
+
+    during the analysis, I found few issues
+
+    some database queries were slow because required indexing was missing
+    we were frequently accessing the same data where there is no caching mechanism in place
+    some API were returning complete database instead of pagination where resulted in large database queries 
+what kind of caching have you used? inmemory vs distributed?
+    we have used both  in-memory and distributed caching depending on the use case
+
+    for in-memory cache, cached data is stored inside the application’s memory, it can be very fast because there is no network call
+
+    we generally use in-memory cache when data is  relatively small, frequently accessed data, can tolerate some staleness
+
+    for example, we used in-memory to store configuration data or reference data
+    the limitation with in-memory is that cached data is not automatically synchronised with all instances, for example instance 1 updates its data, instance 2 might still hold the old data
+
+
+
