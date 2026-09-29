@@ -1,0 +1,19 @@
+1. What are the SOLID principles? Explain each with a practical example.
+
+2. What is the Strategy Pattern? When would you use it?
+
+3. What is the Factory Pattern? What problem does it solve?
+
+4. Factory Pattern vs Abstract Factory Pattern — what is the difference?
+
+5. What is the Observer Pattern? Where would you use it in a real application?
+
+6. What is the Decorator Pattern? Give a practical example.
+
+7. What is the Builder Pattern? Why is it useful in Java?
+
+8. What is the Singleton Pattern? How would you implement a thread-safe Singleton?
+
+9. What is the Adapter Pattern? When would you use it?
+
+10. How do you decide which design pattern to use during an LLD interview?

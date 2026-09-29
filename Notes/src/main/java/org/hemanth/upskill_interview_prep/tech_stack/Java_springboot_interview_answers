@@ -1,0 +1,12 @@
+1. What is Spring Boot, and how is it different from the traditional Spring Framework?
+
+    Spring is a Java framework used to develop enterprise applications. It provides features like Inversion of Control, Dependency Injection, bean lifecycle management, AOP, transaction management, and integration with databases and other technologies.
+    The main issue with traditional Spring was that it required relatively more configuration. We had to configure beans, dependencies, database connections, transaction management, and other application components manually using XML or Java-based configuration.
+    Spring Boot was introduced to simplify Spring application development and reduce this configuration. It provides features like auto-configuration, starter dependencies, embedded servers, and production-ready features.
+    For example, in Spring Boot, if I add spring-boot-starter-web, Spring Boot automatically configures many of the components required for developing a web application. Similarly, if I add Spring Data JPA and a database driver, Spring Boot can automatically configure the required JPA and database-related components based on the dependencies and application configuration.
+    Another important feature is starter dependencies. Instead of manually adding multiple dependencies, we can use starters such as spring-boot-starter-web or spring-boot-starter-data-jpa.
+    Spring Boot also provides embedded servers like Tomcat, so we can package our application as a JAR and run it directly without separately deploying it to an external server.
+    It also provides Spring Boot Actuator, which gives production-ready features such as health checks, metrics, and monitoring.
+    One important point is that Spring Boot does not replace Spring. Spring Boot is built on top of the Spring ecosystem and internally uses Spring's core features such as dependency injection, IoC, and bean management.
+    So, in simple terms, Spring provides the core framework and flexibility, while Spring Boot simplifies Spring application development by providing auto-configuration, starter dependencies, embedded servers, and production-ready features.
+

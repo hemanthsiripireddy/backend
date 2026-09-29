@@ -1,0 +1,39 @@
+1. Your application running on AWS EKS suddenly starts receiving 5–10x normal traffic. How would you scale the application and infrastructure?
+
+2. A Kubernetes pod is continuously restarting. How would you investigate the issue and identify the root cause?
+
+3. A pod is running successfully but users are getting connection failures. How would you troubleshoot the issue?
+
+4. Your application works locally but fails after deployment to EKS. How would you systematically debug the problem?
+
+5. A Kubernetes deployment is running out of CPU or memory. How would you identify the cause and decide whether to tune the application or increase resources?
+
+6. Your service needs to scale automatically based on traffic or resource utilization. How would you design the autoscaling strategy?
+
+7. A new deployment causes production errors. How would you safely roll back the deployment?
+
+8. You need to deploy a new version of a service without downtime. How would you approach the deployment strategy?
+
+9. Your CI/CD pipeline takes 30 minutes and developers frequently face failed deployments. How would you investigate and improve the pipeline?
+
+10. Infrastructure needs to be created consistently across multiple environments such as development, staging, and production. How would you approach this using Terraform?
+
+11. Someone manually changes infrastructure in AWS, causing Terraform state to differ from the actual configuration. How would you handle the situation?
+
+12. A production service is experiencing high latency, but CPU and memory usage appear normal. How would you investigate the issue using CloudWatch, application metrics, logs, and other monitoring tools?
+
+13. A service suddenly starts returning HTTP 5xx errors after a deployment. How would you determine whether the problem is in the application, Kubernetes, networking, database, or another dependency?
+
+14. Your application needs to securely access an AWS resource such as S3 or RDS. How would you provide access without hardcoding credentials?
+
+15. Your application needs to store sensitive configuration such as database passwords and API keys. How would you manage these secrets across environments?
+
+16. A Kubernetes service is accessible from inside the cluster but not from outside. How would you troubleshoot the networking and exposure configuration?
+
+17. One microservice is consuming too many resources and affecting other workloads running in the same Kubernetes cluster. How would you isolate and control its resource usage?
+
+18. Your production system needs high availability even if an AWS availability zone fails. How would you design the deployment and infrastructure for this requirement?
+
+19. You need to investigate an incident that happened in production, but logs are distributed across multiple pods and services. How would you approach troubleshooting and identify the root cause?
+
+20. You are asked to migrate an existing application from a VM-based deployment to containerized workloads running on Kubernetes/EKS. How would you approach the migration, deployment, monitoring, and rollback strategy?

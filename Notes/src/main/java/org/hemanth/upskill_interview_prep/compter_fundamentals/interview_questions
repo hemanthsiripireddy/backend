@@ -1,0 +1,124 @@
+
+
+----os------------
+1. What is the difference between a process and a thread?
+
+2. What is the difference between concurrency and parallelism?
+
+3. Explain process states and the lifecycle of a process.
+
+4. What is context switching? Why is it expensive?
+
+5. What is a thread, and what resources are shared between threads?
+
+6. What is the difference between user-level threads and kernel-level threads?
+
+7. Explain race conditions. How can you prevent them?
+
+8. What is a deadlock? Explain the four necessary conditions for deadlock.
+
+9. How can deadlocks be prevented, avoided, or detected?
+
+10. What is the difference between a mutex and a semaphore?
+
+11. What is synchronization? Why is it required in multithreaded applications?
+
+12. What is virtual memory? Why do operating systems use it?
+
+13. What is the difference between paging and segmentation?
+
+14. What is a page fault? What happens when a page fault occurs?
+
+15. What is CPU scheduling? Explain common scheduling algorithms.
+
+16. What is starvation? How is it different from deadlock?
+
+17. What is memory fragmentation? Explain internal and external fragmentation.
+
+18. What happens when a program starts executing? Explain the relationship between the OS, process, memory, and CPU.
+
+19. How does an operating system manage memory for multiple processes?
+
+20. A production application suddenly consumes very high CPU and memory. How would you investigate the problem at the OS level?
+
+--------------------networking---------------------------
+1. Explain the OSI model and the purpose of each layer.
+
+2. Explain the TCP/IP model. How is it different from the OSI model?
+
+3. What is the difference between TCP and UDP? When would you use each?
+
+4. Explain the TCP three-way handshake.
+
+5. What happens during TCP connection termination?
+
+6. What is an IP address? Explain IPv4 vs IPv6.
+
+7. What is the difference between a public IP and a private IP?
+
+8. What is DNS? Explain what happens when you enter a URL in a browser.
+
+9. What is HTTP? Explain the difference between HTTP/1.1, HTTP/2, and HTTP/3.
+
+10. What is HTTPS? Explain how TLS provides secure communication.
+
+11. What happens internally when a client sends an HTTPS request to a server?
+
+12. What are HTTP methods such as GET, POST, PUT, PATCH, and DELETE? When would you use each?
+
+13. What are HTTP status codes? Explain the differences between 2xx, 3xx, 4xx, and 5xx responses.
+
+14. What is the difference between a reverse proxy, forward proxy, and load balancer?
+
+15. What is a port? Why do applications use different port numbers?
+
+16. What is NAT? Why is NAT commonly used in networks?
+
+17. What is a firewall? How does it control network traffic?
+
+18. What is a socket? Explain the relationship between IP address, port, TCP, and socket.
+
+19. A REST API is suddenly experiencing high latency. How would you determine whether the problem is in the client, network, load balancer, or backend server?
+
+20. Explain what happens from the moment a user enters a URL in a browser until the webpage/API response is received.
+-------------------------------------------------------dbms----------------
+1. What is the difference between a primary key, candidate key, unique key, and foreign key?
+
+2. What is normalization? Explain 1NF, 2NF, 3NF, and BCNF.
+
+3. What is denormalization? When would you intentionally denormalize a database?
+
+4. Explain different types of SQL joins. What is the difference between INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL JOIN?
+
+5. What is an index? How does a database index improve query performance?
+
+6. What is the difference between clustered and non-clustered indexes?
+
+7. What is a composite index? How does the order of columns in a composite index matter?
+
+8. How does a database query optimizer decide how to execute a query?
+
+9. What is an execution plan? How would you use it to troubleshoot a slow query?
+
+10. What is a database transaction? Explain ACID properties.
+
+11. What are transaction isolation levels? Explain READ COMMITTED, REPEATABLE READ, and SERIALIZABLE.
+
+12. What are dirty reads, non-repeatable reads, and phantom reads?
+
+13. What is a database deadlock? How can it occur and how can you troubleshoot it?
+
+14. What is the difference between optimistic and pessimistic locking?
+
+15. What is connection pooling? Why is it important for backend applications?
+
+16. What is database replication? Explain primary-replica architecture and its use cases.
+
+17. What is database sharding? When would you use sharding, and what challenges does it introduce?
+
+18. What is the difference between SQL and NoSQL databases? When would you choose each?
+
+19. A query that used to execute in 100 ms now takes 5 seconds. How would you troubleshoot and optimize it?
+
+20. How would you design a database for a high-traffic application handling thousands of requests per second?
+----------------------------------------------

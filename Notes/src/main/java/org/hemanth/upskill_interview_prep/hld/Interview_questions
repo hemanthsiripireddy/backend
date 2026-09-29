@@ -1,0 +1,39 @@
+1. Your service is currently handling 500 requests/second, but traffic suddenly grows to 5,000 requests/second. How would you approach scaling the system?
+
+2. One of your microservices becomes a bottleneck and starts increasing latency for the entire system. How would you identify the problem and redesign the architecture?
+
+3. You have multiple instances of a microservice running behind a load balancer. How would you handle state that currently exists only inside one instance?
+
+4. Your application needs to handle a large number of read requests, while the database is becoming a bottleneck. How would you approach improving read scalability?
+
+5. Your database is reaching its capacity because of increasing traffic and data volume. How would you decide between indexing, read replicas, caching, partitioning, and sharding?
+
+6. A frequently accessed piece of data is being requested thousands of times per second. How would you introduce caching, and how would you handle cache invalidation?
+
+7. Your service depends on another service that is slow or occasionally unavailable. How would you design the system so that one failing service doesn't bring down the entire application?
+
+8. You have a synchronous request flow involving several microservices, and the overall response time is becoming too high. How would you decide what should become asynchronous?
+
+9. You need to process millions of events asynchronously. How would you design the event-processing architecture, including producers, consumers, retries, ordering, and failure handling?
+
+10. Messages are sometimes processed more than once because of retries or consumer failures. How would you design the system to handle duplicate events?
+
+11. Your system needs to guarantee that an important operation is not lost even if a service crashes immediately after receiving a request. How would you approach this?
+
+12. Two microservices need to update related data, but you cannot use a single database transaction across both services. How would you maintain data consistency?
+
+13. A database query that used to take 100 ms is now taking several seconds as the data volume grows. How would you investigate and solve the problem?
+
+14. Your application is deployed across multiple availability zones/regions. How would you handle failures and maintain availability?
+
+15. A single database table has grown to hundreds of millions of records. How would you approach scaling it while keeping queries performant?
+
+16. Your system needs to support a sudden traffic spike that may be 10x normal traffic for a short period. How would you design for this without permanently provisioning 10x infrastructure?
+
+17. You are migrating a monolithic application to microservices. How would you identify service boundaries and migrate gradually without disrupting existing users?
+
+18. You need to deploy a new version of a critical service without causing downtime. How would you approach the deployment and rollback strategy?
+
+19. Your system is distributed across many microservices, and debugging a request that crosses multiple services has become difficult. How would you design observability for the system?
+
+20. Your application currently works well at its current scale, but you expect 10x growth in users and traffic over the next few years. How would you identify the architectural bottlenecks and prepare the system for that growth?

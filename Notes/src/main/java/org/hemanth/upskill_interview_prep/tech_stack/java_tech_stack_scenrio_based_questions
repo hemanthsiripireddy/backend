@@ -1,0 +1,39 @@
+1. You have a Spring Boot service receiving thousands of concurrent requests. How would you identify and handle thread-safety issues in the application?
+
+2. A Java application is consuming continuously increasing amounts of memory and eventually throws `OutOfMemoryError`. How would you investigate the root cause?
+
+3. An API in your Spring Boot application suddenly becomes slow. How would you determine whether the problem is in Java code, database access, external APIs, or thread contention?
+
+4. You have multiple threads accessing and modifying shared data. How would you decide between `synchronized`, `Lock`, `Atomic` classes, and concurrent collections?
+
+5. A method is being executed concurrently by multiple requests, and the results are sometimes inconsistent. How would you identify and fix the concurrency problem?
+
+6. Your application creates a large number of objects during request processing, causing frequent GC pauses. How would you investigate and optimize it?
+
+7. You need to process a large collection of records efficiently in Java. How would you decide between a traditional loop, Streams, parallel Streams, and asynchronous processing?
+
+8. You have multiple implementations of the same business operation in a Spring Boot application. How would you structure the code so that the correct implementation can be selected dynamically?
+
+9. A Spring Boot service has many beans and dependencies, and startup time has become very high. How would you investigate the problem?
+
+10. A REST API needs consistent exception handling across all controllers. How would you implement it without duplicating error-handling code?
+
+11. Your API receives a request containing invalid or incomplete data. How would you design validation and error handling so that the API returns consistent responses?
+
+12. You need to call an external service from a Spring Boot application, but that service can be slow or unavailable. How would you design the client with timeout, retry, fallback, and circuit-breaker behavior?
+
+13. Multiple requests update the same database entity concurrently. How would you handle transaction boundaries, locking, and consistency in a Spring/JPA application?
+
+14. A Hibernate/JPA-based API is generating hundreds of SQL queries for a single request. How would you identify and solve the problem?
+
+15. A Spring Boot application is experiencing connection-pool exhaustion. How would you investigate the cause and determine whether the problem is in the application, database, or connection-pool configuration?
+
+16. You have a long-running operation inside an HTTP request, causing requests to remain open for a long time. How would you redesign the flow using asynchronous processing?
+
+17. You need to execute a large number of background tasks concurrently, but you don't want to create unlimited threads. How would you design the thread-pool and task-execution strategy?
+
+18. A Java service works correctly with a single instance but behaves incorrectly when multiple instances are deployed. How would you identify state or concurrency assumptions that are causing the issue?
+
+19. You need to maintain backward compatibility while changing an existing Java/Spring Boot API used by multiple clients. How would you approach the change?
+
+20. A production Spring Boot service has intermittent failures that cannot be reproduced locally. How would you use logs, metrics, tracing, thread dumps, heap information, and profiling to identify the root cause?

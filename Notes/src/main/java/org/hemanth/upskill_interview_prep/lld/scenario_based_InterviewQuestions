@@ -1,0 +1,39 @@
+1. You have a class that is becoming too large and handling multiple responsibilities. How would you approach refactoring it?
+
+2. You need to add a new feature without modifying existing business logic too much. How would you design it to minimize the impact on existing code?
+
+3. You have multiple implementations of the same functionality, and new implementations may be added later. How would you structure the code?
+
+4. You have a large if-else / switch block based on type or status. How would you improve the design?
+
+5. Two services/classes are tightly coupled, and changes in one frequently break the other. How would you reduce the coupling?
+
+6. A business rule is changing frequently and is scattered across multiple classes. How would you redesign the code so the rule is easier to change?
+
+7. You have duplicate logic across multiple services. How would you decide whether to create a common component or keep the logic separate?
+
+8. A class has too many dependencies injected into it. What would you consider a design smell, and how would you fix it?
+
+9. You need to support different behaviors based on configuration or runtime conditions. How would you design this without continuously adding if-else conditions?
+
+10. You have an existing API used by many clients, but you need to introduce a new behavior without breaking existing consumers. How would you approach it?
+
+11. A service is doing database access, business logic, validation, and external API calls all inside one class. How would you restructure it?
+
+12. You have an operation that can fail and needs retry logic. Where would you put the retry responsibility, and how would you prevent retry logic from being duplicated?
+
+13. Multiple threads can modify the same object/resource simultaneously. How would you identify and solve the concurrency problem?
+
+14. Two requests can update the same database record at the same time. How would you design the application to prevent inconsistent data?
+
+15. You need to add RabbitMQ/Kafka-based asynchronous processing to an existing synchronous flow. How would you change the design?
+
+16. A downstream service is unavailable. Your service currently waits for it and eventually times out. How would you redesign the interaction?
+
+17. You have a workflow with multiple states, such as CREATED → PROCESSING → COMPLETED/FAILED. How would you structure the code so adding new states doesn't make it messy?
+
+18. You have an external provider with a different request/response model from your internal domain model. How would you design the integration so your business logic doesn't depend on the external provider?
+
+19. A feature is becoming difficult to test because the class has many concrete dependencies and external calls. How would you redesign it for testability?
+
+20. A monolithic component needs to be split into multiple microservices. How would you identify boundaries and avoid creating tightly coupled services?

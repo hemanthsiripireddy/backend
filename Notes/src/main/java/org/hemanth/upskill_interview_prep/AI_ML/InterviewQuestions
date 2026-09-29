@@ -10,3 +10,44 @@ What is fine-tuning?
 What is the difference between fine-tuning and RAG?
 How have you personally used GitHub Copilot?
 Has Copilot actually improved your development workflow?
+
+
+1. What is Generative AI, and how is it different from traditional Machine Learning?
+
+2. What is an LLM? How does a Large Language Model generate text?
+
+3. What is a Transformer architecture? Explain the role of attention and self-attention.
+
+4. What is a token in an LLM? How does tokenization affect the model's input and output?
+
+5. What is an embedding? How is text converted into a vector representation?
+
+6. What is the difference between embeddings and LLMs?
+
+7. What is a vector database? Why is it used in Generative AI applications?
+
+8. How does semantic search work using embeddings and vector databases?
+
+9. What is RAG (Retrieval-Augmented Generation)? Explain the complete RAG pipeline.
+
+10. Why is RAG preferred over simply putting all the information into an LLM prompt?
+
+11. What are chunking and chunk size in RAG? How would you decide the appropriate chunk size?
+
+12. What is the difference between keyword search and semantic/vector search?
+
+13. What are cosine similarity, Euclidean distance, and dot product in the context of vector search?
+
+14. What is prompt engineering? What makes a good prompt for an LLM?
+
+15. What are zero-shot, one-shot, and few-shot prompting?
+
+16. What are hallucinations in LLMs? Why do they happen, and how can you reduce them?
+
+17. What is the difference between fine-tuning, prompt engineering, and RAG?
+
+18. How would you design a production-ready RAG system for a large set of documents?
+
+19. How would you evaluate the quality of an LLM or RAG application? What metrics would you use?
+
+20. How would you integrate an LLM/RAG system into a Spring Boot microservice? Explain the architecture and request flow.

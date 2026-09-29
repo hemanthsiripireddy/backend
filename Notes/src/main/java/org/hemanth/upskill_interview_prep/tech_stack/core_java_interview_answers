@@ -22,3 +22,17 @@ features of java:
         classes can be loaded dynamically at runtime
     robust and secure
         strong type checking, exception handling, and memory management features
+
+-->Explain how HashMap works internally in Java. How do put() and get() work?\
+
+    HashMap is a key-value data structure in Java that uses hashing internally to provide average O(1) time complexity for put() and get() operations.
+
+    Internally, HashMap maintains an array of buckets. When we insert a key-value pair using put(), HashMap calculates the hash of the key and uses that hash to determine the bucket index.
+
+    If the bucket is empty, it stores the key-value pair there. If another entry already exists in the same bucket, a collision occurs. HashMap handles collisions using a linked list, and in modern Java, if the number of entries in a bucket becomes sufficiently large, the linked list can be converted into a red-black tree.
+
+    If the key already exists, HashMap uses equals() to identify the existing key and updates its value.
+
+    When we call get(), HashMap calculates the hash of the key, finds the corresponding bucket, and then uses equals() to find the matching key and return its value.
+
+    So, hashCode() helps determine where to look, and equals() helps identify the exact key.

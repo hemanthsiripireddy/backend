@@ -12,3 +12,83 @@
     hybrid cloud
     multi cloud
         aws+ azure + gcp
+
+
+
+What is S3 bucket:
+   S3 — 5-Minute Revision Notes
+
+      1. Object Storage
+
+      S3 = AWS object storage service.
+      Stores objects such as files, images, videos, logs, backups, etc.
+      Objects are stored inside buckets.
+      Object is identified using a key.
+
+      2. Scalability & Durability
+
+      Highly scalable; handles very large amounts of data and request traffic.
+      Designed for extremely high durability.
+      Data is redundantly stored across multiple facilities within an AWS Region.
+
+      3. Storage Classes
+
+      S3 Standard → frequent access, millisecond retrieval.
+      Standard-IA → infrequent access, millisecond retrieval.
+      Intelligent-Tiering → automatically moves data between access tiers.
+      Glacier classes → archival data, lower storage cost, longer retrieval depending on class.
+
+      4. Security & Access Control
+
+      IAM policies
+      Bucket policies
+      Block Public Access
+      ACLs
+      Keep buckets private unless public access is specifically required.
+
+      5. Encryption
+
+      Encryption at rest.
+      SSE-S3
+      SSE-KMS
+      Client-side encryption is also possible.
+
+      6. Pre-signed URLs
+
+      Temporary URL providing controlled access to an object.
+      Client can directly upload/download from S3.
+      Reduces backend bandwidth and processing load.
+
+      7. Multipart Upload
+
+      Split a large object into multiple parts.
+      Upload parts independently/parallelly.
+      Failed parts can be retried individually.
+      Useful for large files.
+
+      8. Versioning
+
+      Keeps multiple versions of an object.
+      Helps recover from accidental deletion or overwriting.
+
+      9. Lifecycle Management
+
+      Automatically transition objects between storage classes.
+      Automatically expire/delete old objects.
+      Example:
+      Standard → Standard-IA → Glacier → Delete
+
+      10. Replication
+
+      Replicate objects between buckets.
+      CRR → Cross-Region Replication.
+      SRR → Same-Region Replication.
+
+      11. Event Notifications
+
+      S3 can generate events when objects are created/deleted.
+      Can integrate with Lambda, SQS, SNS, etc.
+
+      12. Static Website Hosting
+
+      Can host static HTML/CSS/JavaScript content.

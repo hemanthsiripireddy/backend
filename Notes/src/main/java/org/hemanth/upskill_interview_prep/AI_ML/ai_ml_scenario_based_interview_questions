@@ -1,0 +1,39 @@
+1. You need to add an LLM-based feature to an existing backend application. How would you approach integrating the LLM into the system?
+
+2. Your LLM is producing incorrect or hallucinated answers. How would you investigate the problem and improve the results?
+
+3. You have a large set of internal documents, and users need to ask questions about them. How would you approach building a RAG-based solution?
+
+4. Your RAG system retrieves irrelevant documents for some queries. How would you identify the problem and improve retrieval quality?
+
+5. Your documents are large and cannot be directly sent to the LLM because of context-window limitations. How would you approach chunking and indexing them?
+
+6. You need to choose between different embedding models for a RAG system. What factors would you consider?
+
+7. Your vector database contains millions of embeddings, and search latency has become high. How would you approach improving retrieval performance?
+
+8. Your RAG system retrieves relevant information, but the LLM still generates an incorrect answer. How would you determine whether the problem is retrieval, prompting, or generation?
+
+9. An LLM API is expensive and your application is making millions of requests. How would you reduce inference cost?
+
+10. An LLM-powered API has high latency and users are waiting several seconds for responses. How would you investigate and reduce the latency?
+
+11. Your application needs to handle many concurrent LLM requests. How would you design the system to handle the load reliably?
+
+12. An external LLM provider becomes unavailable. How would you design the application so that the AI feature continues to work or degrades gracefully?
+
+13. You need to prevent sensitive company information from being sent to an external LLM. How would you approach data privacy and security?
+
+14. Different users should receive different information from the same RAG system based on their permissions. How would you design the retrieval process?
+
+15. You changed your prompt and the application's output quality changed. How would you evaluate whether the new prompt is actually better?
+
+16. You need to evaluate the quality of an LLM/RAG application when there is no single exact answer for every question. How would you approach evaluation?
+
+17. Your AI system sometimes gives inconsistent answers for the same input. What factors could cause this, and how would you investigate it?
+
+18. You need to decide whether a task should be handled using traditional software logic, an ML model, or an LLM. How would you make that decision?
+
+19. Your AI application works well in testing but performs poorly after being deployed to production. How would you monitor and troubleshoot the AI/ML system?
+
+20. You need to add an AI assistant/agent to an existing microservices application. How would you decide what tools the agent should have, how it should interact with backend services, and how you would control failures and unexpected actions?

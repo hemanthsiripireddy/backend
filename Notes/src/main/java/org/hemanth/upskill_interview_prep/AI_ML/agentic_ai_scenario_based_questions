@@ -1,0 +1,39 @@
+1. You need to build an AI agent that can understand a user's request, decide what actions are required, and execute them using backend APIs. How would you approach the architecture?
+
+2. An agent needs to decide which tool/API to call based on the user's request. How would you design the tool-selection mechanism?
+
+3. Your agent sometimes chooses the wrong tool or provides incorrect tool parameters. How would you identify and reduce these failures?
+
+4. An agent needs to perform a multi-step task where the output of one tool becomes the input for the next. How would you manage the workflow and state?
+
+5. An agent gets stuck in a loop and repeatedly calls the same tool. How would you detect and prevent infinite agent loops?
+
+6. An agent needs to maintain context across multiple interactions with the same user. How would you design short-term and long-term memory?
+
+7. Your agent needs information from internal company documents before taking an action. How would you combine RAG with agentic workflows?
+
+8. An agent retrieves information from several sources that provide conflicting answers. How would you decide which information to trust?
+
+9. An agent needs to perform an operation that can have a real-world impact, such as modifying data or triggering a deployment. How would you introduce approval and safety mechanisms?
+
+10. An agent calls an external API that sometimes fails or times out. How would you design retries, fallbacks, and error handling?
+
+11. Your agent performs a task involving 10–20 tool calls, and one step fails halfway through. How would you recover without restarting the entire workflow?
+
+12. An agent needs to execute multiple independent tasks. How would you decide which tasks can run in parallel and which must run sequentially?
+
+13. Your agent is becoming expensive because it makes too many LLM calls. How would you reduce token usage and inference cost?
+
+14. Your agent's response latency is high because it performs several sequential LLM and tool calls. How would you identify and reduce the latency?
+
+15. You have multiple specialized agents, such as a research agent, coding agent, and validation agent. How would you decide how they communicate and divide responsibilities?
+
+16. An agent produces a technically valid answer but takes an incorrect action because it misunderstood the user's intent. How would you design validation or guardrails before executing actions?
+
+17. Your agent has access to many tools, but giving all tools to the LLM makes tool selection unreliable. How would you approach tool discovery and tool selection?
+
+18. You need to observe and debug an agent running in production. What would you log and monitor across LLM calls, tool calls, decisions, latency, errors, and costs?
+
+19. An agent works correctly in testing but behaves unpredictably with real users and unexpected inputs. How would you evaluate and improve its reliability?
+
+20. You need to integrate an agentic AI system into an existing Spring Boot microservices platform. How would you decide the boundary between the AI agent, backend services, tools, RAG/vector database, and existing business logic?

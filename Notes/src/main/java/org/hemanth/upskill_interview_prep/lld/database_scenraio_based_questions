@@ -1,0 +1,39 @@
+1. A query that was previously fast has become slow as the table has grown to millions of records. How would you investigate and optimize it?
+
+2. A database is receiving thousands of queries per second and CPU usage is becoming high. How would you identify the bottleneck and improve database performance?
+
+3. A query is performing a full table scan even though an index exists. How would you investigate why the index is not being used?
+
+4. You have a table with hundreds of millions of records. How would you decide whether to use indexing, partitioning, archiving, or sharding?
+
+5. Your application is generating a large number of database connections and eventually gets connection-pool exhaustion. How would you troubleshoot and solve it?
+
+6. Two requests try to update the same database record at the same time. How would you prevent lost updates and maintain data consistency?
+
+7. Your application performs a transaction involving multiple database operations, and one operation fails halfway through. How would you ensure the database remains consistent?
+
+8. You have a long-running database transaction that is blocking other requests. How would you identify the problem and decide how to fix it?
+
+9. Two transactions are waiting for each other and the database reports a deadlock. How would you investigate and prevent recurring deadlocks?
+
+10. Your database contains duplicate records even though the application is supposed to prevent them. How would you identify the cause and prevent duplicates at the database level?
+
+11. You need to store and query a rapidly growing dataset. How would you decide between a relational database, MongoDB, or another database technology?
+
+12. A frequently accessed database query is putting heavy load on PostgreSQL/MySQL. How would you decide whether to introduce Redis caching?
+
+13. Your application has multiple services accessing the same database. How would you decide whether to keep a shared database or give each microservice its own database?
+
+14. A database table is becoming very large and queries are slowing down. How would you approach database partitioning, and how would you choose the partition key?
+
+15. Your application needs to support significantly more read traffic than write traffic. How would you scale the database?
+
+16. Your application needs to handle significantly more writes, and a single database instance is becoming a bottleneck. How would you approach scaling writes?
+
+17. You need to migrate a large database schema in production without causing application downtime. How would you plan and execute the migration?
+
+18. A production database suddenly starts showing high latency, but the application code has not changed. How would you investigate the issue?
+
+19. Your application needs strong consistency for some operations but can tolerate eventual consistency for others. How would you decide where each consistency model should be used?
+
+20. Your database has grown beyond what a single server can handle. How would you evaluate sharding, choose a shard key, and handle queries that need data from multiple shards?

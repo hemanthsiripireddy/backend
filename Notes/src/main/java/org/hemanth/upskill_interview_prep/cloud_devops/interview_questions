@@ -152,6 +152,48 @@ Scenario based questions
 17. 
 
 
+----------------------------------------------
+1. Explain the difference between EC2, ECS, and EKS. When would you choose each?
+
+2. What is AWS EKS? Explain its architecture and how Kubernetes workloads run on EKS.
+
+3. Explain Kubernetes Pods, Deployments, Services, ConfigMaps, and Secrets.
+
+4. What happens when you deploy a Kubernetes Deployment? Explain the complete flow from kubectl apply to running Pods.
+
+5. What is the difference between a Kubernetes Deployment, StatefulSet, and DaemonSet?
+
+6. How does Kubernetes Service discovery work? Explain ClusterIP, NodePort, and LoadBalancer.
+
+7. How does Kubernetes handle scaling? Explain Horizontal Pod Autoscaler and what metrics can be used.
+
+8. A Kubernetes Pod keeps restarting. How would you troubleshoot the issue?
+
+9. How would you troubleshoot a Kubernetes application that is running but not receiving traffic?
+
+10. What is Docker? Explain the difference between a Docker image and a container.
+
+11. What is the difference between a Dockerfile CMD and ENTRYPOINT?
+
+12. Explain Infrastructure as Code. What is Terraform and why would you use it?
+
+13. Explain Terraform state. What is a remote backend, and why is state management important?
+
+14. What is the difference between Terraform plan, apply, destroy, and refresh?
+
+15. Explain a CI/CD pipeline. What are the typical stages from source code commit to production deployment?
+
+16. What is the difference between Continuous Integration, Continuous Delivery, and Continuous Deployment?
+
+17. How would you design a CI/CD pipeline for a Spring Boot microservice using Jenkins, GitHub Actions, or Harness?
+
+18. How would you implement zero-downtime deployment for a microservice running on Kubernetes?
+
+19. How would you monitor and troubleshoot a production application using CloudWatch, Prometheus, and Grafana?
+
+20. Design a production-ready AWS architecture for a highly available Spring Boot microservice. Explain networking, load balancing, EKS, databases, caching, logging, monitoring, CI/CD, security, and disaster recovery.
+
+
 
 
 

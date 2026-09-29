@@ -8,3 +8,43 @@
 8 diff between requestparam and path variable
 8 explain about design patterns
 9 explain about jpa
+
+1. What is Spring Boot, and how is it different from the traditional Spring Framework?
+
+2. What happens internally when a Spring Boot application starts? Explain the role of @SpringBootApplication.
+
+3. What is Dependency Injection and Inversion of Control in Spring? Explain with an example.
+
+4. What is the difference between @Component, @Service, @Repository, and @Controller?
+
+5. What is the difference between @Autowired, constructor injection, and setter injection? Which approach do you prefer and why?
+
+6. How does Spring manage the lifecycle of a Bean? Explain Bean scopes and the Spring Bean lifecycle.
+
+7. What is the difference between @Bean and @Component? When would you use each?
+
+8. How does Spring Boot auto-configuration work internally?
+
+9. What is the difference between @ConfigurationProperties and @Value?
+
+10. Explain the Spring MVC request lifecycle. What happens when a request reaches a @RestController?
+
+11. What is the difference between @Controller and @RestController?
+
+12. How do you handle exceptions globally in Spring Boot? Explain @ControllerAdvice and @ExceptionHandler.
+
+13. How does Spring Data JPA work? What happens internally when you call a repository method such as findById()?
+
+14. What is the difference between JPA and Hibernate? What is the role of EntityManager?
+
+15. Explain lazy loading vs eager loading in Hibernate. What is the N+1 query problem and how do you solve it?
+
+16. Explain @Transactional in Spring. How does transaction management work, and what are propagation and isolation levels?
+
+17. How does Spring Security work? Explain authentication vs authorization and the role of filters.
+
+18. How would you secure a Spring Boot REST API using JWT and OAuth2?
+
+19. How would you design communication between multiple Spring Boot microservices? Compare REST, RabbitMQ, and Kafka.
+
+20. How would you make a Spring Boot microservice production-ready and scalable? Discuss logging, monitoring, health checks, caching, database optimization, retries, timeouts, circuit breakers, and deployment.

@@ -4,30 +4,46 @@ java interview questions:
    3. explain jvm, jre, jdk?
    4. what is JIT compiler?
 
+1. Explain how HashMap works internally in Java. How do put() and get() work?
+
+2. What is the difference between HashMap, Hashtable, and ConcurrentHashMap?
+
+3. Explain the contract between equals() and hashCode(). What happens if you override one but not the other?
+
+4. How does ConcurrentHashMap achieve thread safety? How is it different from synchronizing a HashMap?
+
+5. What is the difference between synchronized, volatile, and AtomicInteger in Java?
+
+6. Explain the Java Memory Model. What are visibility, atomicity, and happens-before?
+
+7. What is the difference between synchronized and ReentrantLock? When would you use ReentrantLock?
+
+8. Explain ExecutorService and ThreadPoolExecutor. How does a thread pool work internally?
+
+9. What is the difference between Runnable, Callable, Future, and CompletableFuture?
+
+10. Explain CompletableFuture. How would you execute multiple asynchronous tasks and combine their results?
+
+11. What is the difference between ArrayList and LinkedList? What are their time complexities for common operations?
+
+12. Explain how HashSet works internally. How is it related to HashMap?
+
+13. What is the difference between == and equals() in Java?
+
+14. Why is String immutable in Java? What are the benefits of String immutability?
+
+15. Explain Java Streams. What is the difference between map(), filter(), flatMap(), and reduce()?
+
+16. What are intermediate and terminal operations in Java Streams? Why are Streams lazily evaluated?
+
+17. What are functional interfaces? Explain Predicate, Function, Consumer, and Supplier with examples.
+
+18. Explain the JVM memory structure. What are Heap, Stack, Metaspace, and Garbage Collection?
+
+19. Explain checked vs unchecked exceptions. When would you create a custom exception?
+
+20. What happens internally when you execute `new Employee()` in Java, from class loading to object creation?
 
 
 
-2.why choose java, features of java?
-why choose java?
-    platform independent,
-    Strong community and ecosystem
-        has massive developer community, extensive libraries and frameworks, and tools that make development faster and easier.
-    Performance and optimization
-        while not fast as c++, java offers good performance with just-in-time (JIT) compilation and good memory management.
-    versatility
-        java is used in various domains, including web development, mobile apps (android), desktop applications, cloud services
-    secutity
-        java has built-in security features, such as the sandbox environment, which helps protect against malicious code.
-features of java:
-    object-oriented
-        java is based on the object-oriented programming (OOP) paradigm, which promotes code reusability, modularity, and maintainability.
-    platform independence
-        java code is compiled into bytecode, which can run on any platform with a compatible Java Virtual Machine (JVM).
-    automatic memory management
-        java has a built-in garbage collector that automatically manages memory allocation and deallocation, reducing the risk of memory leaks.
-    multithreading
-        built in support for concurrent programming,
-    Dynamic and extensible
-        classes can be loaded dynamically at runtime
-    robust and secure
-        strong type checking, exception handling, and memory management features
+

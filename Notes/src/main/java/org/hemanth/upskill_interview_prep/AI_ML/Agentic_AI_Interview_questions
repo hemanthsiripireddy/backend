@@ -1,0 +1,39 @@
+1. What is Agentic AI? How is it different from a traditional LLM-based application?
+
+2. What is an AI agent? What are the main components of an AI agent?
+
+3. What is the difference between an LLM, an AI agent, and an agentic AI system?
+
+4. How does an AI agent decide what action to take? Explain the reasoning and planning process.
+
+5. What is tool calling or function calling? How does an LLM use external tools?
+
+6. How would you design an AI agent that can call multiple tools such as APIs, databases, and search systems?
+
+7. What is the difference between a single-agent and multi-agent architecture?
+
+8. What is a multi-agent system? When would you use multiple specialized agents instead of one agent?
+
+9. How do AI agents maintain memory across multiple interactions?
+
+10. What is the difference between short-term memory and long-term memory in an AI agent?
+
+11. How can RAG be integrated into an AI agent? What is the difference between RAG and an agent using tools?
+
+12. How does an AI agent handle a task that requires multiple steps? Explain planning, execution, observation, and iteration.
+
+13. What are ReAct-style agents? How do reasoning and tool execution work together?
+
+14. What are the major failure modes of AI agents? How can you prevent infinite loops, incorrect tool calls, and hallucinations?
+
+15. How would you control what tools an AI agent is allowed to call? Explain permissions, validation, and guardrails.
+
+16. How would you make an AI agent reliable enough for a production environment?
+
+17. How would you evaluate an AI agent? What metrics would you use to measure correctness, tool selection, latency, and cost?
+
+18. How would you design an agentic AI system that can read documents, retrieve information, call APIs, and generate a final response?
+
+19. How would you integrate an AI agent into a Spring Boot microservice architecture?
+
+20. Design a production-ready agentic AI system using LLMs, RAG, vector databases, tools/APIs, memory, and microservices. Explain the complete architecture.

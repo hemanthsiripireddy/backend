@@ -1,0 +1,39 @@
+1. You receive millions of events from a message queue, and the same event can arrive multiple times. How would you efficiently detect duplicate events?
+
+2. You receive millions of events and need to find the top K most frequently occurring event types. How would you approach it?
+
+3. Your API needs to limit each user to a certain number of requests within a time window. What data structure and approach would you use?
+
+4. You need to maintain the most recently used 10,000 objects in memory and remove the least recently used object when the cache is full. How would you approach it?
+
+5. Events arrive out of order, but they contain sequence numbers and must ultimately be processed in the correct order. How would you handle this?
+
+6. You have millions of records coming from an external file and need to compare them with existing records to identify new, modified, deleted, and unchanged records. How would you approach it?
+
+7. You continuously receive API latency measurements and need to calculate statistics for the most recent 60-second window. How would you efficiently maintain this data?
+
+8. You have multiple servers and need to distribute keys across them such that adding or removing a server causes minimal key redistribution. What data structure and algorithm would you use?
+
+9. A client may send the same request multiple times because of network retries, but the operation must only be processed once. How would you detect and handle duplicate requests?
+
+10. You have millions of API log entries and need to find the top 10 most frequently called endpoints. How would you approach it?
+
+11. You have a dependency graph between services, and you need to determine whether there is a circular dependency. How would you detect it?
+
+12. You need to find the minimum number of service-to-service hops between two services in a network. How would you approach it?
+
+13. You have thousands of background jobs with different priorities, and workers should always process the highest-priority available job. What data structure would you use?
+
+14. You receive a continuous stream of events and need to find the first event that has occurred only once so far. How would you maintain this efficiently?
+
+15. You have millions of time intervals representing maintenance windows, and overlapping intervals need to be merged. How would you approach it?
+
+16. You need to determine whether an ID has already appeared in a stream containing billions of IDs, but you cannot keep every ID in memory. How would you solve this?
+
+17. You have services with dependencies between them and need to determine a valid order in which they can be deployed. How would you approach it?
+
+18. Multiple producer threads generate tasks while multiple consumer threads process them. What data structure and approach would you use to safely coordinate them?
+
+19. Multiple requests can simultaneously update the same resource. How would you design the data structure/algorithm to prevent race conditions and maintain consistency?
+
+20. You need to process a very large dataset that cannot fit into memory and find duplicates or matching records efficiently. How would you approach the problem?
