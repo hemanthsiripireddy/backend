@@ -5,6 +5,49 @@
 5
 
 
+# Top 20 Cloud Computing Interview Questions
+
+1. What is cloud computing? Explain IaaS, PaaS, and SaaS with examples.
+
+2. What is the difference between scalability and elasticity in cloud computing?
+
+3. What is the difference between AWS Regions and Availability Zones?
+
+4. How would you design a highly available and fault-tolerant application on AWS?
+
+5. What is a Load Balancer? Explain the different types of AWS Load Balancers.
+
+6. What is Auto Scaling in AWS? How does it work?
+
+7. What is the difference between Amazon EC2, ECS, and EKS?
+
+8. What is Docker, and why is containerization important in cloud computing?
+
+9. What is Kubernetes? Explain Pods, Deployments, Services, and Ingress.
+
+10. What is Amazon VPC? Explain its major networking components.
+
+11. What is the difference between public and private subnets in AWS?
+
+12. What is the difference between Security Groups and Network ACLs?
+
+13. How does an application running in a private subnet access the internet?
+
+14. How would you secure a production application deployed on AWS?
+
+15. What is AWS IAM? Explain IAM users, roles, policies, and permissions.
+
+16. How do you manage application secrets and configurations securely in AWS?
+
+17. How would you deploy a Java Spring Boot microservice to AWS using Docker, ECR, and EKS?
+
+18. How would you troubleshoot a production application running on AWS?
+
+19. How would you implement monitoring, logging, and alerting for microservices deployed on AWS?
+
+20. Explain the cloud architecture of a project you have worked on, including deployment, networking, scalability, security, and high availability.
+
+
 
 
 

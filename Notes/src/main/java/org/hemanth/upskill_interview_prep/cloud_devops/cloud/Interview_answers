@@ -92,3 +92,20 @@ What is S3 bucket:
       12. Static Website Hosting
 
       Can host static HTML/CSS/JavaScript content.
+
+   ---------------------------
+   1. What is cloud computing? Explain IaaS, PaaS, and SaaS with examples.
+      In Infrastructure as a Service (IaaS), the cloud provider manages the underlying physical infrastructure, such as data centers, 
+      physical servers, networking hardware, power, cooling, and virtualization. We are responsible for managing the operating system, 
+      runtime, applications, and data.  
+      In Platform as a Service (PaaS), the cloud provider manages the underlying infrastructure as well as the operating system 
+      and runtime/platform. They typically take care of things like OS patching, platform maintenance, and infrastructure scaling.
+       We mainly focus on deploying and managing our application and data.
+      In Software as a Service (SaaS), the cloud provider delivers a complete software application that customers can 
+      directly use. The provider manages the infrastructure, operating system, platform, application, maintenance, updates, 
+      and scaling. Examples include Gmail, Salesforce, Microsoft 365, and Slack.
+      ----------
+      IaaS vs PaaS vs SaaS
+      - IaaS → Provider: Physical Infrastructure + Virtualization | You: OS + Runtime + Application + Data | EC2
+      - PaaS → Provider: Infrastructure + OS + Runtime + Scaling/Patching | You: Application + Data | Elastic Beanstalk
+      - SaaS → Provider: Everything (Infrastructure → Application) | You: Just use/configure the software | Gmail, Salesforce
