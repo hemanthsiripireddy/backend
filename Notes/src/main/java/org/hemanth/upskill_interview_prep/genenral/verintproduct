@@ -1,0 +1,105 @@
+# Context: Verint Fraud and Security Solutions (FSS) — Product, Architecture, Business, and Engineering
+
+Act as a senior software architect, product analyst, and enterprise technology consultant who understands banking surveillance systems, cloud video management, distributed systems, and B2B enterprise software.
+
+Help me understand the product I work on at Verint Systems, called Fraud and Security Solutions (FSS), including its customer value, business model, features, architecture, and real-world engineering challenges.
+
+## 1. My technical background and product context
+
+I work as a Software Engineer in the R&D organization at Verint. My work involves cloud-based applications and microservices.
+
+My understanding of the product and architecture includes:
+
+- The product is designed for enterprise security and video surveillance, especially banks, bank branches, and ATMs.
+- Customers may operate thousands of sites and cameras across geographically distributed locations.
+- The platform supports camera management, firmware updates, user permissions, device health monitoring, video retention monitoring, and video retrieval.
+- There are different camera and connectivity configurations. In the architecture I know, some cameras connect directly to the cloud platform, while others communicate through edgeware.
+- Video use cases include live viewing and retrieving recorded video for a requested time range. Depending on the deployment, requests may involve an HVR or other recording infrastructure and a streaming component such as AWS Kinesis.
+- My technical work includes Java, Spring Boot, PostgreSQL, microservices, AWS, Kubernetes, and cloud infrastructure. Some product components use other technology stacks.
+
+Treat these architectural details as context I have provided, not as independently verified public documentation. Ask clarifying questions if a detail materially affects your answer.
+
+## 2. Understand the actual product
+
+Use official Verint product pages, datasheets, product handbooks, customer case studies, demonstrations, and other reliable public sources to explain:
+
+1. What Verint FSS is and what problems it solves.
+2. The products and modules in the portfolio, including EdgeVMS, Cloud Video Orchestrator, Video Inspector, Op-Center, Guard Center, and related products where applicable.
+3. Which features are available in which products.
+4. How cameras, edge devices, recorders, cloud services, and investigator applications fit together.
+5. How live video, recorded video retrieval, device health, firmware management, access control, and retention compliance work at a conceptual level.
+6. Which capabilities are publicly documented and which are assumptions or architecture-dependent.
+
+Do not assume every product or feature is deployed in every customer's environment.
+
+## 3. Understand the business and customers
+
+Explain the product from the perspective of an enterprise banking customer:
+
+- Who buys it, who operates it, and who uses it daily.
+- What problems security teams, fraud investigators, IT operations teams, and compliance teams face.
+- Why a bank would purchase an enterprise platform instead of managing cameras individually or using a basic CCTV solution.
+- How the platform could help reduce investigation time, operational effort, security gaps, and compliance risk.
+- How the customer evaluates the solution and measures its business value.
+- What limitations, costs, migration risks, and integration challenges a customer would consider.
+
+Use realistic examples involving banks with thousands of branches and ATMs.
+
+## 4. Explain how Verint positions and sells FSS
+
+Analyze publicly available marketing materials and customer case studies to explain:
+
+- The main value proposition and product positioning.
+- The business problems emphasized in sales presentations.
+- The differentiators compared with alternative surveillance and video-management approaches.
+- How a sales representative might present the solution to a bank's security leadership, fraud investigators, and IT teams.
+- What a proof of concept or product demonstration might show.
+- How the vendor could communicate return on investment, operational savings, investigation efficiency, and risk reduction.
+- What public evidence supports these claims and what remains a marketing claim rather than independently verified performance data.
+
+Distinguish actual published sales messaging from your own suggested presentation strategy. Do not invent customer results, prices, contracts, revenue figures, or internal sales processes.
+
+## 5. Connect the product to software engineering
+
+Help me identify realistic production scenarios and explain how they would be investigated and resolved, including:
+
+- A camera becoming unreachable or reporting stale health status.
+- An HVR or edge device becoming unavailable during recorded-video retrieval.
+- Slow downstream services causing thread-pool or connection-pool exhaustion.
+- Concurrent requests causing database race conditions.
+- Firmware update failures across large fleets of devices.
+- Video-retention reports showing incorrect or incomplete information.
+- Permission changes not propagating consistently across application instances.
+- Kafka events being lost, delayed, or delivered more than once.
+- Redis cache stampedes or stale cached data.
+- Failures during cloud deployments or Kubernetes migrations.
+- Problems with retries, timeouts, circuit breakers, idempotency, and eventual consistency.
+
+For each scenario, explain the architecture, root cause, investigation steps, logs and metrics, proposed fix, trade-offs, and validation strategy.
+
+## 6. Help me prepare for software engineering interviews
+
+Generate interview questions and answers tailored to this product domain, especially:
+
+- Java and Spring Boot microservices.
+- PostgreSQL transactions, indexing, locking, and concurrency.
+- Kafka, the transactional outbox pattern, and consumer idempotency.
+- Redis caching and cache invalidation.
+- REST APIs and downstream service resilience.
+- AWS, Kubernetes, observability, and production troubleshooting.
+- High-level system design and low-level design.
+- Security, authorization, audit logging, and reliability.
+
+Help me formulate answers that sound like an experienced engineer without exaggerating my personal contributions.
+
+## 7. Rules for your answers
+
+- Research current public information when product-specific facts matter.
+- Prefer official Verint sources for product features and positioning.
+- Cite sources and provide links.
+- Separate verified facts, reasonable architectural inferences, hypothetical incidents, and my actual work experience.
+- Do not claim access to confidential internal architecture, source code, customer deployments, or sales information.
+- Explain technical concepts in clear language, then add senior-engineer-level depth and trade-offs.
+- Use concrete banking, branch-surveillance, ATM, and camera-management examples instead of generic e-commerce examples whenever relevant.
+
+Start by giving me a structured overview of FSS, its product portfolio, target customers, major business problems, and publicly documented differentiators. Then explain how Verint could present the solution to a large bank evaluating an enterprise video surveillance platform.

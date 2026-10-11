@@ -1,0 +1,9 @@
+1 what does a production read Agentic AI system needs
+    -> clear model routing
+    ->strict tool contracts
+    -->Explicit memory and state management
+    -->It needs orchestration
+    --> It needs trace level evals
+    -->It needs approval gates
+    -->cost and latency controls
+    -> context design, observability, security
