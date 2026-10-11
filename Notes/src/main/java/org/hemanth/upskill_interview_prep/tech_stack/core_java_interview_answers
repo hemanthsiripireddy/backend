@@ -36,3 +36,66 @@ features of java:
     When we call get(), HashMap calculates the hash of the key, finds the corresponding bucket, and then uses equals() to find the matching key and return its value.
 
     So, hashCode() helps determine where to look, and equals() helps identify the exact key.
+2. What is the difference between HashMap, Hashtable, and ConcurrentHashMap?
+        - HashMap → key-value pairs | not thread-safe | allows 1 null key + multiple null values
+        - Hashtable → key-value pairs | thread-safe/synchronized | no null keys/values | legacy
+        - ConcurrentHashMap → thread-safe | high concurrency | better scalability than Hashtable
+        - Difference → HashMap = non-thread-safe | Hashtable = legacy synchronized | CHM = modern concurrent
+        - Memory → HashMap = Fast | Hashtable = Old + synchronized | CHM = Concurrent + scalable
+    ----------------------------------------------------
+    HashMap:
+        - Stores data as key-value pairs.
+        - Not thread-safe → unsafe for concurrent modifications by multiple threads.
+        - Allows one null key and multiple null values.
+        - Commonly used when thread safety is not required.
+
+        Hashtable:
+        - Also stores key-value pairs.
+        - Thread-safe because its operations are synchronized.
+        - Does not allow null keys or null values.
+        - Legacy class → generally not preferred in modern applications.
+
+        ConcurrentHashMap:
+        - Thread-safe Map designed specifically for concurrent applications.
+        - Allows multiple threads to read/write concurrently with better scalability than Hashtable.
+        - Does not allow null keys or null values.
+        - Preferred over Hashtable for modern multi-threaded applications.
+
+        Interview Answer:
+        "HashMap is not thread-safe, Hashtable is thread-safe but is a legacy synchronized implementation, while ConcurrentHashMap is designed for high-concurrency applications and provides better scalability than Hashtable."
+3. Explain the contract between equals() and hashCode(). What happens if you override one but not the other?
+
+        - equals() → checks logical equality | hashCode() → generates hash used for bucket/location
+        - Contract → if a.equals(b) == true → a.hashCode() MUST equal b.hashCode()
+        - HashMap → hashCode() → find bucket | equals() → confirm matching key
+        - Override equals() only → equal objects may have different hashes → HashMap lookup can fail
+        - Override hashCode() only → unequal objects may share hash → equals() resolves collision
+        - Memory → hashCode = "where?" | equals = "same?"
+    -------------------------------------------------
+                equals() and hashCode() contract:
+
+            1. equals()
+            → Determines whether two objects are logically equal.
+
+            2. hashCode()
+            → Returns an integer hash value used by hash-based collections such as HashMap and HashSet.
+
+            3. Contract:
+            → If a.equals(b) is true, a.hashCode() MUST be equal to b.hashCode().
+            → If hashCodes are equal, equals() does NOT have to be true because hash collisions are possible.
+
+            HashMap process:
+            hashCode() → calculate hash → identify bucket → equals() → find exact matching key
+
+            If override equals() but NOT hashCode():
+            → Two logically equal objects can have different hashCodes.
+            → HashMap/HashSet may treat them as different objects.
+            → This breaks the collection contract.
+
+            If override hashCode() but NOT equals():
+            → Different objects can have the same hashCode.
+            → This is allowed; equals() distinguishes them.
+            → Performance may degrade due to more collisions.
+
+            Interview Answer:
+            "When overriding equals(), we should also override hashCode(). The contract requires that equal objects must have the same hashCode. HashMap uses hashCode() to locate the bucket and equals() to identify the exact matching key."
